@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/project/!svn/ver/1916/sameroads/vendor/plugins/has_many_friends/generators/hmf_friendship_model/templates
+END
+migration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/project/!svn/ver/1916/sameroads/vendor/plugins/has_many_friends/generators/hmf_friendship_model/templates/migration.rb
+END
+unit_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/project/!svn/ver/1916/sameroads/vendor/plugins/has_many_friends/generators/hmf_friendship_model/templates/unit_test.rb
+END
+fixtures.yml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/project/!svn/ver/1916/sameroads/vendor/plugins/has_many_friends/generators/hmf_friendship_model/templates/fixtures.yml
+END
+model.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/project/!svn/ver/1916/sameroads/vendor/plugins/has_many_friends/generators/hmf_friendship_model/templates/model.rb
+END

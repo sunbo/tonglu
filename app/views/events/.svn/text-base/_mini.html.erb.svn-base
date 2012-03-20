@@ -1,0 +1,58 @@
+<div class="home-right">
+<%= 
+calendar({:year => @date.year, :month => @date.month}) do |d|
+  cell_text = "#{d.mday}"
+ if (d.to_date == Time.now.to_date)
+	   cell_text = "<strong>今天#{d.mday}</strong><br/>"
+  end
+  cell_attrs = { :class => 'day ' }
+  @event_text = ""
+  @post_text = ""
+  @line_text = ""
+	      @events.each do |e|
+	        if e.date.to_date == d
+              todays_events = @events.reject { |e| e.date.to_date != d }
+              events_text = todays_events.map { |e| "<strong>[日程安排]</strong><br/>#{truncate(e.title,15)}<br/>" }
+	          @event_text = "#{ link_to image_tag("/images/icons/d_c.png"), events_path, :id => 'cal-' + d.to_date.to_s, :rel => events_text }&nbsp;"
+	          cell_attrs[:class] = 'specialDay'
+	        end
+	      end
+
+	      @lines.each do |e|
+	        if e.startdate.to_date == d
+              todays_events =  @lines.reject { |e| e.startdate.to_date != d }
+              events_text = todays_events.map { |e| "<strong>[出行线路]</strong><br/>#{truncate(e.title,15)}<br/>" }
+	          @line_text = "#{link_to image_tag("/images/icons/d_t.png"), lines_path(:user => current_user), :id => 'cal-' + d.to_date.to_s, :rel => events_text}&nbsp;"
+	          cell_attrs[:class] = 'specialDay'
+	        end
+	      end
+         @e_posts.each do |e|
+	        if e.created_at.to_date == d
+              todays_events =  @e_posts.reject { |e| e.created_at.to_date != d }
+              events_text = todays_events.map { |e| "<strong>[日记]</strong><br/>#{truncate(e.headline,15)}<br/>" }
+	          @post_text = "#{link_to image_tag("/images/icons/d_d.png"), posts_path(:user => current_user), :id => 'cal-' + d.to_date.to_s, :rel => events_text}&nbsp;"
+	          cell_attrs[:class] = 'specialDay'
+	        end
+	      end
+         cell_texts = @event_text + @post_text + @line_text + cell_text
+  [cell_texts, cell_attrs]
+end
+%>
+	   
+<script type="text/javascript">
+Event.observe(window, 'load', function(){
+  $$('a').each(function(element){
+    if(element.rel != '') new Tip(element, element.rel, {
+        delay: '0',
+		border: 3,
+		radius: 3,
+		style: 'sameroads',
+		width: 'auto',
+		stem: 'topRight',
+		hook: { mouse: true, tip: 'topRight' },
+		offset: { x: 10, y: 16 }
+        });
+  });
+});
+</script>
+</div>

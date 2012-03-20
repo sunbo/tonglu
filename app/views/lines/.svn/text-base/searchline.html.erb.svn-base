@@ -1,0 +1,75 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+		<div align="center">
+			<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+			<% if flash[:error] %><div id="error"><%= flash[:error] %></div><% end %>
+		</div>
+		<%= tabnav :myline %>
+        
+        <%if @search_lines %>
+              <%if !@search_lines.empty?%>
+                <table class="infobox">
+                 <thead>
+                 	<tr>
+                 		<th colspan="9"><span class="floatright fontnormal"><%= link_to '返回继续搜索路线',search_lines_path(:user => current_user) %></span>查找到的路线</th>
+					</tr>
+				</thead>
+				<thead class="trash">
+                    <tr>
+                      <th>用户</th>
+                      <th>状态</th>
+                      <th>标签</th>
+                      <th>目的</th>
+                      <th>时间</th>
+                      <th>出发地</th>
+                      <th>目的地</th>
+                      <th>航班号</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                  <% for line in @search_lines %>
+                    <tr>
+                      <td class="userphoto">
+                      <%= link_to "#{image_tag get_photo(line.user_id)}" ,  :controller => 'profile',:action => 'showuser',:id => line.user_id%>
+                      <ul>
+                      	<li><%= User.find(line.user_id).login %></li>
+						<li><%= User.find(line.user_id).email%></li>
+						<li>邀请同乘
+                        <%= inline_tb_link '发送消息', "new_message_#{User.find(line.user_id).id}",{:title => "给<strong>#{h User.find(line.user_id).login}</strong>发送消息"}, {:height => 260, :width => 430} %></li>
+				<div id="new_message_<%= User.find(line.user_id).id%>" style="display:none">
+		     		<% @showuser = User.find(line.user_id) %>
+		        	<%= render :partial => 'messages/form', :locals => {:hide_header => true} %>
+				</div>
+					  </ul>
+                      </td>
+                      <td>
+                            <%if line.startdate > Time.now%>
+                           未开始
+                           <%elsif line.startdate <= Time.now && line.enddate >= Time.now%>
+                           正在进行
+                           <%elsif line.enddate < Time.now%>
+                           已结束
+                          <%end%>
+                        </td>
+                      <td><%=h line.title %></td>
+                      <td><%=h line.status %></td>
+                      <td><%=h nice_date(line.startdate) %>——<%=h nice_date(line.enddate) %></td>
+                      <td><%=h line.startcity %></td>
+                      <td><%=h line.endcity %></td>
+                      <td><%=h line.n %></td>
+                      <td><%= link_to '查看',line_path(:user => line.user_id,:id => line) %></td>
+                    </tr>
+                  <% end %>
+                </table>
+            <%= will_paginate @search_lines %>
+              <%else%>
+                  <h3>没有符合你所查找的搜索路线</h3>
+              <%end%>
+	    <%else%>
+			<h3>填写条件查找路线</h3>
+	   <%end%>
+	</div>
+
+	<div class="clear"></div>
+</div>

@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/project/!svn/ver/1864/sameroads/vendor/plugins/simple_localization/lib/features
+END
+localized_date_helpers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/project/!svn/ver/1862/sameroads/vendor/plugins/simple_localization/lib/features/localized_date_helpers.rb
+END
+localized_models_by_lang_file.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/project/!svn/ver/1863/sameroads/vendor/plugins/simple_localization/lib/features/localized_models_by_lang_file.rb
+END
+localized_templates.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/project/!svn/ver/1863/sameroads/vendor/plugins/simple_localization/lib/features/localized_templates.rb
+END
+localized_array.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/project/!svn/ver/1862/sameroads/vendor/plugins/simple_localization/lib/features/localized_array.rb
+END
+localized_number_helpers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/project/!svn/ver/1863/sameroads/vendor/plugins/simple_localization/lib/features/localized_number_helpers.rb
+END
+localized_model_attributes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/project/!svn/ver/1863/sameroads/vendor/plugins/simple_localization/lib/features/localized_model_attributes.rb
+END
+localized_models.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/project/!svn/ver/1863/sameroads/vendor/plugins/simple_localization/lib/features/localized_models.rb
+END
+localized_form_options_helpers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/project/!svn/ver/1863/sameroads/vendor/plugins/simple_localization/lib/features/localized_form_options_helpers.rb
+END
+localized_active_record_helpers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/project/!svn/ver/1862/sameroads/vendor/plugins/simple_localization/lib/features/localized_active_record_helpers.rb
+END
+localized_application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/project/!svn/ver/1862/sameroads/vendor/plugins/simple_localization/lib/features/localized_application.rb
+END
+interface_shortcut.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/project/!svn/ver/1861/sameroads/vendor/plugins/simple_localization/lib/features/interface_shortcut.rb
+END
+extended_error_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/project/!svn/ver/1860/sameroads/vendor/plugins/simple_localization/lib/features/extended_error_messages.rb
+END
+reload_lang_file.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/project/!svn/ver/1864/sameroads/vendor/plugins/simple_localization/lib/features/reload_lang_file.rb
+END
+localized_error_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/project/!svn/ver/1863/sameroads/vendor/plugins/simple_localization/lib/features/localized_error_messages.rb
+END
+localized_application_extensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/project/!svn/ver/1862/sameroads/vendor/plugins/simple_localization/lib/features/localized_application_extensions.rb
+END
+class_based_field_error_proc.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/project/!svn/ver/1859/sameroads/vendor/plugins/simple_localization/lib/features/class_based_field_error_proc.rb
+END
+localized_date_and_time.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/project/!svn/ver/1862/sameroads/vendor/plugins/simple_localization/lib/features/localized_date_and_time.rb
+END
+localized_column_human_name.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/project/!svn/ver/1862/sameroads/vendor/plugins/simple_localization/lib/features/localized_column_human_name.rb
+END

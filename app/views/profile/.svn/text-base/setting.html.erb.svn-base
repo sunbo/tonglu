@@ -1,0 +1,12 @@
+<div id="content">
+<%= render :partial=>'slidbar' %>
+	<div id="colright">
+		<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+		<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>
+		<%= tabnav :userdetail %>
+		<% form_tag :action => 'update_setting' do %>
+		<h2>个人隐私设定</h2>
+		<% end %>
+	</div>
+	<div class="clear"></div>
+</div>

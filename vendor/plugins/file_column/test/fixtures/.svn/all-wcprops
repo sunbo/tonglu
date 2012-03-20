@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/project/!svn/ver/1801/sameroads/vendor/plugins/file_column/test/fixtures
+END
+mysql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/project/!svn/ver/1801/sameroads/vendor/plugins/file_column/test/fixtures/mysql.sql
+END
+invalid-image.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/project/!svn/ver/1801/sameroads/vendor/plugins/file_column/test/fixtures/invalid-image.jpg
+END
+entry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project/!svn/ver/1801/sameroads/vendor/plugins/file_column/test/fixtures/entry.rb
+END
+kerb.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project/!svn/ver/1801/sameroads/vendor/plugins/file_column/test/fixtures/kerb.jpg
+END
+schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/project/!svn/ver/1801/sameroads/vendor/plugins/file_column/test/fixtures/schema.rb
+END
+skanthak.png
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/project/!svn/ver/1801/sameroads/vendor/plugins/file_column/test/fixtures/skanthak.png
+END

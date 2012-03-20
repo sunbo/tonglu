@@ -1,0 +1,11 @@
+  <div id ="comment_reply_<%=  @comment_reply.id%>">
+	<div class="reply_body">
+        <!-- %= link_to "#{image_tag get_photo(@comment_reply.user_id)}" ,:controller => 'profile',:action => 'showuser',:id =>@comment_reply.user_id%> -->
+        <%= link_to "#{User.find(@comment_reply.user_id).login}" ,:controller => 'profile',:action => 'showuser',:id =>@comment_reply.user_id%>
+		<span class="state_date">于<%= time_ago_in_words(@comment_reply.created_at) %>前回复-</span>
+		<%= @comment_reply.content %>
+  	</div>
+  		    <script type="text/javascript">
+				  jq('div.reply_body').corners("5px");
+			</script>
+  </div>

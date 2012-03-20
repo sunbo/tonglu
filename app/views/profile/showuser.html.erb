@@ -1,0 +1,150 @@
+<div id="content">
+	<div class="showusersborder">
+		<div class="showusers">
+		<h2 class="bline"><%=h @showuser.login %></h2>
+		<div class="setting floatleft">
+			<div><%= image_tag get_photo_large(@showuser.id) %></div>
+			<div class="clear"></div>
+             <% if logged_in? %>
+                 <div class="center">
+                       <%if current_user.friendship(@showuser) == nil && current_user != @showuser%>
+                           <%= inline_tb_link '添加为好友', "new_friend", {:title => "是否加<strong>#{h @showuser.login}</strong>为好友？"}, {:height => 350, :width => 430} %> -
+                        <% end%>
+             	           <%= inline_tb_link '留言', "new_comment", {:title => "给<strong>#{h @showuser.login}</strong>留言"}, {:height => 230, :width => 430} %> -
+                        <%= inline_tb_link '发送消息', "new_message", {:title => "给<strong>#{h @showuser.login}</strong>发送消息"}, {:height => 260, :width => 430} %>
+                 </div>
+            <%end%>
+
+           	<% if @states!=nil %>
+           		<div class="hometip" style="width:180px;">状态：<%= @states.body %><span id="state_date">[<%= time_ago_in_words @states.created_at %>前更新]</span></div>
+	    	<% else %>
+	    		<div class="hometip" style="width:180px;">ta没有提交ta现在的状态～</div>
+	    	<% end %>
+
+			<%if show?(current_user.friendship(@showuser),@detail.is_show_details) || @showuser.login == current_user.login %>
+				<% if @detail.about_me != "" && @detail.about_me != nil %>
+					<div class="hometip" style="width:180px;"><%= textilize(auto_link(@detail.about_me))%></div>
+				<% else %>
+					<div class="hometip" style="width:180px;">ta没有描述自己</div>
+				<% end %>
+            <%else%>
+               <div class="hometip_green" style="width:180px;"> 个人描述被设定为：<%if @detail.is_show_details == "anyone" %>任何人可见
+                       <%elsif @detail.is_show_details == "friend"%>好友可见
+                       <%elsif @detail.is_show_details == "no"%>不公开<%end%></div>
+            <%end%>
+		</div>
+
+		<div class="floatleft left_line" style="width:530px;margin:0;padding:0 0 0 10px;#width:520px;">
+			<ul class="setting">
+				<li><label>真实姓名：</label><strong><%=h @showuser.login %></strong></li>
+				<li><label>Email：</label><%= @showuser.email%></li>
+			</ul>
+
+            <%if show?(current_user.friendship(@showuser),@detail.is_show_details) || @showuser.login == current_user.login%>
+			<h2>个人基本信息</h2>
+                <ul class="setting">
+					<li><label>性别：</label><%= @detail.sex%></li>
+					<li><label>所在城市：</label><%= @detail.city%></li>
+					<li><label>出生日期：</label><%= nice_date(@detail.birthday)  if @detail.birthday != nil%></li>
+	                <li><label>出发的机场：</label><%= @detail.airport%></li>
+                </ul>
+            <%else%>
+                <div class="hometip_green">个人基本信息被用户隐私设定为：<%if @detail.is_show_details == "anyone" %>任何人可见
+                       <%elsif @detail.is_show_details == "friend"%>好友可见
+                       <%elsif @detail.is_show_details == "no"%>不公开<%end%></div>
+            <%end%>
+			 <div class="clear"></div>
+			  
+             <%if show?(current_user.friendship(@showuser),@detail.is_show_ims) || @showuser.login == current_user.login%>
+              <h2>联系方式</h2>
+              <ul class="setting">
+                <li><label>手机：</label><%= @detail.mobile%></li>
+				<li><label>QQ：</label><%= @detail.qq%></li>
+				<li><label>MSN：</label><%= @detail.msn%></li>
+				<li><label>GTalk：</label><%= @detail.gtalk%></li>
+				<li><label>个人主页：</label><%= @detail.web%></li>
+				</ul>
+                <%else%>
+                 <div class="hometip_green">联系方式被用户隐私设定为：<%if @detail.is_show_ims == "anyone" %>任何人可见
+                       <%elsif @detail.is_show_ims == "friend"%>好友可见
+                       <%elsif @detail.is_show_ims == "no"%>不公开<%end%></div>
+                <%end%>
+               
+               <div class="clear"></div>
+                
+              <%if show?(current_user.friendship(@showuser),@detail.is_show_works) || @showuser.login == current_user.login%>
+              <h2>教育和工作经历</h2> 
+                 <%if @educations%>
+                 <h4>大学</h4>
+                 <ul class="setting">
+                  <%for educations in @educations%>
+                    <li><label>大学：</label><%= educations.name %><%= educations.year %>年入学</li>
+                    <li><label>专业及学历：</label><%= educations.professional %>,获得<%= educations.degree %>学位</li>
+                    <div class="line"></div>
+                   <%end%>
+                  </ul>
+                <%end%>
+            
+                <%if @schools%>
+                <h4>高中</h4>
+                 <ul class="setting">
+                  <%for schools in @schools%>
+                    <li><label>高中：</label><%= schools.name %>，于<%= schools.year %>年毕业。</li>
+                    <div class="line"></div>
+                   <%end%>
+                 </ul>
+               	<%end%>
+                
+                <%if @works%>
+                <h4>工作经历</h4>
+                 <ul class="setting">
+                  <%for works in @works%>
+                    <li><label>工作：</label><%= works.name %></li>
+                    <li><label>工作时间：</label><%= works.startyear %>年至<%= works.workspan ? '今' : "#{works.endyear}年" %></li>
+                    <li><label>职位：</label><%= works.position %></li>
+                    <li><label>描述：</label><%= works.description %></li>
+                    <div class="line"></div>
+                   <%end%>
+                  </ul>
+                <%end%>
+                <%else%>
+                <div class="hometip_green">教育和工作经历被用户隐私设定为：<%if @detail.is_show_works == "anyone" %>任何人可见
+                       <%elsif @detail.is_show_works == "friend"%>好友可见
+                       <%elsif @detail.is_show_works == "no"%>不公开<%end%></div>
+                <%end%>
+				<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		
+			<div id="new_message" style="display:none">
+				<%= render :partial => 'messages/form', :locals => {:hide_header => true} %>
+			</div>
+	
+			<div id="new_comment" style="display:none">
+				<%= render :partial => 'comments/form', :locals => {:hide_header => true} %>
+			</div>
+
+          <!--用户最新日记-->
+          <h2><span class="fontnormal plus"><%= link_to "查看#{@showuser.login}的全部日记" , user_entries_path(:user_id => @showuser.id)%></span>日记</h2>
+          <%for entry in @entries%>
+            <%= link_to entry.title, user_entry_path(:user_id => @showuser.id, :id => entry)  %>
+            <%= link_to "评论(#{entry.entry_comments_count})" , user_entry_path(:user_id => @showuser.id,:id => entry)%><br/>
+          <%end%>
+
+	      <div id="new_friend" style="display:none">
+	        <%= render :partial => 'friends/form' , :locals => {:hide_header => true} %>
+	      </div>
+
+        <%= render :partial => 'comments/profileform' %>
+        <div style="height:10px;"></div>
+	</div>
+	<div class="clear"></div>
+	</div>
+</div>
+				<script>jq(document).ready( function(){
+				  jq('div.showusers').corners();
+				  jq('div.showusersborder').corners();
+				  jq('.hometip').corners("3px");
+				  jq('.hometip_green').corners("3px");
+				  jq('.plus').corners("3px");
+				});</script>

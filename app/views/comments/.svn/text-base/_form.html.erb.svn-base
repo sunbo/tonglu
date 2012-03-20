@@ -1,0 +1,7 @@
+<fieldset>
+<% remote_form_for(:comment, :url => {:controller => 'comments',:action => 'create'}, :html => {} ) do %>
+	<input type="hidden" name="write_id" value="<%= @showuser.id %>" />
+	<div><label>内容：</label><%= text_area_tag 'cbody', nil, :size => "50x8"  %></div>
+	<div><label></label><%= submit_tag '发送',{:class=>"btn_blue"}%></div>
+<% end %>
+</fieldset>

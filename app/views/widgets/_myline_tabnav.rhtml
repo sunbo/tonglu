@@ -1,0 +1,25 @@
+<%
+render_tabnav :myline,:html => { :id=>'TabDate'} do
+
+  add_tab do |t|
+    t.named '我的行程列表'
+    t.links_to hash_for_lines_path
+    t.highlights_on hash_for_lines_path
+   end
+  add_tab do |t|
+    t.named '好友的行程'
+    t.links_to hash_for_friendlines_lines_path
+    t.highlights_on hash_for_friendlines_lines_path
+   end
+  add_tab do |t|
+    t.named '搜索行程'
+    t.links_to hash_for_search_lines_path
+    t.highlights_on hash_for_search_lines_path
+   end
+  add_tab do |t|
+    t.named '+ 添加行程'
+    t.links_to hash_for_new_line_path
+    t.highlights_on hash_for_new_line_path
+   end
+end
+%>

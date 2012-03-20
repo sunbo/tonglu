@@ -1,0 +1,115 @@
+about:
+  language: zh
+  author: Stephan Soller
+  comment:  English language file. You can use this file as a template to build a new one.
+  website: http://www.arkanis-development.de/
+  email: stephan.soller@helionweb.de
+  date: 2007-01-29
+
+active_record_messages:
+  inclusion: is not included in the list
+  exclusion: is reserved
+  invalid: is invalid
+  confirmation: doesn't match confirmation
+  accepted: must be accepted
+  empty: can't be empty
+  blank: can't be blank
+  too_long: is too long (maximum is %d characters)
+  too_short: is too short (minimum is %d characters)
+  wrong_length: is the wrong length (should be %d characters)
+  taken: has already been taken
+  not_a_number: is not a number
+  greater_than: must be greater than %d
+  greater_than_or_equal_to: must be greater than or equal to %d
+  equal_to: must be equal to %d
+  less_than: must be less than %d
+  less_than_or_equal_to: must be less than or equal to %d
+  odd: must be odd
+  even: must be even
+
+dates:
+  #monthnames: [一月 ,二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]
+  #daynames: [星期日, 星期一, 星期二, 星期三, 星期四, 星期五, 星期六]
+  #abbr_monthnames: [1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
+  #abbr_daynames: [日, 一 , 二 , 三 , 四, 五, 六]
+  monthnames: [1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
+  daynames: [日, 一 , 二 , 三 , 四, 五, 六]
+  abbr_monthnames: [1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
+  abbr_daynames: [日, 一 , 二 , 三 , 四, 五, 六]
+  date_formats:
+    attributes: '%m/%d/%y'
+    short: '%e %b'
+    long: '%B %e, %Y'
+  time_formats:
+    attributes: '%m/%d/%y %H:%M'
+    short: '%d %b %H:%M'
+    long: '%B %d, %Y %H:%M'
+  strftime_overwrites:
+    c: '%a %b %e %H:%M:%S %Y'
+    x: '%m/%d/%y'
+    X: '%H:%M:%S'
+
+numbers:
+  separator: '.'
+  delimiter: ','
+  precision: 3
+
+arrays:
+  to_sentence:
+    connector: and
+    skip_last_comma: false
+
+countries:
+  Germany: Germany
+
+helpers:
+  error_messages_for:
+    heading:
+      1: '1 error prohibited this %2$s from being saved'
+      n: '%d errors prohibited this %s from being saved'
+    description: 'There were problems with the following fields:'
+  number_to_currency:
+    precision: 2
+    unit: '$'
+    order: [unit, main, separator, fraction]
+  number_to_phone:
+    area_code: false
+    delimiter: '-'
+    extension: 
+    country_code: 
+  date_select:
+    order: [:year, :month, :day]
+  distance_of_time_in_words:
+    less than 5 seconds: less than 5 seconds
+    less than 10 seconds: less than 10 seconds
+    less than 20 seconds: less than 20 seconds
+    less than a minute: less than a minute
+    1 minute: 1 minute
+    half a minute: half a minute
+    n minutes: %i minutes
+    about 1 hour: about 1 hour
+    about n hours: about %i hours
+    1 day: 1 day
+    n days: %i days
+    about 1 month: about 1 month
+    n months: %i months
+    about 1 year: about 1 year
+    over n years: over %i years
+
+# Add your the model translations as descriped in the
+# localized_models_by_lang_file feature to the model section.
+# 
+# Example:
+# 
+# models:
+#   my_model:
+#     name: Localized model name
+#     attributes:
+#       name: Localized name
+#       description: Localized description
+models:
+
+# You can use the app section freely to localize you application with the
+# localized_application feature. The entries defined here are accesable by the
+# global method "l". See the RDoc for details.
+app:

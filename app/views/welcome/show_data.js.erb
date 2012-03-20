@@ -1,0 +1,21 @@
+<% d =  @date.year.to_s+'-'+@date.month.to_s+'-'+@date.day.to_s%>
+
+<h4 class="line"><%= d == Time.now.strftime("%Y-%m-%d") ? "今日" : d%>的安排</h4>
+
+<%if @lines%>
+<div class="event_title"><img src="/images/icons/d_t.png" /> 行程安排</div>
+<%= @lines %>
+<%end%>
+
+<%if @events%>
+<div class="event_title"><img src="/images/icons/d_c.png" /> 日程安排</div>
+<%= @events %>
+<%end%>
+
+<%if @posts%>
+<div class="event_title"><img src="/images/icons/d_d.png" /> 我的日记</div>
+<%= @posts %>
+<%end%>
+       <script>
+       	jq('div.event_title').corners("3px");
+       </script>

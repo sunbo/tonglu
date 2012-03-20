@@ -1,0 +1,24 @@
+<div id="comment_<%=  @comment.id%>">
+	<div class="masg_body">
+		<div class="sentuser">
+	    	<%= link_to "#{image_tag get_photo(@comment.write_id)}" ,:controller => 'profile',:action => 'showuser',:id =>@comment.write_id%>
+		</div>
+	    <div class="masgcont">
+	    	<ul>
+	    		<li class="fontbold line">
+	    		<%= link_to "#{User.find(@comment.write_id).login}" ,:controller => 'profile',:action => 'showuser',:id =>@comment.write_id%> 
+				<span class="state_date">于<%= time_ago_in_words(@comment.created_at) %>前写道</span></li>
+			</ul>
+	    	<%= @comment.content %>
+	    </div>
+	    <div class="clear"></div>
+	    	<script type="text/javascript">
+				  jq('div.masgcont').corners("5px");
+			</script>
+    </div>
+
+     <div id="new_reply_<%=  @comment.id%>" style="display:none">
+        <% @c =  @comment%>
+       <%= render :partial => 'comments/reply' , :locals => {:hide_header => true} %>
+      </div>
+</div>

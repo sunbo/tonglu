@@ -1,0 +1,40 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+	<%= tabnav :mydate %>
+	<div class="masg_title">
+		<span class="fontbold">
+			<% if @event.user.login == current_user.login %>
+			我
+			<% else %>
+				<%=h @event.user.login%>
+			<% end %>
+		</span>的日程管理
+	</div>
+	<div class="masg_body">
+		<div class="sentuser">
+			<div class="masgdate"><%= masg_date(@event.date) %></div>
+		</div>
+		<div class="masgcont">
+		<div class="username" style="background:#fff;padding:0 10px;">
+			<span class="floatright">
+			<%if current_user == @event.user%>
+				<%= link_to '<img src="/images/icons/application_form_edit.png" alt="编辑" title="编辑" />', edit_event_path(@event)%> &nbsp;
+				<%= link_to '<img src="/images/icons/delect.png" alt="删除" title="删除" />', @event, :confirm => '确定要删除吗？', :method => :delete %>
+			<%end%>			
+			</span>
+			<span class="fontbold"><%=h @event.title %></span>
+		</div>
+		<div style="margin:5px 0;padding:0 5px;">
+			<%=sanitize textilize(@event.description)%>
+		</div>
+		</div>
+		<div class="clear"></div>
+			<script type="text/javascript">
+				  jq('div.masgdate').corners("5px");
+				  jq('div.username').corners("5px");
+				  jq('div.masgcont').corners("5px");
+			</script>
+	</div>
+	<div class="clear"></div>
+</div>

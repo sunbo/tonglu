@@ -1,0 +1,52 @@
+<div id="content">
+	<% if error_messages_for:user  %>
+	  	<div align="center"><div id="error"><%= error_messages_for :user %></div></div>
+	<% end %>
+	<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+	<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>
+	
+	<div class="show_userinfo_div">
+		<%= image_tag get_photo_medium(@users.id) %>
+		<ul style="line-height:22px;">
+			<li class="name"><%=  @users.login%>邀请您加入伴我网，并邀请您成为他的好友。</li>
+			<li>1、伴我网是提供<span class="fonttitle fontblue">网友结伴相乘</span>的人际关系网站，请您用您的真实姓名注册，这样更容易被您早已相识的朋友找到！</li>
+			<li>2、伴我网可以以<span class="fonttitle fontblue">日历</span>的形式提交你的日程安排，你在本站内的所有操作都可以通过<span class="fonttitle fontblue">日历进行管理</span></li>
+			<li>3、直观的日程查询，方便你对<span class="fonttitle fontblue">你的日程</span>进行管理</li>
+			<li>4、你可以通过提交<span class="fonttitle fontblue">你的行程</span>及日程安排与你未来的朋友建立直接的联系！</li>
+			<li>5、你不仅可以搜索到站内所有会员允许让你搜索的行程信息，还可以直接<span class="fonttitle fontblue">一键搜索</span>与你<span class="fonttitle fontblue">相同行程</span>的会员信息！</li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reg_left">
+	<% form_for :user, :url => {:action => "regcreate"} do |f| -%>
+      <input type="hidden" name="reg_id" value="<%= @reg.user_id if @reg%>" />
+      <input type="hidden" name="reg_mailcode" value="<%= @reg.mailcode if @reg%>" />
+	<h2>新用户请注册并接受<%= @users.login%>的邀请</h2>
+	<fieldset>
+		<div><label for="login">用户名</label><%= f.text_field :login,{:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"} %></div>
+		<div class="fonttip"><label for="login_tip"></label>请输入您的真实姓名</div>
+		<div><label for="email">Email</label><%= f.text_field :email,{:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"} %></div>
+		<div class="fonttip"><label for="email_tip">&nbsp;</label>请输入您真实的Email地址,做为找回密码及登录使用的账户。没有Email，您可以免费注册<a href="http://mail.google.com" target="_blank">Gmail</a>使用</div>
+		<div><label for="password">密码</label><%= f.password_field :password,{:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"} %></div>
+		<div class="fonttip"><label for="password"_tip></label>密码在6-20字符之间</div>
+		<div><label for="password_confirmation">确认密码</label><%= f.password_field :password_confirmation,{:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"} %></div>
+		<div><label for="submit"></label><%= submit_tag '注册',{:class=>"btn_yellow"} %></div>
+	</fieldset>
+	<% end -%>
+	</div>
+	
+	<div class="reg_right">
+		<h2>老用户请登录并接受邀请</h2>
+	<% form_tag session_path do -%>
+	<fieldset>	
+				<div><label for="email">E-mail</label><%= text_field_tag('email',nil,:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login") %></div>
+				<div><label for="password">密码</label><%= password_field_tag('password',nil,:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login") %></div>
+				<div><label></label><%= submit_tag '登录',{:class=>"btn_blue"} %></div>
+				<div><label for="remember_me"></label><a href="/forgot_password">忘记密码</a> | <%= check_box_tag 'remember_me' %>在这台机器上自动登录</div>
+	</fieldset>
+	<% end -%>
+	</div>
+
+	<div class="clear"></div>
+</div>

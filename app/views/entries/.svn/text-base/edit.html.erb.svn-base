@@ -1,0 +1,18 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+		<% if error_messages_for :entry %>
+			<div id="error"><%= error_messages_for :entry %></div>
+		<%end%>
+        <%= tabnav :mydiary %>
+		<h2 class="post_edit">编辑我的日记</h2>
+		<%  form_for(:entry,:url => user_entry_path(:user_id => current_user,:id => @entry), :html => { :method => :put }) do |f| %>
+			<h4><%= f.label "标题" %></h4>
+			<%= f.text_field :title %>
+			<h4><%= f.label "内容" %></h4>
+			<%= fckeditor_textarea("entry", "body", :toolbarSet => 'Simple', :width => '85%', :height => '300px') %>
+			<div><%= f.submit "保存",{:class=>"btn_blue"} %></div>
+		<% end %>
+	</div>
+	<div class="clear"></div>
+</div>

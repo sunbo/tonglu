@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/project/!svn/ver/2468/sameroads/vendor/plugins/geokit-rails/test/fixtures
+END
+mock_organizations.yml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/project/!svn/ver/2468/sameroads/vendor/plugins/geokit-rails/test/fixtures/mock_organizations.yml
+END
+companies.yml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/project/!svn/ver/2468/sameroads/vendor/plugins/geokit-rails/test/fixtures/companies.yml
+END
+mock_addresses.yml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/project/!svn/ver/2468/sameroads/vendor/plugins/geokit-rails/test/fixtures/mock_addresses.yml
+END
+locations.yml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/project/!svn/ver/2468/sameroads/vendor/plugins/geokit-rails/test/fixtures/locations.yml
+END
+custom_locations.yml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/project/!svn/ver/2468/sameroads/vendor/plugins/geokit-rails/test/fixtures/custom_locations.yml
+END
+stores.yml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/project/!svn/ver/2468/sameroads/vendor/plugins/geokit-rails/test/fixtures/stores.yml
+END

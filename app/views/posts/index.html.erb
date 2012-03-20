@@ -1,0 +1,53 @@
+<h2>
+  <%= link_to '论坛首页', forums_path %> >
+  <%= link_to @topic.forum.name , forum_path(@topic.forum) %> >
+  <%= @topic.name %>
+</h2>
+
+<h1>主题：<%= @topic.name %></h1>
+
+<p>
+  <% if logged_in? %>
+    <%= link_to '发表帖子', new_forum_topic_post_path(:forum_id => @topic.forum,
+                                                      :topic_id => @topic) %>
+  <% else %>
+    <%= link_to '注册', signup_path %>或
+    <%= link_to '登录发表帖子', login_path %>
+  <% end %>
+</p>
+
+<%= will_paginate @posts %>
+
+<table class="subtable">
+  <tr>
+    <th>发帖人</th>
+    <th>帖子</th>
+  </tr>
+
+<% for post in @posts %>
+  <tr>
+    <td>
+      <%= link_to "#{image_tag get_photo(post.user.id)}" ,  :controller => 'profile',:action => 'showuser',:id => post.user.id%>
+      <small>
+        <%= link_to post.user.login, :controller => 'profile',:action => 'showuser',:id => post.user.id %>
+        发帖数(<%= post.user.posts_count %>)
+      </small>
+
+      <%if logged_in? && current_user.has_role?("moderator")%>
+         <br />
+          <small>
+              <%= link_to "编辑帖子", edit_forum_topic_post_path(:forum_id => @topic.forum, :id => post, :topic_id => @topic) %>
+              <%= link_to "删除帖子", forum_topic_path(:forum_id => @topic.forum, :id => post, :topic_id => @topic), :method => :delete,
+                        :confirm => "确定要删除吗？"%>
+          </small>
+      <%end%>
+    </td>
+    <td>
+        <%= textilize(post.body) %><br />
+    <%= nice_time(post.created_at) %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @posts %>

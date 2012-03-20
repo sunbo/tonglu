@@ -1,0 +1,9 @@
+<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>
+
+
+<%= @line_detail.title %><% if @line_detail.is_private %>(private)<%end%><br/>
+<small><%= nice_date(@line_detail.startdate) %>-<%= nice_date(@line_detail.enddate) %></small><br/>
+
+
+<%= link_to '返回', line_path(:user => current_user,:id => @id) %>

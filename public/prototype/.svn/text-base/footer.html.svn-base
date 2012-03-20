@@ -1,0 +1,51 @@
+<HTML><HEAD><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="imagetoolbar" content="no"><link href="Resources/axurerppage.css" type="text/css" rel="stylesheet"></HEAD><BODY>
+<script type="text/javascript">
+function InitializeSubmenu(submenucontainerid, tablecellroid, tablecellid, fname) { 
+var s = "";
+s = s + "function " + fname + "() { ";
+s = s + "document.getElementById(submenucontainerid).style.visibility='';";
+s = s + "BringToFront(submenucontainerid);";
+s = s + "}";
+if ((index = navigator.userAgent.indexOf("MSIE")) >= 0)
+s = s + "document.getElementById('" + tablecellid + "').attachEvent(\"onmouseover\", " + fname + ");";
+else
+s = s + "document.getElementById('" + tablecellid + "').addEventListener(\"mouseover\", " + fname + ", true);";
+s = s + "document.getElementById(tablecellroid).onclick = function() {";
+s = s + "if( document.createEvent ) {";
+s = s + "var evObj = document.createEvent('MouseEvents');";
+s = s + "evObj.initEvent( 'click', true, false );";
+s = s + "document.getElementById(tablecellid).dispatchEvent(evObj);";
+s = s + "} else if( document.createEventObject ) {";
+s = s + "document.getElementById(tablecellid).fireEvent('onclick');";
+s = s + "}";
+s = s + "}";
+eval(s);
+}
+</script>
+
+<DIV id=ou0 style="position:absolute; left:5px; top:5px; width:766px; height:76px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:774px; height:84px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='footer_files/u0.png',sizingMethod='scale');
+"><img style="width:774px; height:84px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="footer_files/u0.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u0container style="position:absolute; left:5px; top:5px; width:766px; height:76px;; overflow:visible;">
+
+<DIV id=u1 style="position:absolute; left:2px; top:29.5px; width:761px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u1_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u0 src="Resources/transparent.gif" style="position:absolute; left:5px; top:5px; width:765px; height:75px"  >
+
+<DIV id=u2 style="position:absolute; left:481px; top:13px; width:60px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u2_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>关于我们</u></span></DIV></DIV>
+<DIV id=u3 style="position:absolute; left:545px; top:13px; width:60px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u3_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>服务条款</u></span></DIV></DIV>
+<DIV id=u4 style="position:absolute; left:609px; top:13px; width:60px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u4_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>隐私政策</u></span></DIV></DIV>
+<DIV id=u5 style="position:absolute; left:675px; top:13px; width:70px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u5_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>我们的团队</u></span></DIV></DIV>
+<DIV id=u6 style="position:absolute; left:349px; top:38px; width:390px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u6_rtf><span style=" color:#000000; font-size:13px;">? 2007 JutOline Co., Ltd. ? All rights reserved by SameRoads.com</span></DIV></DIV><SCRIPT src="Resources/axurerp_pagescript.js"></SCRIPT>
+<SCRIPT src="footer_files/axurerp_pagespecificscript.js"></SCRIPT></BODY></HTML>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/project/!svn/ver/2318/sameroads/app/views/friends
+END
+invite.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/project/!svn/ver/2318/sameroads/app/views/friends/invite.html.erb
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/project/!svn/ver/2180/sameroads/app/views/friends/search.html.erb
+END
+reg.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/project/!svn/ver/2177/sameroads/app/views/friends/reg.html.erb
+END
+_more.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/project/!svn/ver/2305/sameroads/app/views/friends/_more.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/project/!svn/ver/2121/sameroads/app/views/friends/_form.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/project/!svn/ver/2317/sameroads/app/views/friends/index.html.erb
+END

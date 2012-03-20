@@ -1,0 +1,16 @@
+ <div id="content">
+ 	<div id="colright">
+	 <h2>所有用户</h2>
+	 <table class="subtable">
+	   <tr>
+	     <th>用户名</th>
+	     <th>Email</th>
+	     <th>是否被锁定</th>
+	     <th>权限</th>
+	   </tr>
+	     <%= render :partial => 'user', :collection => @users %>
+	 </table>
+ 	</div>
+ 	<div class="clear"></div>
+ </div>
+

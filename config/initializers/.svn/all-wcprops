@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/project/!svn/ver/2464/sameroads/config/initializers
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/project/!svn/ver/1705/sameroads/config/initializers/mime_types.rb
+END
+geokit_config.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/project/!svn/ver/2464/sameroads/config/initializers/geokit_config.rb
+END
+mail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/project/!svn/ver/2279/sameroads/config/initializers/mail.rb
+END
+exception_notifier.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/project/!svn/ver/2192/sameroads/config/initializers/exception_notifier.rb
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/project/!svn/ver/1705/sameroads/config/initializers/inflections.rb
+END
+simple_localization.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/project/!svn/ver/1864/sameroads/config/initializers/simple_localization.rb
+END
+new_rails_defaults.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/project/!svn/ver/1705/sameroads/config/initializers/new_rails_defaults.rb
+END

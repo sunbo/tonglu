@@ -1,0 +1,53 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+		<div align="center">
+			<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+			<% if flash[:error] %><div id="error"><%= flash[:error] %></div><% end %>
+		</div>
+		<%  if show_admin_menu %><%= tabnav :mydiary %><% end %>
+		<h3 class="fonttitle">
+			<%= @entry.title %>
+		</h3>
+		<h4 class="fontnormal post_date">
+			<%  if show_admin_menu %>
+				<span class="floatright">
+		    		<%= link_to '<img src="/images/icons/application_form_edit.png" alt="编辑" />',edit_user_entry_path(:user_id => current_user,:id => @entry) %>
+		    		<%= link_to '<img src="/images/icons/delect.png" alt="删除" />',user_entry_path(:user_id => current_user,:id => @entry), :confirm => '确定要删除吗？' , :method => :delete%>
+				</span>
+			<% end %>写于<%= nice_time(@entry.created_at) %></h4>
+		<div class="diary_Box"><%= textilize(auto_link(@entry.body))%></div>
+
+
+        <!--评论-->
+        <div id="comment">
+        <p>评论</p>
+          <% @entry.entry_comments.each do |comment| %>
+            写于<%= nice_time(comment.created_at) %>
+            <%= comment.user.login %>说<br/>
+            <%  if show_admin_menu %>
+              <%= link_to "删除这条评论", user_entry_entry_comment_path(:user_id => @entry.user,
+                                                                :entry_id => @entry.id,
+                                                               :id => comment.id),
+                                                              :confirm => "确定要删除吗？",
+                                                                :method => :delete -%>
+            <% end %>
+            <%=h comment.body %><br/>
+          <% end -%>
+        </div>
+         <p>添加评论</p>
+            <% if error_messages_for :entry_comment %>
+                <div id="error"><%= error_messages_for :entry_comment %></div>
+            <%end%>
+          <% remote_form_for(:entry_comment, :url => {:controller => 'entry_comments',:action => 'create',:user_id => @entry.user, :entry_id => @entry}, :html => {} ) do  %>
+                      <%= text_area_tag 'body', nil, :size => "40x5"%><br/>
+                      <%= submit_tag '提交' %>
+          <% end %>
+
+
+		<h4 class="right fontnormal">
+		    <%= link_to '返回全部日记列表',user_entries_path(:user_id => @user) %>
+		</h4>
+	</div>
+	<div class="clear"></div>
+</div>

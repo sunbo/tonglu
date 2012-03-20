@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib
+END
+float.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/float.rb
+END
+array.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/array.rb
+END
+active_mailer_base.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/active_mailer_base.rb
+END
+big_decimal.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/big_decimal.rb
+END
+nil.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/nil.rb
+END
+string.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/string.rb
+END
+date.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/date.rb
+END
+time.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/time.rb
+END
+numeric.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/numeric.rb
+END
+action_view_helpers_url_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/action_view_helpers_url_helper.rb
+END
+active_record_base.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/active_record_base.rb
+END
+active_record_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/active_record_helper.rb
+END
+text_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/text_helper.rb
+END
+active_record_errors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/active_record_errors.rb
+END
+less_monkey_patching.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/less_monkey_patching.rb
+END
+less_dates.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/less_dates.rb
+END
+object.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project/!svn/ver/1946/sameroads/vendor/plugins/less_monkey_patching/lib/object.rb
+END

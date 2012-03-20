@@ -1,0 +1,13 @@
+<div id="content">
+	<div style="margin:0 auto;padding:0 auto;width:50%;">
+	<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+	<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>
+	
+	<h2>E-mail找回密码</h2>
+	<% form_tag('/passwords/create') do %>
+		<p class="center masg_tip">输入您注册时填写的邮箱，您会收到密码重置邮件</p>
+		<p class="center"><%= text_field_tag :email, "", :size => 50,:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login" %></p>
+		<p class="center"><%= submit_tag '发送密码',{:class=>"btn_yellow"} %></p>
+	<% end %>
+	</div>
+</div>

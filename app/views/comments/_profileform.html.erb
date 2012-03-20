@@ -1,0 +1,49 @@
+<h2><% if @showuser.id != current_user.id %>	
+	<span class="fontnormal plus"><%= inline_tb_link '留言', "new_comment", {:title => "给<strong>#{h @showuser.login}</strong>留言"}, {:height => 230, :width => 430} %></span>
+	<% end %>
+留言</h2>
+<div id="comment_list">
+<% if !@comments.empty? %>
+    <% for comments in @comments %>
+    <div class="masg_body">
+    	<div class="sentuser">
+	      <%= link_to "#{image_tag get_photo(comments.write_id)}" ,:controller => 'profile',:action => 'showuser',:id =>comments.write_id%>
+      	</div>
+      	<div class="masgcont">
+      	  <span class="floatright"><% if @showuser.id == current_user.id %><%= inline_tb_link '回复', "new_reply_#{comments.id}", {:title => "回复:<strong>#{h truncate(comments.content,25)}</strong>"}, {:height => 230, :width => 430} %><% end %></span>
+	      <ul>
+	      	<li class="fontbold line"><%= link_to "#{User.find(comments.write_id).login}" ,:controller => 'profile',:action => 'showuser',:id =>comments.write_id%>
+	      	<span class="state_date">于<%= time_ago_in_words(comments.created_at) %>前留言</span></li>
+	      </ul>
+	      <%= comments.content %>
+	      <div id="new_reply_<%=  comments.id%>" style="display:none">
+	        <%@c  = comments%>
+	       <%= render :partial => 'comments/reply' , :locals => {:hide_header => true} %>
+	      </div>
+	      <div id ="comment_reply_<%=  comments.id%>">
+	          <%if comments.comment_replies.recent != nil%>
+	            <% for c in comments.comment_replies.recent%>
+	            <div class="reply_body">
+	              <!-- %= link_to "#{image_tag get_photo(c.user_id)}" ,:controller => 'profile',:action => 'showuser',:id =>c.user_id%> -->
+		          <%= link_to "#{User.find(c.user_id).login}" ,:controller => 'profile',:action => 'showuser',:id =>c.user_id%>
+		        <span class="state_date">于<%= time_ago_in_words(c.created_at) %>前回复－</span><%= c.content %>
+	            </div>
+	            <%end%>
+	          <%end%>
+	      </div>
+      	</div>
+		<div class="clear"></div>
+	
+
+      </div>
+      <% end %>
+<% elsif request.path_parameters['controller'] == 'home' %>
+	<div class="hometip">
+		这里应该是网站用户或你的好友给你留下消息的地方？<br />还没人光顾？没有关系，<span class="fontbold"><a href="/friends/invite">邀请朋友来吧</a></span>，他们会在这里给跟你交流的。
+	</div>
+<% end %>
+			<script type="text/javascript">
+				  jq('div.reply_body').corners("3px");
+				  jq('div.masgcont').corners("3px");
+			</script>
+</div>

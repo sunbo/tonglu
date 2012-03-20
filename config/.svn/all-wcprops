@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/project/!svn/ver/2476/sameroads/config
+END
+gmaps_api_key.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/project/!svn/ver/2464/sameroads/config/gmaps_api_key.yml
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/project/!svn/ver/2476/sameroads/config/routes.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/project/!svn/ver/2392/sameroads/config/database.yml
+END
+deploy.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/project/!svn/ver/2391/sameroads/config/deploy.rb
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/project/!svn/ver/2464/sameroads/config/environment.rb
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/project/!svn/ver/1705/sameroads/config/boot.rb
+END

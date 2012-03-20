@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/project/!svn/ver/2463/sameroads/app/views/layouts
+END
+application.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/project/!svn/ver/2463/sameroads/app/views/layouts/application.html.erb
+END
+_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/project/!svn/ver/2325/sameroads/app/views/layouts/_header.html.erb
+END
+_footer.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/project/!svn/ver/2394/sameroads/app/views/layouts/_footer.html.erb
+END
+_header_login.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/project/!svn/ver/2382/sameroads/app/views/layouts/_header_login.html.erb
+END

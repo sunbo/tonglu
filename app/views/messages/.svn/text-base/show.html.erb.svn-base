@@ -1,0 +1,66 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+        <%= tabnav :mymessages %>
+		<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+		<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>
+		
+		<div class="masg_title">
+
+			<% if @message.smstype == '0' && @message.receive_at != nil %>
+				<% if @message.user_id == current_user.id %>
+					<span class="fontname fontbold">你</span>与<span class="fontname fontbold"><%= @receiver.user_name %></span>之间的对话
+				<% else %>
+					<span class="fontname fontbold"><%= @message.user_name %></span>与<span class="fontname fontbold">你</span>之间的对话
+				<% end %>
+			<% else %>
+				<% if !current_user.is_friends_with?(User.find(@message.user_id)) && current_user.login!= @message.user_name%>
+					<%=@message.user_name %>申请将您加为好友？<br />
+			        	<% form_tag( :controller => "friends",:action => "agree") do  %>
+			            <input type="hidden" name="user_id" value="<%= @message.user_id %>" />
+			            <input type="hidden" name="user_name" value="<%= @message.user_name %>" />
+			            <%= submit_tag '同意加为好友',:class=>"btn_blue"%><%= submit_tag '拒绝',:class=>"btn_yellow"%>
+			            <% end %>
+	             <% else %>
+	             		<span class="fontname fontbold">你</span>与<span class="fontname fontbold">好友<%=@message.user_name %></span>之间的对话
+	             <% end %>
+	             <% if @message.receive_at == nil  %>
+	             	<span class="fontname fontbold">你</span>发送给<span class="fontname fontbold"><%= User.find(@message.receiver_id).login %></span>的消息，对方未回复
+	             <% end %>
+             <%end%>
+
+		</div>
+		
+	<div id="message_to_message">
+		<%for all in @all_message%>
+			<div <% if all.user_id == current_user.id %>class="masg_body"<% else %>class="receiver_body"<% end %>>
+				<div class="sentuser">
+                  <%= link_to "#{image_tag get_photo(all.user_id)}" ,  :controller => 'profile',:action => 'showuser',:id =>all.user_id%>
+				</div>
+            	<a name="message_<%= all.id%>" href=""></a>
+				<div id="message_<%= all.id%>" class="masgcont">
+					<div class="username" style="background:#fff;padding:0 0 0 10px;">
+						<% if all.user_id != current_user.id %>
+						<span class="fontbold"><%= link_to "#{all.user_name}",:controller => 'profile',:action =>'showuser',:id => all.user_id %></span>
+						<% else %>
+						<span class="fontbold"><%= link_to "我",:controller => 'profile',:action =>'showuser',:id => all.user_id %></span>
+						<% end %>	
+					 	<span class="state_date"><%= nice_time(@message.created_at) %>提交</span>
+					</div>
+					<div style="margin:5px 0;padding:5px;"><%= textilize(all.content)%></div>
+				</div>
+			<script type="text/javascript">
+				  jq('div.username').corners("5px");
+				  jq('div.masgcont').corners("5px");
+			</script>
+				<div class="clear"></div>
+			</div>
+		<%end%>
+	</div>
+	<div id="reply_form"><%= render :partial => 'messages/reply' %></div>
+</div>
+<div class="clear"></div>
+			<script type="text/javascript">
+				  jq('div.masg_title').corners("5px");
+			</script>
+</div>

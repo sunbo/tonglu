@@ -1,0 +1,139 @@
+<HTML><HEAD><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="imagetoolbar" content="no"><link href="Resources/axurerppage.css" type="text/css" rel="stylesheet"></HEAD><BODY>
+<script type="text/javascript">
+function InitializeSubmenu(submenucontainerid, tablecellroid, tablecellid, fname) { 
+var s = "";
+s = s + "function " + fname + "() { ";
+s = s + "document.getElementById(submenucontainerid).style.visibility='';";
+s = s + "BringToFront(submenucontainerid);";
+s = s + "}";
+if ((index = navigator.userAgent.indexOf("MSIE")) >= 0)
+s = s + "document.getElementById('" + tablecellid + "').attachEvent(\"onmouseover\", " + fname + ");";
+else
+s = s + "document.getElementById('" + tablecellid + "').addEventListener(\"mouseover\", " + fname + ", true);";
+s = s + "document.getElementById(tablecellroid).onclick = function() {";
+s = s + "if( document.createEvent ) {";
+s = s + "var evObj = document.createEvent('MouseEvents');";
+s = s + "evObj.initEvent( 'click', true, false );";
+s = s + "document.getElementById(tablecellid).dispatchEvent(evObj);";
+s = s + "} else if( document.createEventObject ) {";
+s = s + "document.getElementById(tablecellid).fireEvent('onclick');";
+s = s + "}";
+s = s + "}";
+eval(s);
+}
+</script>
+
+<DIV id=ou0 style="position:absolute; left:10px; top:130px; width:761px; height:181px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:769px; height:189px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='quickreg2_files/u0.png',sizingMethod='scale');
+"><img style="width:769px; height:189px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="quickreg2_files/u0.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u0container style="position:absolute; left:10px; top:130px; width:761px; height:181px;; overflow:visible;">
+
+<DIV id=u1 style="position:absolute; left:2px; top:82px; width:756px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u1_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u0 src="Resources/transparent.gif" style="position:absolute; left:10px; top:130px; width:760px; height:180px"  >
+
+<SELECT id=u2  style="position:absolute; left:118px; top:203px; width:175px; height:22px; ; background-color:#FFFFFF; text-align: left ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" >
+</SELECT>
+
+<DIV id=u3 style="position:absolute; left:13px; top:201px; width:100px; height:25px; ; ; text-align: right ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u3_rtf><div style="text-align:right"><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#000000; font-size:13px;">密码找回问题</span></div></DIV></DIV>
+<INPUT id=u4  type=text value="" style="position:absolute; left:118px; top:233px; width:175px; height:25px; ; background-color:#FFFFFF; text-align: left ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   >
+
+<DIV id=u5 style="position:absolute; left:13px; top:233px; width:100px; height:25px; ; ; text-align: right ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u5_rtf><div style="text-align:right"><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#000000; font-size:13px;">找回问题答案</span></div></DIV></DIV>
+<INPUT id=u6  type=submit value="注册" style="position:absolute; left:119px; top:269px; width:60px; height:25px; ; ; text-align: center ; font-family:'微软雅黑'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" >
+
+<DIV id=u7 style="position:absolute; left:300px; top:200px; width:110px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u7_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#336699; font-size:13px;">请选择您的问题</span></DIV></DIV>
+<DIV id=u8 style="position:absolute; left:300px; top:230px; width:250px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u8_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#336699; font-size:13px;">请输入您问题的答案，以便密码找回时使用</span></DIV></DIV>
+<DIV id=u9 style="position:absolute; left:13px; top:170px; width:100px; height:25px; ; ; text-align: right ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u9_rtf><div style="text-align:right"><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#000000; font-size:13px;">性别</span></div></DIV></DIV>
+<DIV id=u10container style="position:absolute; left:123px; top:175px; width:40px; height:17px; ; ; text-align: left " >
+<DIV id=u11 style="position:absolute; left:16px; top:0px; width:22px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u11_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">男</span></DIV></DIV>
+</DIV>
+<DIV style="position:absolute; left:123px; top:175px; width:40px; height:17px; ; ; text-align: left " ><INPUT id=u10 name="u10" style="position:absolute; left:-3px; top:-2px;" type=radio value=radio checked ></DIV>
+<DIV id=u12container style="position:absolute; left:173px; top:175px; width:40px; height:17px; ; ; text-align: left " >
+<DIV id=u13 style="position:absolute; left:16px; top:0px; width:22px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u13_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">女</span></DIV></DIV>
+</DIV>
+<DIV style="position:absolute; left:173px; top:175px; width:40px; height:17px; ; ; text-align: left " ><INPUT id=u12 name="u12" style="position:absolute; left:-3px; top:-2px;" type=radio value=radio  ></DIV>
+<DIV id=u14container style="position:absolute; left:193px; top:277px; width:180px; height:20px; ; ; text-align: left " >
+<DIV id=u15 style="position:absolute; left:16px; top:0px; width:162px; height:20px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u15_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#000000; font-size:11px;">同意同路人网站服务条款</span></DIV></DIV>
+</DIV>
+<DIV style="position:absolute; left:193px; top:277px; width:180px; height:20px; ; ; text-align: left " ><INPUT id=u14 style="position:absolute; left:-3px; top:-2px;" type=checkbox value=checkbox checked ></DIV>
+<span style="position:absolute; left:20px; top:164px; width:713px; height:5px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='quickreg2_files/u16.png',sizingMethod='scale');
+"><img style="width:713px; height:5px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="quickreg2_files/u16.png" border="0" alt=""></span>
+
+<IMG id=u16 src="Resources/transparent.gif" style="position:absolute; left:20px; top:163.5px; width:710px; height:2px">
+
+<DIV id=u17 style="position:absolute; left:20px; top:140px; width:310px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u17_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#336699; font-size:13px;"><b>您出发的城市：北京&nbsp; ｜&nbsp; 您选择的机场：首都机场 </b></span></DIV></DIV>
+<DIV id=u18 style="position:absolute; left:10px; top:100px; width:150px; height:28px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u18_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#000000; font-size:16px;"><b>新用户快速注册</b></span></DIV></DIV>
+<DIV id=ou19 style="position:absolute; left:10px; top:10px; width:766px; height:86px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:774px; height:94px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='quickreg2_files/u19.png',sizingMethod='scale');
+"><img style="width:774px; height:94px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="quickreg2_files/u19.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u19container style="position:absolute; left:10px; top:10px; width:766px; height:86px;; overflow:visible;">
+
+<DIV id=u20 style="position:absolute; left:2px; top:34.5px; width:761px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u20_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u19 src="Resources/transparent.gif" style="position:absolute; left:10px; top:10px; width:765px; height:85px"  >
+
+<span style="position:absolute; left:15px; top:15px; width:330px; height:80px">
+<IMG id=ou21 src="quickreg2_files/u21.gif" style="position:absolute;left:0px;top:0px;width:330px;height:80px">
+</span>
+<IMG id=u21 src="Resources/transparent.gif" style="position:absolute; left:15px; top:15px; width:330px; height:80px"   >
+
+<DIV id=u22 style="position:absolute; left:505px; top:15px; width:30px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u22_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>首页</u></span></DIV></DIV>
+<DIV id=u23 style="position:absolute; left:545px; top:15px; width:30px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u23_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>注册</u></span></DIV></DIV>
+<DIV id=u24 style="position:absolute; left:585px; top:15px; width:30px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u24_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>登录</u></span></DIV></DIV>
+<DIV id=u25 style="position:absolute; left:625px; top:15px; width:60px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u25_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>关于我们</u></span></DIV></DIV>
+<DIV id=u26 style="position:absolute; left:685px; top:15px; width:60px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u26_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>联系我们</u></span></DIV></DIV>
+<DIV id=ou27 style="position:absolute; left:10px; top:320px; width:766px; height:76px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:774px; height:84px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='quickreg2_files/u27.png',sizingMethod='scale');
+"><img style="width:774px; height:84px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="quickreg2_files/u27.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u27container style="position:absolute; left:10px; top:320px; width:766px; height:76px;; overflow:visible;">
+
+<DIV id=u28 style="position:absolute; left:2px; top:29.5px; width:761px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u28_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u27 src="Resources/transparent.gif" style="position:absolute; left:10px; top:320px; width:765px; height:75px"  >
+
+<DIV id=u29 style="position:absolute; left:486px; top:328px; width:60px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u29_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>关于我们</u></span></DIV></DIV>
+<DIV id=u30 style="position:absolute; left:550px; top:328px; width:60px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u30_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>服务条款</u></span></DIV></DIV>
+<DIV id=u31 style="position:absolute; left:614px; top:328px; width:60px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u31_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>隐私政策</u></span></DIV></DIV>
+<DIV id=u32 style="position:absolute; left:680px; top:328px; width:70px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u32_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>我们的团队</u></span></DIV></DIV>
+<DIV id=u33 style="position:absolute; left:354px; top:353px; width:390px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u33_rtf><span style=" color:#000000; font-size:13px;">? 2007 JutOline Co., Ltd. ? All rights reserved by SameRoads.com</span></DIV></DIV><SCRIPT src="Resources/axurerp_pagescript.js"></SCRIPT>
+<SCRIPT src="quickreg2_files/axurerp_pagespecificscript.js"></SCRIPT></BODY></HTML>

@@ -1,0 +1,50 @@
+<div id="content">
+<%= render :partial => 'slidbar' %>
+	<div id="colright">
+	<%= tabnav :userdetail %>
+<% tableize @userlist,:generate_css => 'true', :cols => 2 do |userlist| %>
+<%= userlist.login %><br/>
+
+<%=  show_detail_for userlist,'查看详细资料'%>
+<% tooltip  image_tag('/images/widgets/tooltip_image.gif') do%>
+<p>点击可以查看具体资料</p>
+<%  end %>
+<% detail_for userlist do%>
+email:<%=  userlist.email%><br/>
+<%=  hide_detail_for userlist,'隐藏详细资料'%>
+<%end%><br/>
+
+<%= link_to '编辑',  :action => '' %>
+<%= link_to '删除',  :action => '' %>
+<%= tooltip image_tag('/images/widgets/tooltip_image.gif'), :partial => 'a'%>
+
+<%  end %>
+
+
+
+ 	<% if error_messages_for :user %>
+
+		<div align="center">
+			<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+			<% if flash[:error] %><div id="error"><%= flash[:error] %></div><% end %>
+		</div>
+		<ul id="TabList">
+			<li class="TabAction"><%= link_to '注册信息', edit_user_path(current_user) %></li>
+			<li class="TabNormal"><a href="">个人资料</a></li>
+			<li class="TabNormal"><%= link_to '密码修改', change_password_path %></li>
+			<li class="TabNormal"><a href="">隐私设置</a></li>
+			<div class="clear"></div>
+		</ul>
+ 	<% if error_messages_for :user %>
+		<div id="error"><%= error_messages_for :user %></div>
+	<% end %>
+		<fieldset class="login">
+		<% form_for :user, :url => user_url(@user), :html => { :method => :put } do |f| %>
+			<div><label>用户名</label><%= f.text_field :login, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"}%></div> 
+			<div><label>Email</label><%= f.text_field :email, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"} %></div>
+			<div><label>&nbsp;</label><%= submit_tag '确定',{:class=>"btn_reg"} %></div>
+		<% end %>
+		</fieldset>
+	</div>
+	<div class="clear"></div>
+</div>

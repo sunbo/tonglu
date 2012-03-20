@@ -1,0 +1,48 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+<div align="center">
+	<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+	<% if flash[:error] %><div id="error"><%= flash[:error] %></div><% end %>
+</div>
+<h2>出行讨论区</h2>
+
+<%if logged_in? && current_user.has_role?("moderator")%>
+      <%= link_to "建立讨论区", new_forum_path %>
+<%end%>
+
+<table class="infobox">
+  <thead>
+  <tr>
+    <th>讨论区</th>
+    <th>主题数</th>
+  </tr>
+  </thead>
+
+<% for forum in @forums %>
+  <tr>
+    <td>
+      <div>
+        <%= link_to forum.name, forum_topics_path(:forum_id => forum)  %>
+      </div>
+
+      <div>
+        <%= forum.description %>
+      </div>
+
+        <%if logged_in? && current_user.has_role?("moderator")%>
+          <br />
+          <small>
+              <%= link_to "编辑讨论区", edit_forum_path(forum) %>
+              <%= link_to "删除讨论区", forum_path(forum), :method => :delete,
+                        :confirm => "确定要删除吗？删除时将会删除该讨论区下的所有主题和回复"%>
+          </small>
+        <%end%>
+    </td>
+    <td><%= forum.topics_count %></td>
+  </tr>
+<% end %>
+</table>
+	</div>
+	<div class="clear"></div>
+</div>

@@ -1,0 +1,35 @@
+<script language=javascript>
+<!--
+  function is_show()
+    {
+      var doc = document.is_show_details;
+      doc.action="/profile/look";
+      doc.submit();
+    }
+  function ims_show()
+    {
+      var doc = document.is_show_ims;
+      doc.action="/profile/look";
+      doc.submit();
+    }
+   function works_show()
+    {
+      var doc = document.is_show_works;
+      doc.action="/profile/look";
+      doc.submit();
+    }
+-->
+</script>
+<div id="content">
+<%= render :partial=>'slidbar' %>
+	<div id="colright">
+        <% if error_messages_for :detail %>
+		<div id="error"><%= error_messages_for :detail %></div>
+        <% end %>
+		<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+		<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>
+		<%= tabnav :userdetail %>
+		<%= render :partial=>'form' %>
+	</div>
+	<div class="clear"></div>
+</div>

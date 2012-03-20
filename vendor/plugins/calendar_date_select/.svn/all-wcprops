@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/project/!svn/ver/2042/sameroads/vendor/plugins/calendar_date_select
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/project/!svn/ver/2040/sameroads/vendor/plugins/calendar_date_select/CHANGELOG
+END
+calendar_date_select.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/project/!svn/ver/2040/sameroads/vendor/plugins/calendar_date_select/calendar_date_select.gemspec
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/project/!svn/ver/2040/sameroads/vendor/plugins/calendar_date_select/MIT-LICENSE
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/project/!svn/ver/2040/sameroads/vendor/plugins/calendar_date_select/init.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/project/!svn/ver/2040/sameroads/vendor/plugins/calendar_date_select/README
+END

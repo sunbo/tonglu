@@ -1,0 +1,21 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+		<%= tabnav :mydate %>
+		<% if error_messages_for :event %>
+			<div id="error"><%= error_messages_for :event %></div>
+		<% end %>
+		<% form_for @event do |f| %>
+			<div class="box" id="box-events-new">
+				<fieldset class="login">
+					<div class="calendar_select"><%#= f.calendar_date_select :date, :embedded => true %></div>
+					<div><label for="event_title">名称</label><%= f.text_field :title, :class => 'text-field' %></div>
+					<div><label for="event_date">时间</label><%= f.datetime_select :date %></div>
+					<div><label for="event_description">日程内容</label><%= f.text_area :description, :rows => '10' , :class => 'text-field'%></div>
+					<div><label></label><%= submit_tag "创建", :disable_with => "创建",:class=>"btn_blue" %>&nbsp;<%= link_to '返回', events_path %></div>
+				</fieldset>
+		<% end %>
+	</div>
+	<div class="clear"></div>
+</div>
+</div>

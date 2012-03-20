@@ -1,0 +1,52 @@
+<HTML><HEAD><meta http-equiv="content-type" content="text/html; charset=utf-8"><link href="Resources/axurerpprototype.css" type="text/css" rel="stylesheet">
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function ShowNotes(id)
+{
+	switch(id) 
+	{
+case "p57275c07c9574bb38b003484b6e92d66":
+document.body.innerHTML = "<SPAN class='notespagename'>Sameroads.com</SPAN><BR><BR><SPAN class='notescontent'></SPAN>";
+break;
+case "pb03502ad472a404593906307e7acdea1":
+document.body.innerHTML = "<SPAN class='notespagename'>users</SPAN><BR><BR><SPAN class='notescontent'></SPAN>";
+break;
+case "pab358ccbb03b4e21b85a32f07c1558ed":
+document.body.innerHTML = "<SPAN class='notespagename'>new</SPAN><BR><BR><SPAN class='notescontent'></SPAN>";
+break;
+case "p3305ff9b9d314cb59cab7218c70e4313":
+document.body.innerHTML = "<SPAN class='notespagename'>index</SPAN><BR><BR><SPAN class='notescontent'></SPAN>";
+break;
+case "p22ca4efdac66476389e155d7ca343c18":
+document.body.innerHTML = "<SPAN class='notespagename'>regdone</SPAN><BR><BR><SPAN class='notescontent'></SPAN>";
+break;
+case "p968e3ba3b36f48a3b03145c9fbafa8c5":
+document.body.innerHTML = "<SPAN class='notespagename'>activeagain</SPAN><BR><BR><SPAN class='notescontent'></SPAN>";
+break;
+case "p97219940f7fb493caf72a29579f20881":
+document.body.innerHTML = "<SPAN class='notespagename'>fogetpassword</SPAN><BR><BR><SPAN class='notescontent'></SPAN>";
+break;
+case "p902929681fd84731aea9ce0c8ded3e46":
+document.body.innerHTML = "<SPAN class='notespagename'>sessions</SPAN><BR><BR><SPAN class='notescontent'></SPAN>";
+break;
+case "p4a32da14a67a45adaa6325eb00219268":
+document.body.innerHTML = "<SPAN class='notespagename'>new</SPAN><BR><BR><SPAN class='notescontent'></SPAN>";
+break;
+case "pd8ecf91c114c414280ec6a4d7eb71420":
+document.body.innerHTML = "<SPAN class='notespagename'>welcome</SPAN><BR><BR><SPAN class='notescontent'></SPAN>";
+break;
+case "p21b2f543083b4903b2fd5a12226f134e":
+document.body.innerHTML = "<SPAN class='notespagename'>index</SPAN><BR><BR><SPAN class='notescontent'></SPAN>";
+break;
+case "pa400401c8d58464893bd9b720a918131":
+document.body.innerHTML = "<SPAN class='notespagename'>quickreg</SPAN><BR><BR><SPAN class='notescontent'>本页面是用户从登录前首页点击快速注册链接后进来的。<br>因在首页已经输入了三条数据，所以在本页表单上方把用户出发的城市和机场显示了出来，email也显示在相应的文本框中。<br>这三条数据应该在首页用户填写完点击按钮时存入数据库，然后在本页调用。<br><br></SPAN>";
+break;
+case "p9a3f18e16626417c84beded866877b79":
+document.body.innerHTML = "<SPAN class='notespagename'>quickreg2</SPAN><BR><BR><SPAN class='notescontent'></SPAN>";
+break;
+default:
+document.body.innerHTML = ""
+	}
+}
+</SCRIPT></HEAD><BODY></BODY></HTML>

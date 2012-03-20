@@ -1,0 +1,124 @@
+<script type="text/javascript">
+
+	function   setCookie(name,value)  
+	{  
+	        var Days = 30;   //此cookie将被保存30天  
+	        var exp = new Date();  //new Date("December 31, 9998");  
+	        exp.setTime(exp.getTime() + Days*24*60*60*1000);  
+	        document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString(); 
+	}  
+	function   getCookie(name)  
+	{  
+	        var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));  
+	        if(arr != null) return unescape(arr[2]);
+	        return null;
+	        alert("test" + document.cookie);
+	}  
+	function   delCookie(name)  
+	{  
+	        var exp = new Date();  
+	        exp.setTime(exp.getTime() - 1);  
+	        var cval=getCookie(name);  
+	        if(cval!=null) document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString(); 
+	}
+
+	function showDivapp(item){
+        if (document.getElementById("app"+item).style.display == 'none') {
+            document.getElementById("app"+item).style.display='block';
+            document.getElementById("app"+item+"op").src="/images/app_tree_open.gif";
+            delCookie("app"+item);
+        }else{
+            document.getElementById("app"+item).style.display='none';
+            document.getElementById("app"+item+"op").src="/images/app_tree_close.gif";
+            setCookie("app"+item, "1")
+        }
+    }
+</script>
+	<div id="colleft">
+		<div class="slidbar_top"></div>
+		<div class="slidbar">
+			<ul class="list_menu">
+	            <div id="app-account">
+	                <li class="my_account"><a href="#" onclick="showDivapp('1')" class="floatright"><img id="app1op" src="/images/app_tree_open.gif" class="icon-op" alt="" /></a><%= link_to '我的帐户', :controller=>"profile",:action => 'show'%></li>
+	                <ul id="app1" class="under_li" style="display:block;">
+							<li><%= link_to '查看档案', :controller=>"profile", :action => 'show'%></li>
+							<li><%= link_to '帐户设置', :controller=>"profile", :action => 'edit'%></li>
+							<li><%= link_to '隐私设定', :controller=>"profile", :action => 'setting'%></li>
+	                </ul>
+	            </div>
+	            <div id="app-trip">
+	                <li class="my_trip"><a href="#" onclick="showDivapp('2')" class="floatright"><img id="app2op" src="/images/app_tree_open.gif" class="icon-op" alt="" /></a><%= link_to '我的出行', lines_path(:user => current_user)%></li>
+	                <ul id="app2" style="display:block;" class="under_li">
+                        <li class="plus"><%= link_to '添加新的行程', new_line_path(:user => current_user)%></li>
+						<li><%= link_to '我的行程列表', lines_path(:user => current_user)%></li>
+						<li><%= link_to '搜索行程', search_lines_path(:user => current_user)%></li>
+						<li><%= link_to '好友的行程', friendlines_lines_path(:user => current_user)%></li>
+	                </ul>
+	            </div>
+	            <div id="app-date">
+	                <li class="my_date"><a href="#" onclick="showDivapp('3')" class="floatright"><img id="app3op" src="/images/app_tree_open.gif" class="icon-op" alt="" /></a><%= link_to '我的日程', events_path%></li>
+	                <ul id="app3" style="display:block;" class="under_li">
+						<li class="plus"><%= link_to'添加日程', new_event_path%></li>
+						<li><%= link_to '管理我的日程', events_path %></li>
+	                </ul>
+	            </div>
+	            <div id="app-diary">
+	                <li class="my_diary"><a href="#" onclick="showDivapp('4')" class="floatright"><img id="app4op" src="/images/app_tree_open.gif" class="icon-op" alt="" /></a><%= link_to '我的日记', user_entries_path(:user_id => current_user)%></li>
+	                <ul id="app4" style="display:block;" class="under_li">
+						<li class="plus"><%= link_to'写日记', new_user_entry_path(:user_id => current_user)%></li>
+						<li><%= link_to '查看我的日记', user_entries_path(:user_id => current_user)%></li>
+	                </ul>
+	            </div>
+	            <div id="app-infocentral">
+	             <%@m = Message.find(:all,:conditions => ["isdeleted = false  and receiver_id = #{current_user.id} and receive_at is null" ])%>  
+	                <%if @m != nil && !@m.empty?%>
+	                <li class="info_centralnew">
+	                <% else %>
+	                <li class="info_central">
+	                <% end %>
+	                <span class="floatright">
+                  <%if @m != nil && !@m.empty?%>
+                     <span class="fontnormal fontnote"><%= link_to "新消息[#{@m.size}]", :controller => "messages",:action => "index"%></span>
+                  <%end%>
+	                <a href="#" onclick="showDivapp('5')" class=""><img id="app5op" src="/images/app_tree_open.gif" class="icon-op" alt="" /></a></span>
+	                <%= link_to '消息中心', :controller => 'messages',:action => 'index'%>
+	                </li>
+	                <ul id="app5" style="display:block;" class="under_li">
+						<li class="plus"><%= link_to '写消息', :controller => 'messages',:action => 'new'%></li>
+						<li><%= link_to '收件箱', :controller => 'messages',:action => 'index'%></li>
+						<li><%= link_to '发件箱', :controller => 'messages',:action => 'outbox'%></li>
+						<li><%= link_to '回收站', :controller => 'messages',:action => 'trash'%></li>
+	                </ul>
+	            </div>
+	            <div id="app-infocentral">
+	                <li class="my_friends"><a href="#" onclick="showDivapp('6')" class="floatright"><img id="app6op" src="/images/app_tree_open.gif" class="icon-op" alt="" /></a><%= link_to '我的好友', :controller => 'friends',:action => 'index'%></li>
+	                <ul id="app6" style="display:block;" class="under_li">
+						<li><a href="/friends/invite">邀请好友</a></li>
+						<li><a href="/friends/search">查找好友</a></li>
+						<li><a href="/friends">好友列表</a></li>
+	                </ul>
+	            </div>
+			</ul>
+		</div>
+		<div class="slidbar_footer"></div>
+		<div class="slidbar_top"></div>
+		<div class="slidbar">
+			<div class="view_my_trip" style="margin-left:15px;font-weight:bold;">快速邀请好友</div>
+			<fieldset>
+			<% form_tag  '/friends/update' do %>
+				<div><label style="width:30px;">Email</label><input type="text" name="email" class="normalinput" size="20" /></div>
+				<div><label style="width:30px;">姓名</label><input type="text" name="name" class="normalinput" size="20" /></div>
+				<div><label style="width:30px;"></label><input type="submit" value="邀请" class="btn_blue" /></div>
+			<% end %>
+			</fieldset>
+		</div>
+		<div class="slidbar_footer"></div>
+	</div>
+<script type="text/javascript">
+
+for (i=1;i<=6;i++) {
+	if (getCookie("app"+i) != null)
+    	showDivapp(i);
+}
+
+</script>

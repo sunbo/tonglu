@@ -1,0 +1,129 @@
+<HTML><HEAD><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="imagetoolbar" content="no"><link href="Resources/axurerppage.css" type="text/css" rel="stylesheet"></HEAD><BODY>
+<script type="text/javascript">
+function InitializeSubmenu(submenucontainerid, tablecellroid, tablecellid, fname) { 
+var s = "";
+s = s + "function " + fname + "() { ";
+s = s + "document.getElementById(submenucontainerid).style.visibility='';";
+s = s + "BringToFront(submenucontainerid);";
+s = s + "}";
+if ((index = navigator.userAgent.indexOf("MSIE")) >= 0)
+s = s + "document.getElementById('" + tablecellid + "').attachEvent(\"onmouseover\", " + fname + ");";
+else
+s = s + "document.getElementById('" + tablecellid + "').addEventListener(\"mouseover\", " + fname + ", true);";
+s = s + "document.getElementById(tablecellroid).onclick = function() {";
+s = s + "if( document.createEvent ) {";
+s = s + "var evObj = document.createEvent('MouseEvents');";
+s = s + "evObj.initEvent( 'click', true, false );";
+s = s + "document.getElementById(tablecellid).dispatchEvent(evObj);";
+s = s + "} else if( document.createEventObject ) {";
+s = s + "document.getElementById(tablecellid).fireEvent('onclick');";
+s = s + "}";
+s = s + "}";
+eval(s);
+}
+</script>
+
+<DIV id=u0 style="position:absolute; left:10px; top:86px; width:150px; height:27px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u0_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#000000; font-size:16px;">新用户注册</span></DIV></DIV>
+<DIV id=ou1 style="position:absolute; left:10px; top:117px; width:761px; height:126px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:769px; height:134px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='regdone_files/u1.png',sizingMethod='scale');
+"><img style="width:769px; height:134px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="regdone_files/u1.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u1container style="position:absolute; left:10px; top:117px; width:761px; height:126px;; overflow:visible;">
+
+<DIV id=u2 style="position:absolute; left:2px; top:54.5px; width:756px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u2_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u1 src="Resources/transparent.gif" style="position:absolute; left:10px; top:117px; width:760px; height:125px"  >
+
+<DIV id=u3 style="position:absolute; left:30px; top:132px; width:580px; height:50px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u3_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#000000; font-size:13px;">感谢您注册同路人网站，您的注册已经成功，请到您注册的邮箱中收取激活邮件并按照提示操作。<br>如果您已经激活或是未收到激活邮件，请点击下方按钮进行操作。</span></DIV></DIV>
+<INPUT id=u4  type=submit value="登录" style="position:absolute; left:30px; top:193px; width:100px; height:25px; ; ; text-align: center ; font-family:'微软雅黑'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" >
+
+<INPUT id=u5  type=submit value="再次激活我的帐号" style="position:absolute; left:140px; top:193px; width:140px; height:25px; ; ; text-align: center ; font-family:'微软雅黑'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" >
+
+<DIV id=u6 style="position:absolute; left:290px; top:196px; width:100px; height:23px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u6_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:12px;"><u>帐号未激活帮助？</u></span></DIV></DIV>
+<DIV id=ou7 style="position:absolute; left:10px; top:5px; width:766px; height:86px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:774px; height:94px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='regdone_files/u7.png',sizingMethod='scale');
+"><img style="width:774px; height:94px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="regdone_files/u7.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u7container style="position:absolute; left:10px; top:5px; width:766px; height:86px;; overflow:visible;">
+
+<DIV id=u8 style="position:absolute; left:2px; top:34.5px; width:761px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u8_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u7 src="Resources/transparent.gif" style="position:absolute; left:10px; top:5px; width:765px; height:85px"  >
+
+<span style="position:absolute; left:15px; top:10px; width:330px; height:80px">
+<IMG id=ou9 src="regdone_files/u9.gif" style="position:absolute;left:0px;top:0px;width:330px;height:80px">
+</span>
+<IMG id=u9 src="Resources/transparent.gif" style="position:absolute; left:15px; top:10px; width:330px; height:80px"   >
+
+<DIV id=u10 style="position:absolute; left:505px; top:10px; width:30px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u10_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>首页</u></span></DIV></DIV>
+<DIV id=u11 style="position:absolute; left:545px; top:10px; width:30px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u11_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>注册</u></span></DIV></DIV>
+<DIV id=u12 style="position:absolute; left:585px; top:10px; width:30px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u12_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>登录</u></span></DIV></DIV>
+<DIV id=u13 style="position:absolute; left:625px; top:10px; width:60px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u13_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>关于我们</u></span></DIV></DIV>
+<DIV id=u14 style="position:absolute; left:685px; top:10px; width:60px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u14_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>联系我们</u></span></DIV></DIV>
+<DIV id=ou15 style="position:absolute; left:10px; top:250px; width:766px; height:76px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:774px; height:84px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='regdone_files/u15.png',sizingMethod='scale');
+"><img style="width:774px; height:84px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="regdone_files/u15.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u15container style="position:absolute; left:10px; top:250px; width:766px; height:76px;; overflow:visible;">
+
+<DIV id=u16 style="position:absolute; left:2px; top:29.5px; width:761px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u16_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u15 src="Resources/transparent.gif" style="position:absolute; left:10px; top:250px; width:765px; height:75px"  >
+
+<DIV id=u17 style="position:absolute; left:486px; top:258px; width:60px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u17_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>关于我们</u></span></DIV></DIV>
+<DIV id=u18 style="position:absolute; left:550px; top:258px; width:60px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u18_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>服务条款</u></span></DIV></DIV>
+<DIV id=u19 style="position:absolute; left:614px; top:258px; width:60px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u19_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>隐私政策</u></span></DIV></DIV>
+<DIV id=u20 style="position:absolute; left:680px; top:258px; width:70px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u20_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#0000FF; font-size:13px;"><u>我们的团队</u></span></DIV></DIV>
+<DIV id=u21 style="position:absolute; left:354px; top:283px; width:390px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u21_rtf><span style=" color:#000000; font-size:13px;">? 2007 JutOline Co., Ltd. ? All rights reserved by SameRoads.com</span></DIV></DIV>
+<DIV id=u22 style="visibility:hidden; position:absolute; left:390px; top:192px; width:251px; height:181px;; overflow:hidden">
+<DIV id=pd0u22 style="position:absolute; left:0px; top:0px; width:1px; height:1px; visibility:hidden;">
+<DIV id=ou23 style="position:absolute; left:0px; top:0px; width:251px; height:181px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:259px; height:189px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='regdone_files/u23.png',sizingMethod='scale');
+"><img style="width:259px; height:189px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="regdone_files/u23.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u23container style="position:absolute; left:0px; top:0px; width:251px; height:181px;; overflow:visible;">
+
+<DIV id=u24 style="position:absolute; left:2px; top:82px; width:246px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u24_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u23 src="Resources/transparent.gif" style="position:absolute; left:0px; top:0px; width:250px; height:180px"  >
+
+<DIV id=u25 style="position:absolute; left:6px; top:21px; width:240px; height:92px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u25_rtf><span style=" font-family:'\'ce\'a2\'c8\'ed\'d1\'c5\'ba\'da'; color:#000000; font-size:12px;">有两种情况会造成您的激活邮件未收到：<br>1、您注册时提交的E-mail不是有效的地址<br>2、您的激活邮件被发送到了您的垃圾邮件箱中</span></DIV></DIV>
+<INPUT id=u26  type=submit value="关闭" style="position:absolute; left:160px; top:150px; width:60px; height:20px; ; ; text-align: center ; font-family:'微软雅黑'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" >
+
+</DIV>
+</DIV><SCRIPT src="Resources/axurerp_pagescript.js"></SCRIPT>
+<SCRIPT src="regdone_files/axurerp_pagespecificscript.js"></SCRIPT></BODY></HTML>

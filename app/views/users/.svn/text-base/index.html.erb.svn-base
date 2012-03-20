@@ -1,0 +1,32 @@
+<div id="content">
+<%= render :partial => 'slidbar' %>
+	<div id="colright">
+		<div align="center">
+			<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+			<% if flash[:error] %><div id="error"><%= flash[:error] %></div><% end %>
+		</div>
+		<div class="intro">
+			<img src="/images/intro_1.png" />
+			<div class="divb">
+				<p>真实姓名与您的个人资料在本网站的使用中是非常重要的。通过真实的姓名，您可以订购机票，购买商品及网站提供的其它服务。</p>
+				<p>完善您的个人资料后，才能够让更多的人搜索到你，并能与你建立联系，同乘一架航班或是分享到达目的地后的出租。</p>
+				<p class="center"><input type="button" name="modifyprofile" value="完善我的个人资料" class="reg_btn" /></p>
+			</div>
+		</div>
+		<div class="intro">
+			<img src="/images/intro_1.png" />
+			<div class="divb">
+				<p>将您经常出行的路线输入到您的出行信息中，并将您经常出发的机场信息及酒店信息提交上来，当有用户和您的路线相同时，他们可以更快的找到您并与您联系乘坐同一班航班。</p>
+				<p class="center"><input type="button" name="modifyprofile" value="填写我的出行信息" class="reg_btn" /></p>
+			</div>
+		</div>
+		<div class="intro">
+			<img src="/images/intro_1.png" />
+			<div class="divb">
+				<p>您的出行计划已经定了吗？您可以在此寻找与您相同行程的用户，并与他们通过站内短信或E-mail建立联系。</p>
+				<p class="center"><input type="button" name="modifyprofile" value="一键搜索出行信息" class="reg_btn" /></p>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>

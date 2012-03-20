@@ -1,0 +1,35 @@
+<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>
+
+
+<%= @line_detail.title %><% if @line_detail.is_private %>(private)<%end%><br/>
+<small><%= nice_date(@line_detail.startdate) %>-<%= nice_date(@line_detail.enddate) %></small><br/>
+
+
+人员管理<br/>
+<table>
+  <thead>
+    <tr>
+      <th>人员</th>
+      <th>权限</th>
+    </tr>
+  </thead>
+  <% for users in @line_users %>
+    <tr>
+      <td><%= link_to "#{image_tag get_photo(users.user.id)}" ,  :controller => 'profile',:action => 'showuser',:id =>users.user.id%>
+          <%= link_to users.user.login ,  :controller => 'profile',:action => 'showuser',:id =>users.user.id%></td>
+     <td><%= users.status == 'admin' ? '管理人员' : '参与人员' %>
+       <% unless users.user == current_user %>
+         <% if users.status == 'admin' %>
+           <%= link_to('权限改为参与人员', unenable_lines_path(:user=>current_user,:id=>users.id), :method => :put) %>
+         <% else %>
+           <%= link_to('权限改为管理人员', enable_lines_path(:user=>current_user,:id=>users.id), :method => :put) %>
+         <% end %>
+       <% end %>
+     </td>
+    </tr>
+  <%end%>
+</table>
+
+<%= link_to '邀请'%>
+<%= link_to '返回', line_path(:user => current_user,:id => @id) %>

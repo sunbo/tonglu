@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/project/!svn/ver/2221/sameroads/app/views/user_mailer
+END
+reset_password.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/project/!svn/ver/2188/sameroads/app/views/user_mailer/reset_password.html.erb
+END
+forgot_password.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/project/!svn/ver/1761/sameroads/app/views/user_mailer/forgot_password.html.erb
+END
+fellowinvite_mail.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/project/!svn/ver/2221/sameroads/app/views/user_mailer/fellowinvite_mail.html.erb
+END
+activation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/project/!svn/ver/2221/sameroads/app/views/user_mailer/activation.html.erb
+END
+signup_notification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/project/!svn/ver/2221/sameroads/app/views/user_mailer/signup_notification.html.erb
+END

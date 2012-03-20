@@ -1,0 +1,12 @@
+<h1>新主题</h1>
+
+<% if error_messages_for :topic %>
+	  <div id="error"><%= error_messages_for :topic %></div>
+<%end%>
+
+<% form_for :topic, :url => forum_topics_path do |f| %>
+    <p>主题：<%= f.text_field :name, :size => 40 %></p>
+    <p>帖子内容：<%= text_area :post,:body, :rows => 8, :cols => 60 %></p>
+    <%= f.submit "创建" %>
+<% end %>
+

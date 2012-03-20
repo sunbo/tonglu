@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/project/!svn/ver/2162/sameroads/app/views/experiences
+END
+_education_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/project/!svn/ver/2162/sameroads/app/views/experiences/_education_edit.html.erb
+END
+_profile_work_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project/!svn/ver/2158/sameroads/app/views/experiences/_profile_work_form.html.erb
+END
+_school_create_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/project/!svn/ver/2161/sameroads/app/views/experiences/_school_create_form.html.erb
+END
+_profile_school_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/project/!svn/ver/2158/sameroads/app/views/experiences/_profile_school_form.html.erb
+END
+_work_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/project/!svn/ver/2158/sameroads/app/views/experiences/_work_edit.html.erb
+END
+_work_create_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/project/!svn/ver/2161/sameroads/app/views/experiences/_work_create_form.html.erb
+END
+_school_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/project/!svn/ver/2161/sameroads/app/views/experiences/_school_edit.html.erb
+END
+_education_create.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/project/!svn/ver/2150/sameroads/app/views/experiences/_education_create.html.erb
+END
+_education_create_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/project/!svn/ver/2161/sameroads/app/views/experiences/_education_create_form.html.erb
+END
+_school_edit_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/project/!svn/ver/2161/sameroads/app/views/experiences/_school_edit_form.html.erb
+END
+_work_create.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/project/!svn/ver/2147/sameroads/app/views/experiences/_work_create.html.erb
+END
+_work_edit_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/project/!svn/ver/2161/sameroads/app/views/experiences/_work_edit_form.html.erb
+END
+_profile_education_form.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project/!svn/ver/2158/sameroads/app/views/experiences/_profile_education_form.erb
+END
+_school_create.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/project/!svn/ver/2147/sameroads/app/views/experiences/_school_create.html.erb
+END
+_education_edit_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/project/!svn/ver/2161/sameroads/app/views/experiences/_education_edit_form.html.erb
+END

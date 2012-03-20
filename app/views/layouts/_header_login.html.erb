@@ -1,0 +1,72 @@
+	<div id="header_home">
+		<div class="logo"><a href="/home"><img src="/images/header_logo.png" alt="伴我网(SameRoads.com)让你的旅途不再寂寞" /></a></div>
+		<div class="navbar">
+		<%url = request.request_uri%>
+	    	<ul id="MenuBar1" class="MenuBarHorizontal">
+	        	
+	        	<li><a class="MenuBarItemSubmenu" href="/home">个人首页</a>
+					<ul class="level2">
+						<li><%= link_to '个人首页', home_path%></li>
+						<li><%= link_to '帐户设置', :controller=>"profile", :action => 'edit'%></li>
+						<li><%= link_to '我的出行信息', lines_path(:user => current_user)%></li>
+						<li><%= link_to '我的日程安排', events_path %></li>
+						<li><%= link_to '我的日记', user_entries_path(:user_id => current_user)%></li>
+					</ul>
+				</li>
+	        	<li><%= link_to '出行', lines_path(:user => current_user),{:class =>'MenuBarItemSubmenu'}%>
+					<ul class="level2">
+						<li><%= link_to '+添加行程信息',new_line_path(:user => current_user) %></li>
+						<li><%= link_to '我的行程列表', lines_path(:user => current_user)%></li>
+						<li><%= link_to '搜索行程', search_lines_path(:user => current_user)%></li>
+						<li><%= link_to '好友的行程', friendlines_lines_path(:user => current_user)%></li>
+					</ul>
+				</li>
+	        	<li><a class="MenuBarItemSubmenu" href="/friends">好友</a>
+					<ul class="level2">
+						<li><a href="/friends/invite">邀请好友</a></li>
+						<li><a href="/friends/search">查找好友</a></li>
+						<li><a href="/friends">好友列表</a></li>
+					</ul>
+				</li>
+	        	<li>
+	        	<% @m = Message.find(:all,:conditions => ["isdeleted = false  and receiver_id = #{current_user.id} and receive_at is null" ])%>
+                  <%if @m != nil && !@m.empty?%>
+                    <span style="top:0;left:60px;position:relative;float:left;z-index:1001;"><%=  image_tag("/images/icons/recommend.gif") %></span>
+                  <%end%>
+                  <a class="MenuBarItemSubmenu" href="/messages">消息中心</a>
+					<ul class="level2">
+						<li><%= link_to '+写消息', :controller => 'messages',:action => 'new'%></li>
+                        <li>
+                        <%if @m != nil && !@m.empty?%>
+                          <%= link_to "收件箱(<span class=\"fontnormal fontnote\">#{@m.size}条新消息</span>)", :controller => 'messages',:action => 'index'%>
+                        <%else%>
+                          <%= link_to "收件箱", :controller => 'messages',:action => 'index'%>
+                        <%end%></li>
+						<li><%= link_to '发件箱', :controller => 'messages',:action => 'outbox'%></li>
+						<li><%= link_to '回收站', :controller => 'messages',:action => 'trash'%></li>
+					</ul>
+				</li>
+	        	<li><a class="MenuBarItemSubmenu" href="javascript:void();">社区</a>
+					<ul class="level2">
+                        <li><%= link_to '出行日记', blogs_path%></li>
+                        <li><%= link_to '出行讨论区', forums_path%></li>
+					</ul>
+				</li>
+	    	</ul>
+	   	</div>
+		<div class="right">
+	    	<ul>
+	    		<li><strong><%=h current_user.login %></strong></li>
+		        <li><%= link_to '邀请', :controller=>"friends", :action => 'invite'%></li>
+	    		<li><%= link_to '帐户首页', home_path %></li>
+	    		<li><%= link_to '登出', logout_path%></li>
+	    	</ul>
+			<div class="searchdiv"><input type="text" value="" class="searchinput" /><input type="button" value="" class="btn_top_sch" /></div>
+		</div>
+    	<div class="clear"></div>
+	</div>
+<script type="text/javascript">
+<!--
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"/images/icons/SpryMenuBarDownHover.gif"});
+//-->
+</script>

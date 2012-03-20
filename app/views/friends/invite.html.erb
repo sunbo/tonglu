@@ -1,0 +1,41 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">	
+		<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+		<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>
+		<%= tabnav :myfriends %>
+		<div class="bgnoborder rounded">Email批量邀请</div>
+			<fieldset class="login">
+				<% form_tag :action => 'update' do %>
+					<div><label>对方Email</label><textarea cols="52" name="email" rows="5"></textarea></div>
+					<div><label></label>一次填写多个Email地址请用','(英文逗号)分隔</div>
+					<div><label>邀请内容</label><textarea cols="52" name="content" rows="5"><%=  @content%></textarea></div>
+					<div><label></label><%= submit_tag '发送邀请',{:class=>"btn_blue"} %></div>
+				<% end %>
+			</fieldset>
+		<div class="bgnoborder rounded"><span class="floatright fontnormal fontnote">[复制此邀请链接地址，用QQ、MSN、Gtalk或其他方式发送给你的朋友；打开此网址即可加入]</span>IM地址邀请</div>
+			<div>
+				<input type="text" name="invite_url" class="normalinput" id="invite_url" size="70" onclick="oCopy(this)" value="<%= @invite_url%>" />
+				<input type="submit" name="Submit" class="btn_blue" value="复制到剪贴板" onclick="Copy('invite_url')" />
+			</div>
+		<script type="text/javascript">
+		 function oCopy(obj){
+             obj.select();
+             js=obj.createTextRange();
+             js.execCommand("Copy");
+         }
+         function Copy(theField) {
+             var tempval=document.getElementById(theField);
+             tempval.focus();
+             tempval.select();
+             therange=tempval.createTextRange();
+             therange.execCommand("Copy");
+             alert("您的私人邀请链接已经被复制到剪贴板中，现在可以粘贴到MSN、QQ或别的即时通讯工具中，将此链接发送给朋友。");
+         }
+		jq(document).ready( function(){
+		  jq('.rounded').corners("5px");
+		});
+		</script>
+	</div>
+	<div class="clear"></div>
+</div>

@@ -1,0 +1,275 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/project/!svn/ver/2465/sameroads/db/migrate
+END
+20090303030203_create_line_places.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/project/!svn/ver/2426/sameroads/db/migrate/20090303030203_create_line_places.rb
+END
+20081107083459_create_friendships.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/project/!svn/ver/1914/sameroads/db/migrate/20081107083459_create_friendships.rb
+END
+20081103070126_create_posts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/project/!svn/ver/1825/sameroads/db/migrate/20081103070126_create_posts.rb
+END
+20090105145742_create_topics.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/project/!svn/ver/2369/sameroads/db/migrate/20090105145742_create_topics.rb
+END
+20090105153501_add_user_posts_count.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project/!svn/ver/2369/sameroads/db/migrate/20090105153501_add_user_posts_count.rb
+END
+20090105030552_create_entry_comments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/project/!svn/ver/2367/sameroads/db/migrate/20090105030552_create_entry_comments.rb
+END
+20090105030346_create_entries.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/project/!svn/ver/2367/sameroads/db/migrate/20090105030346_create_entries.rb
+END
+20090317055537_line_details_pictrue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project/!svn/ver/2465/sameroads/db/migrate/20090317055537_line_details_pictrue.rb
+END
+20081217093737_add_city_airport_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/project/!svn/ver/2289/sameroads/db/migrate/20081217093737_add_city_airport_data.rb
+END
+20081112095409_create_mailcodes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/project/!svn/ver/1951/sameroads/db/migrate/20081112095409_create_mailcodes.rb
+END
+20090303030333_create_line_articles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project/!svn/ver/2426/sameroads/db/migrate/20090303030333_create_line_articles.rb
+END
+20090303030020_create_line_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/project/!svn/ver/2426/sameroads/db/migrate/20090303030020_create_line_users.rb
+END
+20081129131515_add_details_more_isshow.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/project/!svn/ver/2155/sameroads/db/migrate/20081129131515_add_details_more_isshow.rb
+END
+20081015075858_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/project/!svn/ver/1762/sameroads/db/migrate/20081015075858_create_users.rb
+END
+20081112094723_add_detail_mailcode_column.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/project/!svn/ver/1951/sameroads/db/migrate/20081112094723_add_detail_mailcode_column.rb
+END
+20081030110441_add_detail_more_column.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/project/!svn/ver/1801/sameroads/db/migrate/20081030110441_add_detail_more_column.rb
+END
+20081016093159_create_permissions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/project/!svn/ver/2184/sameroads/db/migrate/20081016093159_create_permissions.rb
+END
+20081215091900_add_users_status_column.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/project/!svn/ver/2287/sameroads/db/migrate/20081215091900_add_users_status_column.rb
+END
+20081127143735_create_works.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/project/!svn/ver/2141/sameroads/db/migrate/20081127143735_create_works.rb
+END
+20081119022831_create_lines.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/project/!svn/ver/2041/sameroads/db/migrate/20081119022831_create_lines.rb
+END
+20081016093123_create_roles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/project/!svn/ver/1762/sameroads/db/migrate/20081016093123_create_roles.rb
+END
+20081204041653_create_city_airports.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project/!svn/ver/2199/sameroads/db/migrate/20081204041653_create_city_airports.rb
+END
+20090105145731_create_forums.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/project/!svn/ver/2369/sameroads/db/migrate/20090105145731_create_forums.rb
+END
+20090105030720_add_blog_settiings_to_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/project/!svn/ver/2367/sameroads/db/migrate/20090105030720_add_blog_settiings_to_user.rb
+END
+20090316083821_create_line_maps.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/project/!svn/ver/2465/sameroads/db/migrate/20090316083821_create_line_maps.rb
+END
+20081024083709_create_details.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/project/!svn/ver/2035/sameroads/db/migrate/20081024083709_create_details.rb
+END
+20081127143657_create_educations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/project/!svn/ver/2141/sameroads/db/migrate/20081127143657_create_educations.rb
+END
+20081111023717_create_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/project/!svn/ver/2187/sameroads/db/migrate/20081111023717_create_messages.rb
+END
+20090105030003_drop_table_posts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/project/!svn/ver/2367/sameroads/db/migrate/20090105030003_drop_table_posts.rb
+END
+20081217091534_add_city_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/project/!svn/ver/2290/sameroads/db/migrate/20081217091534_add_city_data.rb
+END
+20090303031616_remove_lines_and_create_line_details.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/project/!svn/ver/2426/sameroads/db/migrate/20090303031616_remove_lines_and_create_line_details.rb
+END
+20081127141217_add_details_more.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/project/!svn/ver/2141/sameroads/db/migrate/20081127141217_add_details_more.rb
+END
+20081126131435_add_mailcodes_reg_at.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project/!svn/ver/2117/sameroads/db/migrate/20081126131435_add_mailcodes_reg_at.rb
+END
+20081106040859_create_events.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/project/!svn/ver/1858/sameroads/db/migrate/20081106040859_create_events.rb
+END
+20090303030527_create_line_notes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/project/!svn/ver/2465/sameroads/db/migrate/20090303030527_create_line_notes.rb
+END
+20081030101853_create_cities.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/project/!svn/ver/1801/sameroads/db/migrate/20081030101853_create_cities.rb
+END
+20090303025248_remove_lines_and_create.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/project/!svn/ver/2426/sameroads/db/migrate/20090303025248_remove_lines_and_create.rb
+END
+20081126122929_create_comment_replies.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/project/!svn/ver/2117/sameroads/db/migrate/20081126122929_create_comment_replies.rb
+END
+20090105152831_create_table_posts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/project/!svn/ver/2369/sameroads/db/migrate/20090105152831_create_table_posts.rb
+END
+20081129140923_remove_details_more.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/project/!svn/ver/2155/sameroads/db/migrate/20081129140923_remove_details_more.rb
+END
+20081126122853_create_comments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/project/!svn/ver/2117/sameroads/db/migrate/20081126122853_create_comments.rb
+END
+20081127143715_create_schools.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/project/!svn/ver/2141/sameroads/db/migrate/20081127143715_create_schools.rb
+END
+20090303030805_create_line_contents.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project/!svn/ver/2426/sameroads/db/migrate/20090303030805_create_line_contents.rb
+END
+20090105154123_add_role.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/project/!svn/ver/2369/sameroads/db/migrate/20090105154123_add_role.rb
+END
+20081114061858_create_states.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/project/!svn/ver/1980/sameroads/db/migrate/20081114061858_create_states.rb
+END

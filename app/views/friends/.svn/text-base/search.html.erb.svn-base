@@ -1,0 +1,50 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+		<div align="center">
+			<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+			<% if flash[:error] %><div id="error"><%= flash[:error] %></div><% end %>
+		</div>
+		<%= tabnav :myfriends %>
+		<h2>查找好友</h2>
+		<fieldset>
+        <% form_tag :action => 'search' do %>
+			<div><label>好友姓名</label><input type="text" name="name" size="20" class="normalinput" /></div>
+			<div><label>所在城市</label><%=select_tag :city,options_for_select(City.find(:all).collect {|c| [ c.name, c.name ]})%></div>
+			<div><label></label><%= submit_tag '查找',{:class=>"btn_blue"} %></div>
+        <% end %>
+        </fieldset>
+
+		<%if @search_friends %>
+			<%if !@search_friends.empty?%>
+			<h2>查找到的好友</h2>
+				<% for @showuser in @search_friends %>
+				<div class="user_list">
+					<%= link_to "#{image_tag get_photo(@showuser.id)}" ,  :controller => 'profile',:action => 'showuser',:id =>@showuser.id%>
+					<ul>
+						<li><strong><%= link_to "#{(@showuser.login)}", :controller => 'profile',:action => 'showuser',:id =>@showuser.id %></strong></li>
+                        <%if current_user.friendship(@showuser) == nil && current_user != @showuser%>
+						<li><%= inline_tb_link '添加为好友', "new_friend_#{@showuser.id}", {:title => "是否加<strong>#{h @showuser.login}</strong>为好友？"}, {:height => 350, :width => 430} %> </li>
+						<%end%>
+                        <li><%= inline_tb_link '发送消息', "new_message_#{@showuser.id}", {:title => "给<strong>#{h @showuser.login}</strong>发送消息"}, {:height => 260, :width => 430} %></li>
+					</ul>
+				</div>
+     <div id="new_message_<%=  @showuser.id%>" style="display:none">
+        <%= render :partial => 'messages/form', :locals => {:hide_header => true} %>
+      </div>
+
+      <div id="new_friend_<%=  @showuser.id%>" style="display:none">
+        <%= render :partial => 'friends/form' , :locals => {:hide_header => true} %>
+      </div>
+				<%end%>
+            
+            <%else%>
+			<h3>没有符合你所查找的好友</h3>
+            <%end%>
+			<%else%>
+			<h3>填写条件查找你的好友</h3>
+			<%end%>
+	</div>
+
+	<div class="clear"></div>
+</div>

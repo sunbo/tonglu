@@ -1,0 +1,60 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+		<%= tabnav :mymessages %>
+		<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+		<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>
+			<%if !@messages.empty?%>
+				<table class="infobox">
+					<thead>
+						<tr>
+							<th colspan="5">
+							<span class="floatright"><input type="text" size="20" class="infoboxinput" value="搜索消息" onfocus="this.value='';" onblur="this.value='搜索消息';" /></span>
+							<select name="infostatus">
+								<option value="操作..">操作..</option>
+								<option value="删除">删除</option>
+							</select>
+							</th>
+						</tr>
+					</thead>
+                    <thead class="trash">
+                        <tr>
+                          <th width="30"><input type="checkbox" /></th>
+                          <th style="width:13em">收件人</th>
+                          <th>内容</th>
+						  <th width="30">状态</th>
+                          <th width="36">操作</th>
+                        </tr>
+						</thead>
+                        <%for messages in @messages%>
+                        <tr>
+                          <td width="30" class="center"><input type="checkbox" /></td>
+                          <td class="userphoto">
+                          	<%= link_to "#{image_tag get_photo(messages.receiver_id)}" ,:controller => 'profile',:action => 'showuser',:id =>messages.receiver_id%>
+                            <ul>
+						    	<li><strong>
+                                <%= link_to "#{User.find(messages.receiver_id).login}",:controller => 'profile',:action => 'showuser',:id =>messages.receiver_id %></strong></li>
+                                <li class="ensmall"><%= nice_time(messages.created_at)%></li>
+						    	<li><%if messages.smstype == '0' %>普通信息
+                              <%elsif messages.smstype == 'friend' %>加好友信息
+                              <%end%></li>
+                            </ul>
+						</td>
+                          <td >
+                              <%= link_to "#{truncate(messages.content,30)}", { :action => 'show_old' ,:id => messages}%>
+                          </td>
+                          <td class="center"><%= messages.receive_at.blank? ? '<img src="/images/icons/unreadmail_y.png" alt="新消息" title="新消息" />' : '<img src="/images/icons/readmail_b.png" alt="已读消息" title="已读消息" />'%></td>
+                          <td class="center"><%= link_to '<img src="/images/icons/delect.png" alt="删除此消息" title="删除此消息" />',{:action => 'totrash',:id => messages}, :confirm => '确定要放到回收站里吗？' %></td>
+                        </tr>
+                        <%end%>
+                      </table>
+					  <%= will_paginate @messages %>
+		<%else%>
+			<div class="hometip">你的发件箱为空，你可以给站内的其他用户<a href="/messages/new">写信息</a></div>
+		<%end%>
+				<script>jq(document).ready( function(){
+				  jq('div.hometip').corners("5px");
+				});</script>
+	</div>
+	<div class="clear"></div>
+</div>

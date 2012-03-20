@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
+<link rel="shortcut icon" href="/favicon.ico" mce_href=”/dir/favicon.ico” type="image/x-icon" />
+<link rel="icon" href="/favicon.ico" mce_href=”/dir/favicon.ico” type="image/x-icon" />
+<link rel="bookmark icon" href="/favicon.ico" mce_href=”/dir/favicon.ico”  />
+<title>伴我网(SameRoads.com)让你的旅途不再寂寞</title>
+	<script src="/javascripts/prototype.js?1223883899" type="text/javascript"></script>
+<script src="/javascripts/effects.js?1223883899" type="text/javascript"></script>
+<script src="/javascripts/dragdrop.js?1223883899" type="text/javascript"></script>
+
+<script src="/javascripts/controls.js?1223883899" type="text/javascript"></script>
+<script src="/javascripts/widgets/tooltip.js?1225252631" type="text/javascript"></script>
+<script src="/javascripts/application.js?1227962463" type="text/javascript"></script>
+	<script src="/javascripts/prototip.js?1225947109" type="text/javascript"></script>
+<script src="/javascripts/jquery.js?1228101656" type="text/javascript"></script>
+<script src="/javascripts/thickbox.js?1228107177" type="text/javascript"></script>
+<script src="/javascripts/SpryMenuBar.js?1226641902" type="text/javascript"></script>
+<script src="/javascripts/SpryTabbedPanels.js?1227881202" type="text/javascript"></script>
+
+<script src="/javascripts/fckeditor/fckeditor.js?1225701885" type="text/javascript"></script>
+
+	<link href="/stylesheets/global.css?1228205217" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/prototip.css?1227527455" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/thickbox.css?1227449352" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/SpryMenuBarHorizontal.css?1227794082" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/SpryTabbedPanels.css?1227881202" media="screen" rel="stylesheet" type="text/css" />
+	<script src="/javascripts/calendar_date_select/calendar_date_select.js?1227088173" type="text/javascript"></script>
+
+<script src="/javascripts/calendar_date_select/locale/zh.js?1227247872" type="text/javascript"></script>
+
+<script src="/javascripts/calendar_date_select/format_hyphen_ampm.js?1227088173" type="text/javascript"></script>
+
+<link href="/stylesheets/calendar_date_select/plain.css?1227247872" media="screen" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="container">
+
+	<div id="header">
+		<div class="left"><a href="/"><img src="/images/logo.png" alt="伴我网(SameRoads.com)让你的旅途不再寂寞" /></a></div>
+		<div class="right">
+    		<div class="TopMenu">
+    			<ul>
+
+                	<li><a href="/" >首页</a></li>
+                    <li><a href="/login">登录</a></li>
+                    <li><a href="/signup">注册</a></li>
+    			</ul>
+    		</div>
+    		<div class="clear"></div>
+        	<div id="navbar">
+
+        		<ul class="notlogin">
+        			<li>你还不是伴我网会员？快点击加入吧</li>
+        			<li><input type="button" name="regbtn" value="马上注册" class="btn_yellow" onclick="location.href='/signup';" /></li>
+        		</ul>
+        	</div>
+        </div>
+	</div>
+
+<div id="content">
+
+出错啦
+</div>
+	<div id="footer">
+		<div class="left">
+			<a href="">服务条款</a>-
+			<a href="">隐私政策</a>-
+			<a href="">联系我们</a>-
+			<a href="">我们的团队</a>
+
+		</div>
+		<div class="right">
+			<p>&copy; 2007-2008 伴我网 ; &reg; All rights reserved by <a href="/">SameRoads.com</a></p>
+			<p><a href="http://www.miibeian.gov.cn" target="_blank">京ICP备05040050号</a></p>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

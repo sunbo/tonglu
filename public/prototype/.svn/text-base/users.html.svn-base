@@ -1,0 +1,356 @@
+<HTML><HEAD><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="imagetoolbar" content="no"><link href="Resources/axurerppage.css" type="text/css" rel="stylesheet"></HEAD><BODY>
+<script type="text/javascript">
+function InitializeSubmenu(submenucontainerid, tablecellroid, tablecellid, fname) { 
+var s = "";
+s = s + "function " + fname + "() { ";
+s = s + "document.getElementById(submenucontainerid).style.visibility='';";
+s = s + "BringToFront(submenucontainerid);";
+s = s + "}";
+if ((index = navigator.userAgent.indexOf("MSIE")) >= 0)
+s = s + "document.getElementById('" + tablecellid + "').attachEvent(\"onmouseover\", " + fname + ");";
+else
+s = s + "document.getElementById('" + tablecellid + "').addEventListener(\"mouseover\", " + fname + ", true);";
+s = s + "document.getElementById(tablecellroid).onclick = function() {";
+s = s + "if( document.createEvent ) {";
+s = s + "var evObj = document.createEvent('MouseEvents');";
+s = s + "evObj.initEvent( 'click', true, false );";
+s = s + "document.getElementById(tablecellid).dispatchEvent(evObj);";
+s = s + "} else if( document.createEventObject ) {";
+s = s + "document.getElementById(tablecellid).fireEvent('onclick');";
+s = s + "}";
+s = s + "}";
+eval(s);
+}
+</script>
+
+<DIV id=ou0 style="position:absolute; left:60px; top:60px; width:51px; height:81px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:59px; height:89px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u0.png',sizingMethod='scale');
+"><img style="width:59px; height:89px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u0.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u0container style="position:absolute; left:60px; top:60px; width:51px; height:81px;; overflow:visible;">
+
+<DIV id=u1 style="position:absolute; left:2px; top:24px; width:46px; height:32px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u1_rtf><div style="text-align:center"><span style=" font-family:'Arial'; color:#000000; font-size:13px;">new users</span></div></DIV></DIV>
+</DIV>
+<IMG id=u0 src="Resources/transparent.gif" style="position:absolute; left:60px; top:60px; width:50px; height:80px"  >
+
+<DIV id=ou2 style="position:absolute; left:221px; top:70px; width:101px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u2.png',sizingMethod='scale');
+"><img style="width:109px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u2.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u2container style="position:absolute; left:221px; top:70px; width:101px; height:61px;; overflow:visible;">
+
+<DIV id=u3 style="position:absolute; left:2px; top:13px; width:96px; height:34px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u3_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">输入或重新个人信息</span></div></DIV></DIV>
+</DIV>
+<IMG id=u2 src="Resources/transparent.gif" style="position:absolute; left:221px; top:70px; width:100px; height:60px"  >
+
+<span style="position:absolute; left:106px; top:90px; width:125px; height:20px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u4c0.png',sizingMethod='scale');
+"><img style="width:128px; height:23px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u4c0.png" border="0" alt=""></span>
+
+<DIV id=u4container style="position:absolute; left:110px; top:100px; width:1px; height:1px;; overflow:visible">
+
+<DIV id=u5 style="position:absolute; left:5.5px; top:-8px; width:100px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u5_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<DIV id=ou6 style="position:absolute; left:500px; top:70px; width:101px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u6.png',sizingMethod='scale');
+"><img style="width:109px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u6.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u6container style="position:absolute; left:500px; top:70px; width:101px; height:61px;; overflow:visible;">
+
+<DIV id=u7 style="position:absolute; left:2px; top:21.5px; width:96px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u7_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">注册成功页面</span></div></DIV></DIV>
+</DIV>
+<IMG id=u6 src="Resources/transparent.gif" style="position:absolute; left:500px; top:70px; width:100px; height:60px"  >
+
+<DIV id=ou8 style="position:absolute; left:350px; top:70px; width:101px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u8.png',sizingMethod='scale');
+"><img style="width:109px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u8.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u8container style="position:absolute; left:350px; top:70px; width:101px; height:61px;; overflow:visible;">
+
+<DIV id=u9 style="position:absolute; left:2px; top:21.5px; width:96px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u9_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">跳转</span></div></DIV></DIV>
+</DIV>
+<IMG id=u8 src="Resources/transparent.gif" style="position:absolute; left:350px; top:70px; width:100px; height:60px"  >
+
+<span style="position:absolute; left:446px; top:90px; width:64px; height:20px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u10c0.png',sizingMethod='scale');
+"><img style="width:67px; height:23px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u10c0.png" border="0" alt=""></span>
+
+<DIV id=u10container style="position:absolute; left:450px; top:100px; width:1px; height:1px;; overflow:visible">
+
+<DIV id=u11 style="position:absolute; left:-25px; top:-8px; width:100px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u11_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<DIV id=ou12 style="position:absolute; left:221px; top:190px; width:101px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u12.png',sizingMethod='scale');
+"><img style="width:109px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u12.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u12container style="position:absolute; left:221px; top:190px; width:101px; height:61px;; overflow:visible;">
+
+<DIV id=u13 style="position:absolute; left:2px; top:21.5px; width:96px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u13_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">判断</span></div></DIV></DIV>
+</DIV>
+<IMG id=u12 src="Resources/transparent.gif" style="position:absolute; left:221px; top:190px; width:100px; height:60px"  >
+
+<span style="position:absolute; left:261px; top:126px; width:20px; height:74px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u14c0.png',sizingMethod='scale');
+"><img style="width:23px; height:77px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u14c0.png" border="0" alt=""></span>
+
+<DIV id=u14container style="position:absolute; left:271px; top:130px; width:1px; height:1px;; overflow:visible">
+
+<DIV id=u15 style="position:absolute; left:-50px; top:22px; width:100px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u15_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<span style="position:absolute; left:317px; top:210px; width:93px; height:20px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u16c0.png',sizingMethod='scale');
+"><img style="width:96px; height:23px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u16c0.png" border="0" alt=""></span>
+
+<span style="position:absolute; left:390px; top:126px; width:20px; height:104px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u16c1.png',sizingMethod='scale');
+"><img style="width:23px; height:107px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u16c1.png" border="0" alt=""></span>
+
+<DIV id=u16container style="position:absolute; left:321px; top:220px; width:1px; height:1px;; overflow:visible">
+
+<DIV id=u17 style="position:absolute; left:29px; top:-14px; width:100px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u17_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">成功</span></div></DIV></DIV>
+</DIV>
+<span style="position:absolute; left:201px; top:210px; width:24px; height:20px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u18c0.png',sizingMethod='scale');
+"><img style="width:27px; height:23px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u18c0.png" border="0" alt=""></span>
+
+<span style="position:absolute; left:201px; top:90px; width:20px; height:140px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u18c1.png',sizingMethod='scale');
+"><img style="width:23px; height:143px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u18c1.png" border="0" alt=""></span>
+
+<span style="position:absolute; left:201px; top:90px; width:24px; height:20px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u18c2.png',sizingMethod='scale');
+"><img style="width:27px; height:23px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u18c2.png" border="0" alt=""></span>
+
+<DIV id=u18container style="position:absolute; left:221px; top:220px; width:1px; height:1px;; overflow:visible">
+
+<DIV id=u19 style="position:absolute; left:-60px; top:-68.5px; width:100px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u19_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">失败</span></div></DIV></DIV>
+</DIV>
+<DIV id=ou20 style="position:absolute; left:221px; top:300px; width:101px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u20.png',sizingMethod='scale');
+"><img style="width:109px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u20.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u20container style="position:absolute; left:221px; top:300px; width:101px; height:61px;; overflow:visible;">
+
+<DIV id=u21 style="position:absolute; left:2px; top:13px; width:96px; height:34px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u21_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">使用</span><span style=" font-family:'Arial'; color:#000000; font-size:13px;">Ajax</span><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">进行表单判断</span></div></DIV></DIV>
+</DIV>
+<IMG id=u20 src="Resources/transparent.gif" style="position:absolute; left:221px; top:300px; width:100px; height:60px"  >
+
+<span style="position:absolute; left:261px; top:240px; width:20px; height:64px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u22c0.png',sizingMethod='scale');
+"><img style="width:23px; height:67px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u22c0.png" border="0" alt=""></span>
+
+<DIV id=u22container style="position:absolute; left:271px; top:300px; width:1px; height:1px;; overflow:visible">
+
+<DIV id=u23 style="position:absolute; left:-50px; top:-33px; width:100px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u23_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<DIV id=ou24 style="position:absolute; left:500px; top:180px; width:101px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u24.png',sizingMethod='scale');
+"><img style="width:109px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u24.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u24container style="position:absolute; left:500px; top:180px; width:101px; height:61px;; overflow:visible;">
+
+<DIV id=u25 style="position:absolute; left:2px; top:21.5px; width:96px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u25_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">发送激活邮件</span></div></DIV></DIV>
+</DIV>
+<IMG id=u24 src="Resources/transparent.gif" style="position:absolute; left:500px; top:180px; width:100px; height:60px"  >
+
+<span style="position:absolute; left:540px; top:126px; width:20px; height:64px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u26c0.png',sizingMethod='scale');
+"><img style="width:23px; height:67px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u26c0.png" border="0" alt=""></span>
+
+<DIV id=u26container style="position:absolute; left:550px; top:130px; width:1px; height:1px;; overflow:visible">
+
+<DIV id=u27 style="position:absolute; left:-50px; top:17px; width:100px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u27_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<DIV id=ou28 style="position:absolute; left:500px; top:280px; width:101px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u12.png',sizingMethod='scale');
+"><img style="width:109px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u12.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u28container style="position:absolute; left:500px; top:280px; width:101px; height:61px;; overflow:visible;">
+
+<DIV id=u29 style="position:absolute; left:2px; top:21.5px; width:96px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u29_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">判断</span></div></DIV></DIV>
+</DIV>
+<IMG id=u28 src="Resources/transparent.gif" style="position:absolute; left:500px; top:280px; width:100px; height:60px"  >
+
+<span style="position:absolute; left:540px; top:236px; width:20px; height:54px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u30c0.png',sizingMethod='scale');
+"><img style="width:23px; height:57px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u30c0.png" border="0" alt=""></span>
+
+<DIV id=u30container style="position:absolute; left:550px; top:240px; width:1px; height:1px;; overflow:visible">
+
+<DIV id=u31 style="position:absolute; left:-50px; top:12px; width:100px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u31_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<DIV id=ou32 style="position:absolute; left:650px; top:70px; width:101px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u6.png',sizingMethod='scale');
+"><img style="width:109px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u6.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u32container style="position:absolute; left:650px; top:70px; width:101px; height:61px;; overflow:visible;">
+
+<DIV id=u33 style="position:absolute; left:2px; top:21.5px; width:96px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u33_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">激活成功提示</span></div></DIV></DIV>
+</DIV>
+<IMG id=u32 src="Resources/transparent.gif" style="position:absolute; left:650px; top:70px; width:100px; height:60px"  >
+
+<DIV id=ou34 style="position:absolute; left:500px; top:380px; width:101px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u24.png',sizingMethod='scale');
+"><img style="width:109px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u24.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u34container style="position:absolute; left:500px; top:380px; width:101px; height:61px;; overflow:visible;">
+
+<DIV id=u35 style="position:absolute; left:2px; top:13px; width:96px; height:34px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u35_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">重新发送激活邮件</span></div></DIV></DIV>
+</DIV>
+<IMG id=u34 src="Resources/transparent.gif" style="position:absolute; left:500px; top:380px; width:100px; height:60px"  >
+
+<span style="position:absolute; left:480px; top:300px; width:24px; height:20px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u36c0.png',sizingMethod='scale');
+"><img style="width:27px; height:23px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u36c0.png" border="0" alt=""></span>
+
+<span style="position:absolute; left:480px; top:300px; width:20px; height:120px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u36c1.png',sizingMethod='scale');
+"><img style="width:23px; height:123px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u36c1.png" border="0" alt=""></span>
+
+<span style="position:absolute; left:480px; top:400px; width:24px; height:20px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u36c2.png',sizingMethod='scale');
+"><img style="width:27px; height:23px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u36c2.png" border="0" alt=""></span>
+
+<DIV id=u36container style="position:absolute; left:500px; top:310px; width:1px; height:1px;; overflow:visible">
+
+<DIV id=u37 style="position:absolute; left:-60px; top:41.5px; width:100px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u37_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">失败</span></div></DIV></DIV>
+</DIV>
+<span style="position:absolute; left:540px; top:330px; width:20px; height:54px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u38c0.png',sizingMethod='scale');
+"><img style="width:23px; height:57px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u38c0.png" border="0" alt=""></span>
+
+<DIV id=u38container style="position:absolute; left:550px; top:380px; width:1px; height:1px;; overflow:visible">
+
+<DIV id=u39 style="position:absolute; left:-50px; top:-28px; width:100px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u39_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<DIV id=ou40 style="position:absolute; left:670px; top:270px; width:61px; height:81px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:69px; height:89px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u40.png',sizingMethod='scale');
+"><img style="width:69px; height:89px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u40.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u40container style="position:absolute; left:670px; top:270px; width:61px; height:81px;; overflow:visible;">
+
+<DIV id=u41 style="position:absolute; left:2px; top:31.5px; width:56px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u41_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">确认邮件</span></div></DIV></DIV>
+</DIV>
+<IMG id=u40 src="Resources/transparent.gif" style="position:absolute; left:670px; top:270px; width:60px; height:80px"  >
+
+<span style="position:absolute; left:596px; top:300px; width:84px; height:20px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u42c0.png',sizingMethod='scale');
+"><img style="width:87px; height:23px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u42c0.png" border="0" alt=""></span>
+
+<DIV id=u42container style="position:absolute; left:600px; top:310px; width:1px; height:1px;; overflow:visible">
+
+<DIV id=u43 style="position:absolute; left:-15px; top:-8.5px; width:100px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u43_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">成功</span></div></DIV></DIV>
+</DIV>
+<span style="position:absolute; left:75px; top:136px; width:20px; height:344px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u44c0.png',sizingMethod='scale');
+"><img style="width:23px; height:347px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u44c0.png" border="0" alt=""></span>
+
+<span style="position:absolute; left:75px; top:460px; width:635px; height:20px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u44c1.png',sizingMethod='scale');
+"><img style="width:638px; height:23px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u44c1.png" border="0" alt=""></span>
+
+<span style="position:absolute; left:690px; top:346px; width:20px; height:134px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u44c2.png',sizingMethod='scale');
+"><img style="width:23px; height:137px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u44c2.png" border="0" alt=""></span>
+
+<DIV id=u44container style="position:absolute; left:85px; top:140px; width:1px; height:1px;; overflow:visible">
+
+<DIV id=u45 style="position:absolute; left:152.5px; top:321.5px; width:100px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u45_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">收到确认邮件</span></div></DIV></DIV>
+</DIV>
+<span style="position:absolute; left:690px; top:120px; width:20px; height:154px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='users_files/u46c0.png',sizingMethod='scale');
+"><img style="width:23px; height:157px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="users_files/u46c0.png" border="0" alt=""></span>
+
+<DIV id=u46container style="position:absolute; left:700px; top:270px; width:1px; height:1px;; overflow:visible">
+
+<DIV id=u47 style="position:absolute; left:-50px; top:-78px; width:100px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u47_rtf>&nbsp;</DIV></DIV>
+</DIV><SCRIPT src="Resources/axurerp_pagescript.js"></SCRIPT>
+<SCRIPT src="users_files/axurerp_pagespecificscript.js"></SCRIPT></BODY></HTML>

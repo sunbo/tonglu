@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/project/!svn/ver/2477/sameroads/app/views/lines
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/project/!svn/ver/2474/sameroads/app/views/lines/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/project/!svn/ver/2477/sameroads/app/views/lines/show.html.erb
+END
+editnote.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/project/!svn/ver/2463/sameroads/app/views/lines/editnote.html.erb
+END
+searchline.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/project/!svn/ver/2236/sameroads/app/views/lines/searchline.html.erb
+END
+changecity.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/project/!svn/ver/2463/sameroads/app/views/lines/changecity.html.erb
+END
+addmap.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/project/!svn/ver/2463/sameroads/app/views/lines/addmap.html.erb
+END
+addcontent.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/project/!svn/ver/2463/sameroads/app/views/lines/addcontent.html.erb
+END
+addarticle.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/project/!svn/ver/2463/sameroads/app/views/lines/addarticle.html.erb
+END
+addnote.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/project/!svn/ver/2463/sameroads/app/views/lines/addnote.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/project/!svn/ver/2475/sameroads/app/views/lines/index.html.erb
+END
+editmap.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/project/!svn/ver/2463/sameroads/app/views/lines/editmap.html.erb
+END
+manageuser.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/project/!svn/ver/2475/sameroads/app/views/lines/manageuser.html.erb
+END
+editcontent.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/project/!svn/ver/2463/sameroads/app/views/lines/editcontent.html.erb
+END
+_planform.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/project/!svn/ver/2463/sameroads/app/views/lines/_planform.html.erb
+END
+editarticle.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/project/!svn/ver/2463/sameroads/app/views/lines/editarticle.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/project/!svn/ver/2474/sameroads/app/views/lines/edit.html.erb
+END
+invite.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/project/!svn/ver/2476/sameroads/app/views/lines/invite.html.erb
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/project/!svn/ver/2305/sameroads/app/views/lines/search.html.erb
+END
+friendlines.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/project/!svn/ver/2236/sameroads/app/views/lines/friendlines.html.erb
+END

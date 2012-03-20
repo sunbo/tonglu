@@ -1,0 +1,2 @@
+module EntryCommentsHelper
+end

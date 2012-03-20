@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/py
+END
+fckcommands.py
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/py/fckcommands.py
+END
+htaccess.txt
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/py/htaccess.txt
+END
+config.py
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/py/config.py
+END
+upload.py
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/py/upload.py
+END
+fckutil.py
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/py/fckutil.py
+END
+fckconnector.py
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/py/fckconnector.py
+END
+fckoutput.py
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/py/fckoutput.py
+END
+wsgi.py
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/py/wsgi.py
+END
+connector.py
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/py/connector.py
+END
+zope.py
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/py/zope.py
+END

@@ -1,0 +1,4 @@
+	<li><label>工作：</label><%= @work.name %></li>
+	<li><label>工作时间：</label><%= @work.startyear %>年至<%= !@work.workspan.blank? ? '今' : "#{@work.endyear}年" %></li>
+	<li><label>职位：</label><%= @work.position %></li>
+	<li><label>描述：</label><%= @work.description %></li>

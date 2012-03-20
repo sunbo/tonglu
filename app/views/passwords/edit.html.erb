@@ -1,0 +1,8 @@
+ <% form_tag url_for(:action => 'update',:id => params[:id]) do %>
+     输入新密码:<br />
+     <%= password_field_tag :password %><br />
+     再次输入新密码:<br />
+     <%= password_field_tag :password_confirmation %><br />
+     <%= submit_tag "重置密码" %>
+<% end %>
+

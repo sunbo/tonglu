@@ -1,0 +1,14 @@
+<fieldset>
+<% remote_form_for(:friend, :url => {:controller => 'friends',:action => 'create'}, :html => {} ) do %>
+	<input type="hidden" name="friend_id" value="<%= @showuser.id %>" />
+	<div class="masg_tip">
+		<%= image_tag get_photo(@showuser.id),{:class=>"floatleft",:style=>"margin-right:10px;"} %>
+		<p><strong><%= @showuser.login%></strong>将会通过你的邀请确认成为你的朋友<br />同时，请最好不要在伴我网中添加你不认识的朋友</p>
+		<div class="clear"></div>
+	</div>
+	<p><strong>请在下面添加你的邀请消息</strong></p>
+	<div><%= text_area_tag 'fbody', nil, :size => "65x8" %></div>
+	<div><%= submit_tag '发送',{:class=>"btn_blue"}%></div>
+	<p>将<strong><%= @showuser.login%></strong>成功加入朋友后，你将能够看到他的个人信息！</p>
+<% end %>
+</fieldset>

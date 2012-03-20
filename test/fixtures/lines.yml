@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  title: MyString
+  startdate: 2008-11-19 10:28:31
+  enddate: 2008-11-19 10:28:31
+  startcity: MyString
+  endcity: MyString
+  number: MyString
+
+two:
+  user_id: 1
+  title: MyString
+  startdate: 2008-11-19 10:28:31
+  enddate: 2008-11-19 10:28:31
+  startcity: MyString
+  endcity: MyString
+  number: MyString

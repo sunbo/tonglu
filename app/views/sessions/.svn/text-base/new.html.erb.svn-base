@@ -1,0 +1,27 @@
+<div id="content">
+
+	<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+	<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>
+	
+			
+	<div class="rounded userlogin">
+			<fieldset>
+			<h2 class="bline" style="margin-bottom:10px;">用户登录</h2>
+			<% form_tag session_path do -%>
+				<div><label for="email">E-mail</label><%= text_field_tag('email',nil,:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login") %></div>
+				<div><label for="password">密码</label><%= password_field_tag('password',nil,:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login") %></div>
+				<div><label></label><%= submit_tag '登录',{:class=>"btn_blue"} %></div>
+				<div><label for="remember_me"></label><a href="/forgot_password">忘记密码</a> | <%= check_box_tag 'remember_me' %>在这台机器上自动登录</div>
+			<% end -%>
+			</fieldset>
+			<h2 class="center nostyle">您还不是伴我网的会员？快点击下面按钮加入</h2>
+			<div class="center"><a href="/signup"><img src="/images/btn_reg.png" alt="注册成为新会员" /></a></div>
+			<p></p>
+	</div>
+	<script>
+	jq(document).ready( function(){
+		jq('.rounded').corners("10px");
+	});
+	</script>
+
+</div>

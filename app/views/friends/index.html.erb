@@ -1,0 +1,39 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+		<div align="center">
+			<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+			<% if flash[:error] %><div id="error"><%= flash[:error] %></div><% end %>
+		</div>
+		<%= tabnav :myfriends %>
+		<h2>我的好友</h2>
+		<%if !@friends.empty?%>
+			<%for friends in @friends%>
+				<div class="user_list">
+					<div class="<%= online?(friends.id)%>"><%= link_to "#{image_tag get_photo(friends.id)}" ,  :controller => 'profile',:action => 'showuser',:id =>friends.id%></div>
+					<ul>
+						<li class="fontbold"><%= link_to "#{friends.login}",:controller => 'profile', :action => 'showuser', :id=>friends.id %></li>
+						<li><%= inline_tb_link '发送消息', "new_message_#{friends.id}",{:title => "给<strong>#{h friends.login}</strong>发送消息"}, {:height => 260, :width => 430} %></li>
+						<li><%= inline_tb_link '留言', "new_comment_#{friends.id}", {:title => "给<strong>#{h friends.login}</strong>留言"}, {:height => 230, :width => 430} %></li>
+					</ul>
+				</div>
+				<div id="new_message_<%= friends.id%>" style="display:none">
+	     			<% @showuser = friends %>
+	        		<%= render :partial => 'messages/form', :locals => {:hide_header => true} %>
+				</div>
+				
+				<div id="new_comment_<%= friends.id%>" style="display:none">
+					<%= render :partial => 'comments/form', :locals => {:hide_header => true} %>
+				</div>
+			<%end%>
+		<%else%>
+			<div class="hometip rounded">您现在还没有好友，请可以点击<a href="/friends/search">查找好友</a>，或是<a href="/friends/invite">邀请好友</a>加入</div>
+				<script type="text/javascript">
+				jq(document).ready( function(){
+				  jq('.rounded').corners("2px");
+				});
+				</script>
+		<%end%>
+	</div>
+	<div class="clear"></div>
+</div>

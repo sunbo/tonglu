@@ -1,0 +1,14 @@
+<h1>编辑讨论区</h1>
+
+<% if error_messages_for :forum %>
+	  <div id="error"><%= error_messages_for :forum %></div>
+<%end%>
+
+<% form_for(:forum, :url => forum_path(@forum),
+              :html => {:method => :put}) do |f| %>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+    <%= f.submit "编辑" %>
+<% end %>
+
+<%= link_to '查看', forum_path(@forum) %>
+<%= link_to '返回', forums_path %>

@@ -1,0 +1,129 @@
+<div id="content">
+
+	<div id="cont">
+		<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+		<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>
+		<div class="line_h2">
+			<span class="floatright"><%= link_to '返回我的出行信息列表',lines_path(:user => current_user) %></span>
+            <%= @line.title %><%if @line.is_private%>(private)<%end%> <span style="font-size:12px;font-weight:normal;margin-left:10px;">[提交时间<%= nice_time(@line.created_at) %>]</span>
+			<%if current_user == @line.user%>
+
+				<span>
+		    		<%= link_to '编辑',edit_line_path(:user => current_user,:id => @line) %> | 
+                    <%= link_to '人员管理' %> | 
+		    		<%= link_to '删除',line_path(:user => current_user,:id => @line), :confirm => '确定要删除吗？' , :method => :delete%>
+				</span>
+			<% end %>
+
+		</div>
+
+		<table class="subtable">
+			<tr>
+				<td rowspan="4" class="lineimg"><%= link_to '<img src="/images/roadtrip.jpg" alt="编辑" />',edit_line_path(:user => current_user,:id => @line) %><brt />
+				<%= link_to "邀请" ,invite_path(:user => current_user,:id => @line)%></td>
+				<td class="title">行程分类</td>
+				<td><%= @line.status%></td>
+				<td class="title">时间</td>
+				<td><%= nice_date(@line.startdate) %>到<%= nice_date(@line.enddate) %></td>
+			</tr>
+			<tr>
+				<td class="title">地点</td>
+				<td><%= @line.startcity %>到<%= @line.endcity %></td>
+				<td class="title">航班号</td>
+				<td><%= @line.n %></td>
+			<tr>
+				<td class="title" valign="top">行程描述</td>
+				<td colspan="3"><%= nice_time(@line.airtime)%><%= @line.startcity%>出发<br /><%= @line.body%></td>
+			<tr>
+            	<td class="title">管理人员</td>
+            	<td>
+            <% for lineadminuser in @lineadminuser %>
+              <%= link_to lineadminuser.user.login ,  :controller => 'profile',:action => 'showuser',:id =>lineadminuser.user.id%>
+            <% end %></td>
+            	<td class="title">参与人员</td>
+            	<td>
+            <% for lineuser in @lineuser %>
+              <%= link_to lineuser.user.login ,  :controller => 'profile',:action => 'showuser',:id =>lineuser.user.id%>
+            <% end %></td>
+       	</table>
+       	<div class="clear"></div>
+       	
+       	<div id="linecont">
+	       	<div class="lineleftnav">
+	       		<ul>
+	       		<% for lineplaces in @lineplaces %>
+	             	<li class="center"><span class="fontnote fontbold"><%=  nice_date(lineplaces.date) %></span><br /><%=  lineplaces.place %></li>
+	       		<% end %>
+	       		</ul>
+	       	</div>
+	       	
+			<div class="lineright"><div class="line_cont">
+            <% for lineplaces in @lineplaces %>
+            
+             <div class="line_h3"><%=  nice_date(lineplaces.date) %> <%=  lineplaces.place %>
+              <span>[<%= link_to "编辑", changecity_path(:user => current_user,:id => @line)%> | 
+              <%= inline_tb_link '添加内容', "new_plan_#{lineplaces.id}", {:title => "添加您所需要的内容"}, {:height => 230, :width => 430} %>]</span></div>
+              
+              <!--地图内容-->
+              <% for map in lineplaces.line_maps %>
+                <div class="line_h4">
+                	<span><%= link_to "[编辑]",editmap_path(:user => current_user,:map_id => map.id,:line_id =>@line)%>
+                	<%= link_to "[删除]", destroymap_path(:user => current_user,:map_id => map.id,:line_id =>@line), :confirm => '确定要删除吗？' , :method => :delete%></span>
+				地图：<%= map.title %></div>
+                地图日期：<%= nice_date(map.date) %><br/>
+                地图描述：<%= map.description %><br/>
+                <div class="googlemap"><% show_map(map,map.id) %>
+                <%= @m.to_html %>
+                <%= @m.div(:width => 882, :height => 300) %></div>
+              <% end %>
+              
+              <!--文章内容-->
+              <% for article in lineplaces.line_articles %>
+                <strong>文章</strong>:<%= article.title %>
+                <%= link_to "[编辑]",editarticle_path(:user => current_user,:article_id => article.id,:line_id =>@line)%>
+                <%= link_to "[删除]", destroyarticle_path(:user => current_user,:article_id => article.id,:line_id =>@line), :confirm => '确定要删除吗？' , :method => :delete%><br/>
+                  <%= article.body %><br/>
+                <%= article.note %><br/>
+               <% end %>
+
+              <!--活动内容-->
+              <% for content in lineplaces.line_contents %>
+                <strong>活动</strong>:<%= content.title %>
+                <%= link_to "[编辑]",editcontent_path(:user => current_user,:content_id => content.id,:line_id =>@line)%>
+                <%= link_to "[删除]", destroycontent_path(:user => current_user,:content_id => content.id,:line_id =>@line), :confirm => '确定要删除吗？' , :method => :delete%><br/>
+                <%= content.content %><br/>
+                <%= nice_date(content.startdate) %>-<%= nice_date(content.enddate) %><br/>
+                <%= content.body %><br/>
+                <%= content.note %><br/>
+               <% end %>
+               
+              <!--备忘录内容-->
+              <% for note in lineplaces.line_notes %>
+                <strong>备忘录</strong>:<%= note.body %>
+                <%= link_to "[编辑]",editnote_path(:user => current_user,:note_id => note.id,:line_id =>@line)%>
+                <%= link_to "[删除]", destroynote_path(:user => current_user,:note_id => note.id,:line_id =>@line), :confirm => '确定要删除吗？' , :method => :delete%><br/>
+              <% end %>
+
+
+              <div id="new_plan_<%=lineplaces.id%>" style="display:none">
+                  <% @id = lineplaces.id %>
+                  <% @line_id = lineplaces.line_id %>
+                 <%= render :partial => 'lines/planform', :locals => {:hide_header => true} %>
+              </div>
+            <% end %>
+
+
+			</div></div>
+			<div class="clear"></div>
+        </div>
+        
+		<h4 class="right fontnormal">
+            <%= link_to '搜索路线',search_lines_path(:user => current_user) %>
+		    <%= link_to '返回我的出行信息列表',lines_path(:user => current_user) %>
+		</h4>
+</div>
+				<script>jq(document).ready( function(){
+				  jq('div.line_h3').corners("5px");
+				  jq('div.lineright').corners("5px");
+				  jq('div.line_cont').corners("5px");
+				});</script>

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/project/!svn/ver/2369/sameroads/lib
+END
+authenticated_test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/project/!svn/ver/1733/sameroads/lib/authenticated_test_helper.rb
+END
+authenticated_system.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/project/!svn/ver/2369/sameroads/lib/authenticated_system.rb
+END

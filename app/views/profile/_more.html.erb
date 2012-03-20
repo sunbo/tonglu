@@ -1,0 +1,11 @@
+		<div class="push_user">
+			<h4>用户推荐</h4>
+			<% for users in @users %>
+              <%= link_to "#{image_tag get_photo(users.id)}", :controller => 'profile', :action => 'showuser', :id => users%>
+			<ul>
+				<li><strong><%= link_to users.login, :controller => 'profile', :action => 'showuser', :id => users%></strong></li>
+				<li><%=h users.email %></li>
+			</ul>
+			<div class="clear"></div>
+			<% end %>
+		</div>

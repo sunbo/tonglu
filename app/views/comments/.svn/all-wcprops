@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/project/!svn/ver/2407/sameroads/app/views/comments
+END
+_comment.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/project/!svn/ver/2346/sameroads/app/views/comments/_comment.html.erb
+END
+_profileform.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/project/!svn/ver/2407/sameroads/app/views/comments/_profileform.html.erb
+END
+_reply.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/project/!svn/ver/2119/sameroads/app/views/comments/_reply.html.erb
+END
+_comment_reply.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/project/!svn/ver/2371/sameroads/app/views/comments/_comment_reply.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/project/!svn/ver/2117/sameroads/app/views/comments/_form.html.erb
+END

@@ -1,0 +1,6 @@
+<fieldset>
+<%= link_to "地图", addmap_path(:user => current_user,:id => @id,:line_id =>@line_id)%><br/>
+<%= link_to "文章", addarticle_path(:user => current_user,:id => @id,:line_id =>@line_id)%><br/>
+<%= link_to "备忘录", addnote_path(:user => current_user,:id => @id,:line_id =>@line_id)%><br/>
+<%= link_to "活动", addcontent_path(:user => current_user,:id => @id,:line_id =>@line_id)%><br/>
+</fieldset>

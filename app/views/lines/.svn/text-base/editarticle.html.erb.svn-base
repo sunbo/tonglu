@@ -1,0 +1,15 @@
+		<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+		<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>
+      <% form_for(:line_article, :url => updatearticle_path(:user => current_user)) do |f| %>
+		<input type="hidden" value="<%= @id %>" name="id"/>
+        <input type="hidden" value="<%= @line_id %>" name="line_id"/>
+        <div class="box" id="box-events-new">
+				<fieldset class="login">
+					<div><label for="line_article_title">标题</label><%= f.text_field :title,{:class=>"normalinput"}%></div>
+                    <div><label for="line_article_body">内容</label><%= f.text_area :body, :size => "50x4"%></div>
+					<div><label for="line_article_note">备注</label><%= f.text_area :note, :size => "50x4"%></div>
+                    <div><label></label><%= submit_tag "更新", :disable_with => "更新",:class=>"btn_blue" %>&nbsp;
+                                        <%= link_to '返回', line_path(:user => current_user,:id => @line_id) %></div>
+				</fieldset>
+            </div>
+		<% end %>

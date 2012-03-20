@@ -1,0 +1,9 @@
+	<fieldset>
+		<% remote_form_for(:message, :url => {:controller => 'messages',:action => 'create'}, :html => {} ) do  %>
+			<input type="hidden" name="friend_id" value="<%= @showuser.id %>" />
+			<div><label>收件人：</label><strong><%= @showuser.login %></strong></div>
+			<!--div><label>主题：</label><#%= text_field_tag 'title', '', :size => "46", :class=>"normalinput" %></div-->
+			<div><label>消息：</label><%= text_area_tag 'mbody', nil, :size => "50x8"  %></div>
+			<div><label></label><%= submit_tag '发送',{:class=>"btn_blue"}%></div>
+		<% end %>
+	</fieldset>

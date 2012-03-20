@@ -1,0 +1,17 @@
+<div id="content">
+	<div id="colright">
+		<div align="center">
+			<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+			<% if flash[:error] %><div id="error"><%= flash[:error] %></div><% end %>
+		</div>
+	<h2><%=h @user.login.capitalize %>的权限</h2>
+
+	 <h3>分配的权限:</h3>
+	 <ul><%= render :partial => 'role', :collection => @user.roles %></ul>
+	
+	 <h3>可用的权限:</h3>
+    <ul><%= render :partial => 'role', :collection => (@all_roles - @user.roles) %></ul>
+	</div>
+	<div class="clear"></div>
+</div>
+<%= link_to "返回", all_users_path %>

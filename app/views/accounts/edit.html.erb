@@ -1,0 +1,26 @@
+<div id="content">
+<%= render :partial => 'users/slidbar' %>
+<div align="center">
+	<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+	<% if flash[:error] %><div id="error"><%= flash[:error] %></div><% end %>
+</div>
+<%= tabnav :userdetail %>
+	<div id="colright">
+		<fieldset class="login">
+
+		 <% form_tag url_for(:action => 'update') do %>
+		   <div><label for="old_password" class="block">旧密码</label>
+		   <%= password_field_tag 'old_password', @old_password, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"}%></div>
+		
+		   <div><label for="password" class="block">新密码</label>
+		   <%= password_field_tag 'password', {}, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"}%><small>密码在6-20字符之间</small></div>
+		   
+		   <div><label for="password_confirmation"  class="block">确认新密码</label>
+		   <%= password_field_tag 'password_confirmation', {}, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"}%></div>
+		   <div><label></label><%= submit_tag '修改密码',{:class=>"btn_reg"} %></div>	
+		 <% end %>
+		</fieldset>
+ 	</div>
+ 	<div class="clear"></div>
+ </div>
+

@@ -1,0 +1,42 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+		<%= tabnav :myline %>
+
+		<%if !@friendlines.empty?%>
+		<table class="infobox">
+			<%for friendlines in @friendlines%>
+			<tr>
+              <%if !friendlines.lines.empty? %>
+                  <ul><td class="userphoto">
+                        <%= link_to "#{image_tag get_photo(friendlines.id)}<ul><li class=\"fontbold\">#{friendlines.login}</li>" ,  :controller => 'profile',:action => 'showuser',:id =>friendlines.id%>
+                            
+                              <li><%= friendlines.email %></li>
+                              <li>邀请同乘
+                              <%= inline_tb_link '发送消息', "new_message_#{friendlines.id}",{:title => "给<strong>#{h friendlines.login}</strong>发送消息"}, {:height => 260, :width => 430} %></li>
+                            
+                            <div id="new_message_<%= friendlines.id%>" style="display:none">
+                                <% @showuser = friendlines %>
+                                <%= render :partial => 'messages/form', :locals => {:hide_header => true} %>
+                            </div>
+                    </td></ul>
+				     <td>
+                       <%i = 0%>
+                        <%for lines in friendlines.lines%>
+						  <ul>
+                          	<li><%= link_to "#{lines.title}" , line_path(:user => friendlines.id,:id => lines)%></li>
+						  </ul>
+                          <% i = i + 1 %>
+                        <%end%>
+				    </td>
+                <%end%>
+			</tr>
+            <%end%>
+		</table>
+        <%if i == nil %><h3>您的好友还没有提交行程路线</h3><%end%>
+		<%else%>
+			<h3>您还没有好友，可以点击<a href="/friends/search">查找好友</a>，或是<a href="/friends/invite">邀请好友</a>加入</h3>
+		<%end%>
+	</div>
+	<div class="clear"></div>
+</div>

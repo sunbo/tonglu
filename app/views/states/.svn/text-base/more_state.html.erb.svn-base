@@ -1,0 +1,23 @@
+<div id="content">
+	<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+		
+		<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+		<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>
+		
+        <% form_tag :action => 'update' do %>
+        <%= text_field_tag 'body', nil, :size => "44",:class=>"normalinput"  %>
+        <%= submit_tag '确定',{:class=>"btn_blue"} %>
+        <%end%>
+          <%  for more_state in @more_state%>
+          <div style="border-bottom:1px solid #ccc;padding:5px;">
+            <%if current_user == more_state.user%>
+            <span class="floatright"><%=  link_to "x",{ :action => "destroy", :id => more_state.id} , :confirm => '确定要删除吗？' %></span>
+            <%end%>
+            <%=  more_state.body%><span id="state_date">写于<%= time_ago_in_words  more_state.created_at %>前</span>
+          </div>
+          <%end%>
+        <%= will_paginate @more_state %>
+	</div>
+	<div class="clear"></div>
+</div>

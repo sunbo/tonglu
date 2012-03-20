@@ -1,0 +1,14 @@
+<span style="float:left;">
+<%= link_to @date.strftime("%Y年%B"), events_path %>
+</span>
+<span class="calendar-nav" style="float:right;">
+<% if request.path_parameters['controller'] == 'events' %>
+  <%= link_to "&laquo;上月", events_path(:params => {:date => @date.last_month.strftime("%Y-%m") + '-01'}) %>&nbsp;
+  <%= link_to "本月", events_path %>&nbsp;
+  <%= link_to "下月&raquo;", events_path(:params => {:date => @date.next_month.strftime("%Y-%m") + '-01'}) %>
+<% else %>
+  <%= link_to "&laquo;上月", home_path(:params => {:date => @date.last_month.strftime("%Y-%m") + '-01'}) %>&nbsp;
+  <%= link_to "本月", home_path %>&nbsp;
+  <%= link_to "下月&raquo;", home_path(:params => {:date => @date.next_month.strftime("%Y-%m") + '-01'}) %>
+<% end %>
+</span>

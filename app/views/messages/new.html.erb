@@ -1,0 +1,17 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+	<%= tabnav :mymessages %>
+		<% if flash[:notice] %><div align="center"><div id="notice"><%= flash[:notice] %></div></div><% end %>
+		<% if flash[:error] %><div align="center"><div id="error"><%= flash[:error] %></div></div><% end %>	
+		<fieldset>
+		<% form_for(:message, :url => {:action => 'create_message'}, :html => {} ) do  %>
+		<div><label>收件人：</label><%= text_field_with_auto_complete :message, :user_login,{ :value => @login, :size => 35,:class=>"normalinput"  }, { :url => formatted_users_path(:js), :method => :get, :param_name => 'search' ,:skip_style => 'contlist'} %></div>
+		<!--div><label>主题：</label><#%= text_field_tag 'title', @title, :size => 35,:class=>"normalinput" %></div-->
+		<div><label>消息：</label><%= text_area_tag 'body', @body, :size => "55x10"  %></div>
+		<div><label></label><%= submit_tag '发送',{:class=>"btn_blue"}%></div>
+		<% end %>
+		</fieldset>
+	</div>
+	<div class="clear"></div>
+</div>

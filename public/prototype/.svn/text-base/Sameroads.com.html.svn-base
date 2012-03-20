@@ -1,0 +1,94 @@
+<HTML><HEAD><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="imagetoolbar" content="no"><link href="Resources/axurerppage.css" type="text/css" rel="stylesheet"></HEAD><BODY>
+<script type="text/javascript">
+function InitializeSubmenu(submenucontainerid, tablecellroid, tablecellid, fname) { 
+var s = "";
+s = s + "function " + fname + "() { ";
+s = s + "document.getElementById(submenucontainerid).style.visibility='';";
+s = s + "BringToFront(submenucontainerid);";
+s = s + "}";
+if ((index = navigator.userAgent.indexOf("MSIE")) >= 0)
+s = s + "document.getElementById('" + tablecellid + "').attachEvent(\"onmouseover\", " + fname + ");";
+else
+s = s + "document.getElementById('" + tablecellid + "').addEventListener(\"mouseover\", " + fname + ", true);";
+s = s + "document.getElementById(tablecellroid).onclick = function() {";
+s = s + "if( document.createEvent ) {";
+s = s + "var evObj = document.createEvent('MouseEvents');";
+s = s + "evObj.initEvent( 'click', true, false );";
+s = s + "document.getElementById(tablecellid).dispatchEvent(evObj);";
+s = s + "} else if( document.createEventObject ) {";
+s = s + "document.getElementById(tablecellid).fireEvent('onclick');";
+s = s + "}";
+s = s + "}";
+eval(s);
+}
+</script>
+
+<DIV id=ou0 style="position:absolute; left:80px; top:20px; width:101px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Sameroads.com_files/u0.png',sizingMethod='scale');
+"><img style="width:109px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="Sameroads.com_files/u0.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u0container style="position:absolute; left:80px; top:20px; width:101px; height:61px;; overflow:visible;">
+
+<DIV id=u1 style="position:absolute; left:2px; top:22px; width:96px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u1_rtf><div style="text-align:center"><span style=" font-family:'Arial'; color:#000000; font-size:13px;">header</span></div></DIV></DIV>
+</DIV>
+<IMG id=u0 src="Resources/transparent.gif" style="position:absolute; left:80px; top:20px; width:100px; height:60px"  >
+
+<DIV id=u0ann style="font-size:1px; position:absolute; left:171px; top:16px; width:1px; height:1px; overflow:visible"></DIV>
+
+<DIV id=ou2 style="position:absolute; left:80px; top:160px; width:101px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Sameroads.com_files/u0.png',sizingMethod='scale');
+"><img style="width:109px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="Sameroads.com_files/u0.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u2container style="position:absolute; left:80px; top:160px; width:101px; height:61px;; overflow:visible;">
+
+<DIV id=u3 style="position:absolute; left:2px; top:22px; width:96px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u3_rtf><div style="text-align:center"><span style=" font-family:'Arial'; color:#000000; font-size:13px;">footer</span></div></DIV></DIV>
+</DIV>
+<IMG id=u2 src="Resources/transparent.gif" style="position:absolute; left:80px; top:160px; width:100px; height:60px"  >
+
+<DIV id=u2ann style="font-size:1px; position:absolute; left:171px; top:156px; width:1px; height:1px; overflow:visible"></DIV>
+
+<DIV id=ou4 style="position:absolute; left:80px; top:90px; width:101px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Sameroads.com_files/u0.png',sizingMethod='scale');
+"><img style="width:109px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="Sameroads.com_files/u0.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u4container style="position:absolute; left:80px; top:90px; width:101px; height:61px;; overflow:visible;">
+
+<DIV id=u5 style="position:absolute; left:2px; top:22px; width:96px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u5_rtf><div style="text-align:center"><span style=" font-family:'Arial'; color:#000000; font-size:13px;">application</span></div></DIV></DIV>
+</DIV>
+<IMG id=u4 src="Resources/transparent.gif" style="position:absolute; left:80px; top:90px; width:100px; height:60px"  >
+
+<DIV id=u4ann style="font-size:1px; position:absolute; left:171px; top:86px; width:1px; height:1px; overflow:visible"></DIV>
+
+<DIV id=ou6 style="position:absolute; left:195px; top:90px; width:101px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Sameroads.com_files/u0.png',sizingMethod='scale');
+"><img style="width:109px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="Sameroads.com_files/u0.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u6container style="position:absolute; left:195px; top:90px; width:101px; height:61px;; overflow:visible;">
+
+<DIV id=u7 style="position:absolute; left:2px; top:22px; width:96px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u7_rtf><div style="text-align:center"><span style=" font-family:'Arial'; color:#000000; font-size:13px;">index</span></div></DIV></DIV>
+</DIV>
+<IMG id=u6 src="Resources/transparent.gif" style="position:absolute; left:195px; top:90px; width:100px; height:60px"  >
+
+<DIV id=u6ann style="font-size:1px; position:absolute; left:286px; top:86px; width:1px; height:1px; overflow:visible"></DIV>
+<SCRIPT src="Resources/axurerp_pagescript.js"></SCRIPT>
+<SCRIPT src="Sameroads.com_files/axurerp_pagespecificscript.js"></SCRIPT></BODY></HTML>

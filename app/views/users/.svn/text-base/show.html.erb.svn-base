@@ -1,0 +1,19 @@
+<div id="content">
+<%= render :partial => 'slidbar' %>
+	<div id="colright">
+		<div align="center">
+			<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+			<% if flash[:error] %><div id="error"><%= flash[:error] %></div><% end %>
+		</div>
+		<ul id="TabList">
+			<li class="TabAction"><a href="">注册信息</a></li>
+			<li class="TabNormal"><a href="">个人资料</a></li>
+			<li class="TabNormal"><a href="">密码修改</a></li>
+			<li class="TabNormal"><a href="">隐私设置</a></li>
+			<div class="clear"></div>
+		</ul>
+		<span sytle="margin:0;padding:0;">您好: <%=h @user.login %> <br/>
+		<%=h @user.email %></span>
+	</div>
+	<div class="clear"></div>
+</div>

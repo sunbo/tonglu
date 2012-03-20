@@ -1,0 +1,31 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+
+		<% if error_messages_for :line_detail %>
+			<div id="error"><%= error_messages_for :line_detail %></div>
+		<% end %>
+                <%=tabnav :myline%>
+                <h2 class="nostyle">编辑路线</h2>
+		<% form_for(:line_detail,:url => line_path(:user => current_user), :html => { :method => :put }) do |f| %>
+			<div class="box" id="box-events-new">
+				<fieldset class="login">
+					<div><label for="line_title">行程名称</label><%= f.text_field :title,{:class=>"normalinput"}%></div>
+                    <div><label for="line_endcity">主要目的地</label><%= f.text_field :endcity,{:class=>"normalinput"}%></div>
+                    <div><label for="line_status">目的</label><%= f.select :status ,({""=> "","旅游"=>"旅游","出差"=>"出差","探亲访友"=>"探亲访友","出国"=>"出国"})%></div>
+                    <div><label for="line_body">描述</label><%= f.text_area :body, :size => "50x4"%></div>
+                    <div><label for="date">时间</label><%= calendar_date_select :line_detail,:startdate,{:year_range => 3.years.ago..5.years.since,:class=>"normalinput",:time => false,:value => nice_date(@line_detail.startdate)}  %>
+					     <span class="fontlabel">到</span><%= calendar_date_select :line_detail,:enddate,{:year_range => 3.years.ago..5.years.since,:class=>"normalinput",:time => false,:value => nice_date(@line_detail.startdate)} %></div>
+					<div><label for="line_detail_is_private">是否私有</label><%= check_box(:line_detail, :is_private) %>（如果勾选将指有您自己可以看见）</div>
+                    <div><label for="city">起始地</label><%=f.select :startcity,City.find(:all).collect {|c| [ c.name, c.name ] }, {:selected => @line_detail.startcity }%></div>
+                    <div><label for="date">航班时间</label><%= calendar_date_select :line_detail,:airtime,{:year_range => 3.years.ago..5.years.since,:class=>"normalinput",:value => nice_time(@line_detail.airtime)}  %></div>
+                    <div><label for="line">航班号</label>
+					<%= f.select :airlinesname, airlinesname_options_for_select %>
+					<%= f.text_field :number,{:size => 4,:class=>"normalinput"}%></div>
+					<div><label></label><%= submit_tag "编辑", :disable_with => "编辑",:class=>"btn_blue" %>&nbsp;<%= link_to '返回', lines_path(:user => current_user) %></div>
+				</fieldset>
+                          </div>
+		<% end %>
+            <div class="clear"></div>
+    </div>
+</div>

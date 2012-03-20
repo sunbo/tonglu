@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/perl
+END
+commands.pl
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/perl/commands.pl
+END
+io.pl
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/perl/io.pl
+END
+basexml.pl
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/perl/basexml.pl
+END
+connector.cgi
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/perl/connector.cgi
+END
+upload.cgi
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/perl/upload.cgi
+END
+util.pl
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/perl/util.pl
+END
+upload_fck.pl
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/project/!svn/ver/1827/sameroads/vendor/plugins/fckeditor/public/javascripts/fckeditor/editor/filemanager/connectors/perl/upload_fck.pl
+END

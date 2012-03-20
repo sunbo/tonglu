@@ -1,0 +1,103 @@
+<%
+	  if @detail &&@detail.city
+	    @city = @detail.city
+	  else
+	    @city = "选择城市"
+	  end
+	%>
+
+	<div class="setleft">
+        <h2><span class="floatright fonttip"><% form_tag({}, :name =>'is_show_details') do %>
+          隐私设定 <%= select_tag 'detailslook', look_options(@detailslook),  :onchange => "javascript:is_show();"  %>
+        <% end %></span>个人基本信息</h2>
+		<% form_tag :action => 'update' do %>
+			<ul class="setting">
+				<input type="hidden" name="switch" value="detail" />
+			  	<li><label>性别：</label>
+			  		<%= radio_button(:detail,:sex,'男')%>男
+			        <%= radio_button(:detail,:sex,'女')%>女</li>
+                <li><label>出生日期：</label><%= date_select(:detail,:birthday,:start_year=>1900,:end_year=>2015,:use_month_numbers=>true)%></li>
+				<li><label>所在城市：</label><%=select :detail,:city,City.find(:all).collect {|c| [ c.name, c.name ] }, { :selected => @city }%>  </li>
+            <li><label>出发的机场：</label>
+            <span id ="sub_select">
+                 <%= text_field :detail,:airport, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login",:readonly  => true } %>
+             </span>
+               <%=observe_field(  "detail_city",
+                                :url => { :action => "update_subsel"},
+                                :update => "sub_select",
+                                :with => "'name='+ value"
+                               )%>
+            </li>
+				<li><label>个人简介：</label><%= text_area :detail,:about_me,:cols => 30, :rows => 5%></li>
+				<li><label></label><%= submit_tag '确定',{:class=>"btn_blue"} %></li>
+			</ul>
+		<% end %>
+        <div class="clear"></div>
+
+        <h2><span class="floatright fonttip"><% form_tag({}, :name =>'is_show_ims') do %>
+          隐私设定 <%= select_tag 'imslook', look_options(@imslook),  :onchange => "javascript:ims_show();"  %>
+        <% end %></span>联系方式</h2>
+		<% form_tag :action => 'update' do %>
+			<ul class="setting">
+				<input type="hidden" name="switch" value="photo" />
+				<li><label>手机：</label><%= text_field :detail,:mobile, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"} %></li>
+				<li><label>QQ：</label><%= text_field :detail,:qq, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"} %></li>
+				<li><label>MSN：</label><%= text_field :detail,:msn, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"} %></li>
+				<li><label>GTalk：</label><%= text_field :detail,:gtalk, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"} %></li>
+                <li><label>个人主页：</label><%= text_field :detail,:web, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"} %></li>
+				<li><label></label><%= submit_tag '确定',{:class=>"btn_blue"} %></li>
+			</ul>
+		<% end %>
+        <div class="clear"></div>
+
+        <h2><span class="floatright fonttip"><% form_tag({}, :name =>'is_show_works') do %>
+          隐私设定 <%= select_tag 'workslook', look_options(@workslook),  :onchange => "javascript:works_show();"  %>
+        <% end %></span>教育和工作经历</h2>
+        <!--大学-->
+        <fieldset class="setting">
+        <legend>大学</legend>
+        <%= render :partial => 'experiences/profile_education_form' %>
+        </fieldset>
+        <!--大学结束-->
+        <div class="clear"></div>
+        <!--高中-->
+        <fieldset class="setting">
+        <legend>高中</legend>
+        <%= render :partial => 'experiences/profile_school_form' %>
+        </fieldset>
+        <!--高中结束-->
+        <div class="clear"></div>
+        <!--工作-->
+        <fieldset class="setting">
+        <legend>工作</legend>
+        <%= render :partial => 'experiences/profile_work_form' %>
+        </fieldset>
+        <!--工作结束-->
+        <div class="clear"></div>
+	</div>
+
+	<div class="setright">
+		<% form_tag({:action => 'update'},:multipart => true) do %>
+			<h2>个人照片</h2>
+			<h3>请提交您的真实照片</h3>
+			<input type="hidden" name="switch" value="photo" />
+			<ul class="setting">
+				<li><%=image_tag show_photo %><%= file_column_field "detail","photo",{:class=>"normalinput"}%><br /><%= submit_tag '确定',{:class=>"btn_blue"} %></li>
+            </ul>
+		<% end %>
+		<div class="clear"></div>
+	    <% form_tag :action => 'update' do %>
+	    	<h2>密码修改</h2>
+	    	<input type="hidden" name="switch" value="password" />
+		    <ul class="setting">
+			    <li><label for="old_password" class="block">旧密码</label>
+			    <%= password_field_tag 'old_password', @old_password, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"}%></li>
+			    <li><label for="password" class="block">新密码</label>
+			    <%= password_field_tag 'password', {}, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"}%><small>密码在6-20字符之间</small></li>
+			    <li><label for="password_confirmation"  class="block">确认新密码</label>
+			    <%= password_field_tag 'password_confirmation', {}, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"}%></li>
+				<li><label></label><%= submit_tag '修改密码',{:class=>"btn_blue"} %></li>
+		    </ul>
+	    <% end %>
+	</div>
+	<div class="clear"></div>

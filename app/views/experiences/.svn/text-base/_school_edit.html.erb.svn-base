@@ -1,0 +1,2 @@
+<li><label>高中：</label><%= @school.name %></li>
+	<li><label>毕业时间：</label><%= @school.year %>年</li>

@@ -1,0 +1,30 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+		<div align="center">
+			<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+			<% if flash[:error] %><div id="error"><%= flash[:error] %></div><% end %>
+		</div>
+		<%= tabnav :myline %>
+		<h2>查找我感兴趣的出行信息</h2>
+		<fieldset>
+        <% form_tag searchline_lines_path(:user => current_user) do%>
+				<fieldset class="login">
+					<div><label for="line_title">标签</label><%= text_field_tag :title,nil,{:class=>"normalinput"}%></div>
+					<div><label for="line_status">目的</label><%= select_tag :status ,line_status_options_for_select%></div>
+					<div><label for="line_body">描述</label><%= text_field_tag :body,nil,{:class=>"normalinput"}%></div>
+					<div><label for="date">时间</label><%= calendar_date_select_tag :startdate,nil,{:year_range => 3.years.ago..5.years.since,:class=>"normalinput"} %>
+					<span class="fontlabel">到</span><%= calendar_date_select_tag :enddate,nil,{:year_range => 3.years.ago..5.years.since,:class=>"normalinput"} %></div>
+					<div><label for="city">地点</label><%=select_tag :startcity,line_city_options_for_select%>
+					<span class="fontlabel">到</span><%=select_tag :endcity,line_city_options_for_select%></div>
+					<div><label for="line">航班号</label>
+					<%= select_tag :airlinesname, line_airlinesname_options_for_select %>
+					<%= text_field_tag :number,nil,{:size => 4,:class=>"normalinput"}%></div>
+					<div><label></label><%= submit_tag '查找',{:class=>"btn_blue"} %></div>
+				</fieldset>
+        <% end %>
+        </fieldset>
+	</div>
+
+	<div class="clear"></div>
+</div>

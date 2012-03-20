@@ -1,0 +1,19 @@
+	<div id="header">
+		<div class="left"><% if logged_in? %><a href="/home"><% else %><a href="/"><% end %><img src="/images/logo.png" alt="伴我网(SameRoads.com)让你的旅途不再寂寞" /></a></div>
+		<div class="right">
+    		<div class="TopMenu">
+    			<ul>
+                	<li><a href="/" >首页</a></li>
+                    <li><%= link_to '登录', login_path %></li>
+                    <li><%= link_to '注册', signup_path %></li>
+    			</ul>
+    		</div>
+    		<div class="clear"></div>
+        	<div id="navbar">
+        		<ul class="notlogin">
+        			<li>你还不是伴我网会员？快点击加入吧</li>
+        			<li><input type="button" name="regbtn" value="马上注册" class="btn_yellow" onclick="location.href='/signup';" /></li>
+        		</ul>
+        	</div>
+        </div>
+	</div>

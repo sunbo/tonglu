@@ -1,0 +1,12 @@
+<h1>新建讨论区</h1>
+
+<% if error_messages_for :forum %>
+	  <div id="error"><%= error_messages_for :forum %></div>
+<%end%>
+
+<% form_for(:forum, :url => forums_path) do |f| %>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+    <%= f.submit "创建" %>
+<% end %>
+
+<%= link_to '返回', forums_path %>

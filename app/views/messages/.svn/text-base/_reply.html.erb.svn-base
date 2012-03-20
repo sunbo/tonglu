@@ -1,0 +1,11 @@
+<% remote_form_for(:message, :url => {:controller => 'messages',:action => 'reply'}, :html => {} ) do  %>
+	<input type="hidden" name="friend_id" value="<%=  current_user.id == @message.user_id ? @message.receiver_id : @message.user_id %>" />
+    <input type="hidden" name="message_id" value="<%= @message.id %>" />
+	<p>回复</p>
+	<p><%= text_area_tag 'rbody', nil, :size => "60x5" %></p>
+	<p><%= submit_tag '回复',:class=>"btn_yellow"%>
+		<% if current_user.login? %>
+	    	<%= link_to '<img src="/images/icons/delect.png" alt="删除" />',{:action => 'totrash',:id => @message}, :confirm => '确定要放到回收站里吗？' %>
+    	<% end %>
+	</p>
+<% end %>

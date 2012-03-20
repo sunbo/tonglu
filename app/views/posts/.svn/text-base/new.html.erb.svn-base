@@ -1,0 +1,15 @@
+<h1>新帖子</h1>
+
+<% if error_messages_for :post %>
+	  <div id="error"><%= error_messages_for :post %></div>
+<%end%>
+
+<h2>主题：<%= @topic.name%> </h2>
+
+<% form_for :post, :url => forum_topic_posts_path(:forum_id =>  @topic.forum,
+                                                  :topic_id => @topic) do |f| %>
+    <p>帖子内容：<%= f.text_area :body, :rows => 8, :cols => 60 %></p>
+    <%= f.submit "创建" %>
+    <%= link_to "返回", forum_topics_path(:id => @topic, :forum_id => @topic.forum)%>
+<% end %>
+

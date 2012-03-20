@@ -1,0 +1,13 @@
+    <div id="education_<%= @education.id %>">
+		<ul class="setting">
+          <li>
+              <div class="floatright"><%= inline_tb_link '编辑', "edit_education_#{ @education.id}", {:title => "编辑"}, {:height => 130, :width => 330} %>
+              <%=  link_to "删除", {:controller => "experiences",:action => "destroy",:id =>  @education.id ,:switch=>"education"}, :confirm => '确定要删除吗？'%></div>
+              <label>大学：</label><%= @education.name %></li>
+          <li><label>毕业时间：</label><%= @education.year %>年毕业</li>
+          <li><label>专业：</label><%= @education.professional %>，获得<%= @education.degree %>学历/学位 </li>
+        </ul>
+        <div id="edit_education_<%=   @education.id%>" style="display:none">
+          <%= render :partial => 'experiences/education_edit_form', :locals => {:hide_header => true} %>
+        </div>
+    </div>

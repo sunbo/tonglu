@@ -1,0 +1,7 @@
+   <fieldset>
+		<% remote_form_for(:experience, :url => {:controller => 'experiences',:action => 'createschool'}, :html => {} ) do  %>
+			<div><label>高中：</label><%= text_field_tag :schoolname,nil, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"} %></div>
+			<div><label>毕业时间：</label><%= select_tag :schoolyear,year_option_tag("毕业时间")%>年</div>
+			<div><label></label><%= submit_tag '确定',{:class=>"btn_blue"}%></div>
+		<% end %>
+	</fieldset>

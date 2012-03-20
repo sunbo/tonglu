@@ -1,0 +1,12 @@
+<fieldset>
+		<% remote_form_for(:experience, :url => {:controller => 'experiences',:action => 'creatework'}, :html => {} ) do  %>
+			<div><label>工作：</label><%= text_field_tag :workname,nil, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"} %></div>
+            <div><label>职位：</label><%= text_field_tag :workposition,nil, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"} %></div>
+            <div><label>描述：</label><%= text_area_tag :workdescription,nil, :size => "50x4" %></div>
+            <div><label>工作时间：</label>
+            <%= select_tag :startyear,workstartyear_option_tag("入职年份")%>
+            <span id="endyearspan"><%= select_tag :endyear,workendyear_option_tag("离职年份")%></span>
+            <%= check_box_tag :workspan,"1",false,:onclick => "showhidespan('endyearspan')"%> 至今</div>
+            <div><label></label><%= submit_tag '确定',{:class=>"btn_blue"}%></div>
+		<% end %>
+</fieldset>

@@ -1,0 +1,29 @@
+	<div id="colleft">
+		<div class="userinfo">
+			<%= image_tag show_photo %>
+			<ul>
+				<li><strong><%=h current_user.login %></strong></li>
+				<li style="background:url(/images/icons/letter.gif) no-repeat left center;padding-left:20px;"><%=h current_user.email %></li>
+				<li><a href="" class="s_btn_g">邀请朋友加入</a></li>
+				<li><%= link_to '安全退出', logout_path,{:style=>"background:url(/images/icons/exit.gif) no-repeat left center;padding-left:15px;"} %></li>
+			</ul>
+		</div>
+		<div class="infocentral">
+			<span style="background:url(/images/icons/infocentral.gif) no-repeat left center;padding-left:15px;">您有新短消息[10]</span>
+		</div>
+		<div class="slidbar">
+			<ul>
+				<!-- li style="background:url(/images/icons/user.gif) no-repeat left center;padding-left:20px;"><%= link_to '我的帐户', user_path(current_user) %></li -->
+				<li style="background:url(/images/icons/vcard.gif) no-repeat left center;padding-left:20px;"><%= link_to '我的帐户', :action => 'show'%></li>
+				<li style="background:url(/images/icons/user_go.gif) no-repeat left center;padding-left:20px;">查看/修改我的出行信息</li>
+				<li style="background:url(/images/icons/search_u.gif) no-repeat left center;padding-left:20px;">查看与我相同的出行信息</li>
+				<li style="background:url(/images/icons/search_all.png) no-repeat left center;padding-left:20px;">查看所有出行信息</li>
+				<li style="background:url(/images/icons/27.png) no-repeat left center;padding-left:20px;">消息中心</li>
+				<li style="background:url(/images/icons/friends.gif) no-repeat left center;padding-left:20px;">我的好友</li>
+				<!-- li style="background:url(/images/icons/vcard.gif) no-repeat left center;padding-left:20px;">我代购的商品</li-->
+			<% if current_user.has_role?('administrator') %>
+				<li style="background:url(/images/icons/41.png) no-repeat left center;padding-left:20px;"><%= link_to '管理用户', all_users_path %></li>
+			<% end %>
+			</ul>
+		</div>
+	</div>

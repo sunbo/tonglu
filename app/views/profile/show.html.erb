@@ -1,0 +1,101 @@
+<div id="content">
+<%= render :partial => 'slidbar' %>
+	<div id="colright">
+		<%= tabnav :userdetail %>
+		<div class="setting floatleft">
+			<div><%= image_tag show_photo_large%></div>
+			<div class="clear"></div>
+			<% if @states!=nil %>
+				<div class="rounded hometip" style="width:180px;">状态：<%= @states.body %><span id="state_date">[<%= time_ago_in_words @states.created_at %>前更新]</span></div>
+			<% else %>
+				<div class="rounded hometip" style="width:180px;">你没有提交现在的状态～</div>
+			<% end %>
+
+			<% if @detail.about_me != "" && @detail.about_me != nil %>
+				<div class="rounded hometip" style="width:180px;"><%= textilize(auto_link(@detail.about_me))%> 
+				<%= link_to '[编辑]', :controller=>"profile", :action => 'edit'%></div>
+			<% else %>
+				<div class="rounded hometip" style="width:180px;">
+					<%= link_to '描述一下你自己吧！', :controller=>"profile", :action => 'edit'%>
+				</div>
+			<% end %>
+				<script>jq(document).ready( function(){
+				  jq('.rounded').corners();
+				});</script>
+		</div>
+		<div class="floatleft left_line" style="width:530px;margin:0;padding:0 0 0 10px;">
+			<ul class="setting">
+              <li><label>姓名：</label><strong><%=h current_user.login %></strong></li>
+              <li><label>Email：</label><strong><%= @user.email%></strong></li>
+            </ul>
+        
+        <div class="clear"></div>
+        <h2>
+		<span class="floatright fontnormal">隐私设定：<%if @detail.is_show_details == "anyone" %>任何人可见
+                       <%elsif @detail.is_show_details == "friend"%>好友可见
+                       <%elsif @detail.is_show_details == "no"%>不公开<%end%></span>个人基本信息</h2>
+           <ul class="setting">
+				<li><label>性别：</label><%= @detail.sex%></li>
+				<li><label>所在城市：</label><%= @detail.city%></li>
+				<li><label>出生日期：</label><%= nice_date(@detail.birthday)  if @detail.birthday != nil%></li>
+                <li><label>出发的机场：</label><%= @detail.airport%></li>
+           </ul>
+           
+        <div class="clear"></div>   
+        <h2>
+   <span class="floatright fontnormal">隐私设定：<%if @detail.is_show_ims == "anyone" %>任何人可见
+                       <%elsif @detail.is_show_ims == "friend"%>好友可见
+                       <%elsif @detail.is_show_ims == "no"%>不公开<%end%></span>联系方式</h2>
+           <ul class="setting">
+                <li><label>手机：</label><%= @detail.mobile%></li>
+				<li><label>QQ：</label><%= @detail.qq%></li>
+				<li><label>MSN：</label><%= @detail.msn%></li>
+				<li><label>GTalk：</label><%= @detail.gtalk%></li>
+				<li><label>个人主页：</label><%= @detail.web%></li>
+             </ul>
+             
+        <div class="clear"></div>
+        <h2>
+   <span class="floatright fontnormal">隐私设定：<%if @detail.is_show_works == "anyone" %>任何人可见
+                       <%elsif @detail.is_show_works == "friend"%>好友可见
+                       <%elsif @detail.is_show_works == "no"%>不公开<%end%></span>教育和工作经历</h2>
+            <%if @educations%>
+            <h4>大学</h4>
+            <ul class="setting">
+              <%for educations in @educations%>
+				<li><label>大学：</label><%= educations.name %>，于<%= educations.year %>年毕业</li>
+                <li><label>专业及学历：</label><%= educations.professional %>，获得<%= educations.degree %>学历/学位</li>
+                <div class="line"></div>
+               <%end%>
+            </ul>
+		    <%end%>
+		    
+		    <%if @schools%>
+		    <h4>高中</h4>
+		    <ul class="setting">
+              <%for schools in @schools%>
+				<li><label>高中：</label><%= schools.name %>，于<%= schools.year %>毕业</li>
+				<div class="line"></div>
+               <%end%>
+            </ul>
+		    <%end%>
+            
+            <%if @works%>
+            <h4>工作经历</h4>
+            <ul class="setting">
+              <%for works in @works%>
+				<li><label>工作：</label><%= works.name %></li>
+				<li><label>工作时间：</label><%= works.startyear %>年至<%= works.workspan ? '今' : "#{works.endyear}年" %></li>
+                <li><label>职位：</label><%= works.position %></li>
+                <li><label>描述：</label><%= works.description %></li>
+                <div class="line"></div>
+               <%end%>
+             </ul>
+		    <%end%>
+        </div>
+    	<div class="clear"></div>
+
+	</div>
+	<div class="clear"></div>
+</div>
+</div>

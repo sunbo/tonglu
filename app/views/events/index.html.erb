@@ -1,0 +1,41 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+		<%= tabnav :mydate %>
+		<div class="c_border_large">
+	    <%=
+	    calendar({:year => @date.year, :month => @date.month}) do |d|
+	      cell_text = "#{d.mday}"
+	      if (d.to_date == Time.now.to_date)
+	        cell_text = "<strong>今天#{d.mday}</strong>"
+	      end
+	      cell_attrs = {:class => 'day'}
+	      @events.each do |e|
+	        if e.date.to_date == d
+	          cell_text << "<p><img src=\"/images/icons/d_c.png\" />&nbsp;#{ link_to h(truncate(e.title,10)), e ,:title => e.title}</p>"#日程
+	          cell_attrs[:class] = 'specialDay'
+	        end
+	      end
+	      @posts.each do |a|
+	        if a.created_at.to_date == d
+	          cell_text << "<p><img src=\"/images/icons/d_d.png\" />&nbsp;#{link_to h(truncate(a.title,10)), user_entry_path(:user_id => current_user.id,:id => a),:title => a.title}</p>"#日记
+	          cell_attrs[:class] = 'specialDay'
+	        end
+	      end
+	      @lines.each do |b|
+	        if b.startdate.to_date == d
+	          cell_text << "<p><img src=\"/images/icons/d_t.png\" />&nbsp;#{link_to h(truncate(b.title,10)), line_path(:user => current_user,:id => b),:title => b.title}</p>"#线路
+	          cell_attrs[:class] = 'specialDay'
+	        end
+	      end
+	      [cell_text, cell_attrs]
+	    end
+	    %>
+		</div>
+		<%#*<div style="text-align:right;margin-bottom:5px;"><%= link_to '添加我的日程', new_event_path, {:class=>"s_btn_r"} </div>%>
+	</div>
+			<script type="text/javascript">
+				  jq('div.c_border_large').corners("5px");
+			</script>
+	<div class="clear"></div>
+</div>

@@ -1,0 +1,30 @@
+            <%if @educations%>
+              <div id="education">
+				<%for educations in @educations%>
+                 <span class="floatright"><%= inline_tb_link '编辑', "edit_education_#{educations.id}", {:title => "编辑"}, {:height => 160, :width => 330} %>
+                 <%=  link_to "删除", {:controller => "experiences",:action => "destroy",:id => educations.id ,:switch=>"education"}, :confirm => '确定要删除吗？'%></span>                        
+              <ul class="setting">
+                   <div id="e_<%= educations.id %>">
+                        <li><label>大学：</label><%= educations.name %></li>
+                        <li><label>毕业时间：</label><%= educations.year %>年</li>
+                        <li><label>专业：</label><%= educations.professional %>，获得<%= educations.degree %>学历/学位</li>
+                   </div>
+              </ul>
+              <div class="line"></div>
+                      <div id="edit_education_<%=  educations.id%>" style="display:none">
+                         <% @education = educations %>
+                          <%= render :partial => 'experiences/education_edit_form', :locals => {:hide_header => true} %>
+                      </div>
+                 <%end%>
+             </div>
+          <%end%>
+                <span class="plus">
+                <% if educations == nil %>
+                <%= inline_tb_link '添加大学', "new_education", {:title => "添加大学"}, {:height => 160, :width => 330} %>
+                <% else %>
+                <%= inline_tb_link '添加更多大学', "new_education", {:title => "添加更多大学"}, {:height => 160, :width => 330} %>
+                <% end %>
+                </span>
+                <div id="new_education" style="display:none">
+                    <%= render :partial => 'experiences/education_create_form', :locals => {:hide_header => true} %>
+                </div>

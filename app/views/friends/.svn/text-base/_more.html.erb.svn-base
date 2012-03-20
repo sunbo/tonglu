@@ -1,0 +1,41 @@
+	<div class="push_user">
+		<h4>看看我的好友在做什么？<br /><span class="fontnormal">[鼠标放图片上]</span></h4>
+		<%if !@friends.empty?%>
+			<%for friends in @friends%>
+              <% @s = State.find(:first,:conditions => ['user_id = ? ',friends.id],:order => 'created_at DESC') %>
+                <div id='userpohto_<%= friends.id%>' class="<%= online?(friends.id)%>"><%= link_to "#{image_tag get_photo(friends.id),:alt=>''}" , { :controller => 'profile',:action => 'showuser',:id =>friends.id}%></div>
+				<script type="text/javascript" language="javascript">
+				new Tip('userpohto_<%= friends.id%>', "<%= @s != nil ? @s.body : "此用户没提交状态！"%>", {
+					border: 3,
+					radius: 3,
+					style: 'sameroads',
+					width: 'auto',
+					stem: 'topRight',
+					hook: { mouse: true, tip: 'topRight' },
+					offset: { x: 10, y: 16 }
+				});				
+				</script>
+				<ul>
+					<li class="fontbold"><%= link_to "#{friends.login}",:controller => 'profile', :action => 'showuser', :id=>friends.id %></li>
+					<li>
+						<%= inline_tb_link '发送消息', "new_message_#{friends.id}",{:title => "给<strong>#{h friends.login}</strong>发送消息"}, {:height => 260, :width => 430} %>
+						<%= inline_tb_link '留言', "new_comment_#{friends.id}", {:title => "给<strong>#{h friends.login}</strong>留言"}, {:height => 230, :width => 430} %>
+					</li>
+				</ul>
+				<div class="clear line"></div>
+				<div id="new_message_<%= friends.id%>" style="display:none">
+		     		<% @showuser = friends %>
+		        	<%= render :partial => 'messages/form', :locals => {:hide_header => true} %>
+				</div>
+				
+				<div id="new_comment_<%= friends.id%>" style="display:none">
+					<%= render :partial => 'comments/form', :locals => {:hide_header => true} %>
+				</div>
+				
+				<div class="clear"></div>
+			<%end%>
+            <div class="line right"><a href="/friends">更多好友&raquo;</a> </div>
+		<%else%>
+			<h3>您现在还没有好友，请可以点击<a href="/friends/search">查找好友</a>，或是<a href="/friends/invite">邀请好友</a>加入</h3>
+		<%end%>
+	</div>

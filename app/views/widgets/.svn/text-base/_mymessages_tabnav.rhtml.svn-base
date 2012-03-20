@@ -1,0 +1,26 @@
+<%
+render_tabnav :mymessages,:html => { :id=>'TabMess'} do 
+
+
+  add_tab do |t|
+    t.named '收件箱'
+    t.links_to :controller=>"messages",:action=>"index"
+    t.highlights_on :controller=>"messages",:action=>"index"
+   end
+  add_tab do |t|
+    t.named '发件箱'
+    t.links_to :controller=>"messages",:action=>"outbox"
+    t.highlights_on :controller=>"messages",:action=>"outbox"
+  end
+  add_tab do |t|
+    t.named '回收站'
+    t.links_to :controller=>"messages",:action=>"trash"
+    t.highlights_on :controller=>"messages",:action=>"trash"
+  end
+  add_tab do |t|
+    t.named '+写消息'
+    t.links_to :controller=>"messages",:action=>"new"
+    t.highlights_on :controller=>"messages",:action=>"new",:controller=>"messages",:action=>"create_message"
+  end
+end
+%>

@@ -1,0 +1,21 @@
+修改目的地：<br/>
+<%= @linedetail.title %><br/>
+<%= @linedetail.endcity %>,<%= nice_date(@linedetail.startdate) %>-<%= nice_date(@linedetail.enddate) %><br/>
+<% form_tag editcity_lines_path(:user => current_user), :html => { :method => :put } do%>
+  <input type="hidden" value="<%= @linedetail.id %>" name="line_id"/>
+  <table>
+    <thead>
+      <tr>
+        <th>日期</th>
+        <th>地点</th>
+      </tr>
+    </thead>
+      <% for line_place in @line_places  %>
+      <tr>
+            <td><%= nice_date(line_place.date)%></td>
+            <td><%= text_field_tag "line_place_ids[]",line_place.place,{:class=>"normalinput"}%></td>
+      </tr>
+      <% end %>
+  </table>
+<%= submit_tag "修改",:class=>"btn_blue" %>&nbsp;<%= link_to '返回', line_path(:user => current_user,:id => @linedetail.id) %>
+<% end %>

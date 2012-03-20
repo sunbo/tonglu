@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates
+END
+controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/controller.rb
+END
+model_functional_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/model_functional_test.rb
+END
+functional_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/functional_spec.rb
+END
+signup.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/signup.html.erb
+END
+observer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/observer.rb
+END
+unit_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/unit_spec.rb
+END
+activation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/activation.html.erb
+END
+model_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/model_controller.rb
+END
+signup_notification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/signup_notification.html.erb
+END
+helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/helper.rb
+END
+migration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/migration.rb
+END
+functional_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/functional_test.rb
+END
+unit_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/unit_test.rb
+END
+mailer_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/mailer_test.rb
+END
+authenticated_test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/authenticated_test_helper.rb
+END
+fixtures.yml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/fixtures.yml
+END
+model.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/model.rb
+END
+login.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/login.html.erb
+END
+model_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/model_helper.rb
+END
+mailer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/mailer.rb
+END
+model_functional_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/model_functional_spec.rb
+END
+authenticated_system.rb
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/project/!svn/ver/1733/sameroads/vendor/plugins/restful_authentication/generators/authenticated/templates/authenticated_system.rb
+END

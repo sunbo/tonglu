@@ -1,0 +1,18 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+		<div align="center">
+			<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+			<% if flash[:error] %><div id="error"><%= flash[:error] %></div><% end %>
+		</div>
+		<%  if show_admin_menu %><%= tabnav :mydiary %><% end %>
+			<% for entry in @entries %>
+			<h3 class="fonttitle"><span class="floatright fontnormal post_date"><%= link_to "评论(#{entry.entry_comments_count})" , user_entry_path(:user_id => entry.user,:id => entry)%>写于<%= nice_time(entry.created_at)%></span><%= link_to entry.title, user_entry_path(:user_id => entry.user,:id => entry)%> </h3>
+			<div class="diary_Box">
+				<%=  truncate(entry.body.gsub!(%r{</?.*?>},""),200) %>
+				<div class="right"><%= link_to "[查看全部]", user_entry_path(:user_id => entry.user,:id => entry)%></div>
+			</div>
+			<% end %>
+      <%= will_paginate @entries %>
+	</div>
+</div>

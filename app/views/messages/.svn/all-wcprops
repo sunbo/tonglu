@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/project/!svn/ver/2811/sameroads/app/views/messages
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/project/!svn/ver/2180/sameroads/app/views/messages/new.html.erb
+END
+outbox.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/project/!svn/ver/2353/sameroads/app/views/messages/outbox.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/project/!svn/ver/2811/sameroads/app/views/messages/show.html.erb
+END
+_reply.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/project/!svn/ver/2129/sameroads/app/views/messages/_reply.html.erb
+END
+trash.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/project/!svn/ver/2353/sameroads/app/views/messages/trash.html.erb
+END
+_message.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/project/!svn/ver/2342/sameroads/app/views/messages/_message.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/project/!svn/ver/2113/sameroads/app/views/messages/_form.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/project/!svn/ver/2353/sameroads/app/views/messages/index.html.erb
+END

@@ -1,0 +1,75 @@
+	<div id="content">
+		<div class="col1to1">
+			<fieldset class="login">
+				<% if logged_in? %>
+					<div><strong><%=h current_user.login %></strong></div>
+			        <div><%= link_to '用户首页', home_path %></div>
+					<div><%= link_to '注销', logout_path %></div>
+				<% else %>
+					<% form_tag session_path do -%>
+						Email<br /><%= text_field_tag 'email' ,nil,{:class => "text_login",:onfocus => "this.className='text_normal'",:onblur=>"this.className='text_login'"}%><br />
+						密码<br /><%= password_field_tag 'password' ,nil,{:class => "text_login",:onfocus => "this.className='text_normal'",:onblur=>"this.className='text_login'"}%><br />
+						<div><%= submit_tag '登录' ,{:class => "btn_blue"}%><input type="button" value="注册" class="btn_yellow" onclick="window.location.href='/signup'"/></div>
+						<div><a href="/forgot_password">忘记密码</a> | <%= check_box_tag 'remember_me',{:class=>'box'} %> 下次自动登录</div>
+					<% end -%>
+				<% end %>
+			</fieldset>
+		</div>
+		<div class="col1to2">
+			<img src="/images/intro.png" alt="" />
+			<div class="cont floatleft">
+				<h2 class="nostyle">如果你没有注册，还等什么？</h2>
+				<a href="/signup"><img src="images/btn_reg.png" alt="注册成为新会员" /></a>
+			</div>
+			<div class="cont floatleft" style="width:230px;margin-left:10px;">
+				<h2 class="nostyle">同城搜索</h2>
+				<form method="post" action="">
+					<select>
+						<option value="">请选择你所在的城市</option>
+						<option value="北京">北京</option>
+						<option value="上海">上海</option>
+						<option value="广州">广州</option>
+						<option value="杭州">杭州</option>
+						<option value="南京">南京</option>
+					</select>
+					<input type="button" value="" name="button" class="btn_sch" />
+				</form>
+			</div>
+			<div class="clear"></div>
+
+		
+		</div>
+        <div class="col1to3">
+            <div class="ibox_normal">
+				<div class="ihead_normal"><img src="/images/newguy.gif" alt="新近加入的会员" /></div>
+				<div class="ibody_normal">
+					<% for users in @users %>
+					<div id="userphoto_<%= users.id%>"><%= link_to "#{image_tag get_photo(users.id),:alt=>''}",{:controller => 'profile',:action => 'showuser',:id =>users.id}%></div>
+					<script type="text/javascript" language="javascript">
+					new Tip('userphoto_<%= users.id%>', '<%= image_tag get_photo_large(users.id)%>', {
+						title: '姓名：<%= users.login %>',
+						border: 3,
+						radius: 3,
+						style: 'sameroads',
+						width: '210px',
+						stem: 'topRight',
+						hook: { mouse: true, tip: 'topRight' },
+						offset: { x: 10, y: 16 }
+					});				
+					</script>
+
+					<% end %>
+				</div>	
+				<div class="clear"></div>
+			</div>
+			<h2 class="nostyle">让伴我网每天都有新意思</h2>
+			<!-- <ul>
+			<% for posts in @admin_posts%>
+				<li style="background:url(/images/icons/25.png) no-repeat left center;padding-left:20px;"><%= nice_time(posts.created_at)%>，<%= link_to posts.headline, post_path(:user => posts.user,:id => posts)%></li>
+			<% end %>
+			</ul> -->
+			<!-- %= render :partial => 'welcome/newevents' % -->
+				<iframe allowtransparency="true" vspace="0" hspace="0" marginheight="0" marginwidth="0" width="260" height="150" frameborder=0 src="http://www.timeku.com/view_timeline_in.php?tid=1390" scrolling="no"></iframe>
+        </div>
+        <div class="clear"></div>
+	</div>

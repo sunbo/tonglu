@@ -1,0 +1,13 @@
+<div id="entry_comment_<%=  @entry_comment.id%>">
+写于<%= nice_time(@entry_comment.created_at) %>
+<%= @entry_comment.user.login %>说<br/>
+<%  @user = User.find(@entry_comment.entry.user_id) %>
+<%  if show_admin_menu %>
+<%= link_to "删除这条评论", user_entry_entry_comment_path(:user_id => @entry_comment.entry.user,
+                                                         :entry_id => @entry_comment.entry.id,
+                                                        :id => @entry_comment.id),
+                                                      :confirm => "确定要删除吗？",
+                                                       :method => :delete -%>
+ <%  end %>
+<%= @entry_comment.body %><br/>
+</div>

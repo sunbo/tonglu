@@ -1,0 +1,174 @@
+<HTML><HEAD><meta http-equiv="content-type" content="text/html; charset=utf-8"><link href="Resources/axurerpprototype.css" type="text/css" rel="stylesheet"></HEAD>
+<BODY>
+<A href=# onclick='parent.CloseSitemap()' style='font-size:8pt'>Close Frames</A><br><br>
+
+<SCRIPT LANGUAGE="JavaScript">
+image1 = new Image();
+image1.src = 'Resources/plus.gif';
+
+function CloseSitemap()
+{
+	parent.URL = parent.mainFrame.URL
+}
+
+function ToggleDiv(node, id)
+{
+	sibling = document.getElementById(id);
+	if (sibling.style.display == 'none')
+	{
+		if (node.childNodes.length > 0)
+		{
+			if (node.childNodes[0].tagName == "IMG")
+			{
+				node.childNodes[0].src = "Resources/minus.gif";
+			}
+		}
+
+		sibling.style.display = '';
+	}
+	else
+	{
+		if (node.childNodes.length > 0)
+		{
+			if (node.childNodes[0].tagName == "IMG")
+			{
+				node.childNodes[0].src = "Resources/plus.gif";
+			}
+		}
+		sibling.style.display = 'none';
+	}
+}
+
+var currentPage = null;
+
+function highlight(id)
+{
+	if (currentPage != null)
+	{
+		currentPage.style.backgroundColor = '#EEEEFF';
+		currentPage.style.paddingLeft = '0px';
+		currentPage.style.paddingRight = '0px';
+		currentPage.style.border = '0px solid #666666';
+	}
+	
+	currentPage = document.getElementById(id);
+    if (currentPage) {
+	    currentPage.style.backgroundColor = '#DDDDDD';
+	    currentPage.style.paddingLeft = '3px';
+	    currentPage.style.paddingRight = '3px';
+	    currentPage.style.border = '1px solid #666666';
+    }
+}
+
+</SCRIPT>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD nowrap><A onclick="ToggleDiv(this, 'd57275c07c9574bb38b003484b6e92d66')"><IMG SRC="Resources/minus.gif"></A>&nbsp;&nbsp;<A onclick="parent.mainFrame.location='Sameroads.com.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="p57275c07c9574bb38b003484b6e92d66">Sameroads.com</SPAN></A><DIV id="d57275c07c9574bb38b003484b6e92d66">
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD WIDTH="13" nowrap>&nbsp;</TD>
+		<TD nowrap><A onclick="ToggleDiv(this, 'db03502ad472a404593906307e7acdea1')"><IMG SRC="Resources/minus.gif"></A>&nbsp;&nbsp;<A onclick="parent.mainFrame.location='users.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="pb03502ad472a404593906307e7acdea1">users</SPAN></A><DIV id="db03502ad472a404593906307e7acdea1">
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD WIDTH="30" nowrap>&nbsp;</TD>
+		<TD nowrap><A onclick="parent.mainFrame.location='new.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="pab358ccbb03b4e21b85a32f07c1558ed">new</SPAN></A><DIV id="tdab358ccbb03b4e21b85a32f07c1558ed">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD WIDTH="30" nowrap>&nbsp;</TD>
+		<TD nowrap><A onclick="parent.mainFrame.location='index.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="p3305ff9b9d314cb59cab7218c70e4313">index</SPAN></A><DIV id="td3305ff9b9d314cb59cab7218c70e4313">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD WIDTH="30" nowrap>&nbsp;</TD>
+		<TD nowrap><A onclick="parent.mainFrame.location='regdone.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="p22ca4efdac66476389e155d7ca343c18">regdone</SPAN></A><DIV id="td22ca4efdac66476389e155d7ca343c18">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD WIDTH="30" nowrap>&nbsp;</TD>
+		<TD nowrap><A onclick="parent.mainFrame.location='activeagain.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="p968e3ba3b36f48a3b03145c9fbafa8c5">activeagain</SPAN></A><DIV id="td968e3ba3b36f48a3b03145c9fbafa8c5">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD WIDTH="30" nowrap>&nbsp;</TD>
+		<TD nowrap><A onclick="parent.mainFrame.location='fogetpassword.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="p97219940f7fb493caf72a29579f20881">fogetpassword</SPAN></A><DIV id="td97219940f7fb493caf72a29579f20881">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD WIDTH="13" nowrap>&nbsp;</TD>
+		<TD nowrap><A onclick="ToggleDiv(this, 'd902929681fd84731aea9ce0c8ded3e46')"><IMG SRC="Resources/minus.gif"></A>&nbsp;&nbsp;<A onclick="parent.mainFrame.location='sessions.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="p902929681fd84731aea9ce0c8ded3e46">sessions</SPAN></A><DIV id="d902929681fd84731aea9ce0c8ded3e46">
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD WIDTH="30" nowrap>&nbsp;</TD>
+		<TD nowrap><A onclick="parent.mainFrame.location='new_1.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="p4a32da14a67a45adaa6325eb00219268">new</SPAN></A><DIV id="td4a32da14a67a45adaa6325eb00219268">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD WIDTH="13" nowrap>&nbsp;</TD>
+		<TD nowrap><A onclick="ToggleDiv(this, 'dd8ecf91c114c414280ec6a4d7eb71420')"><IMG SRC="Resources/minus.gif"></A>&nbsp;&nbsp;<A onclick="parent.mainFrame.location='welcome.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="pd8ecf91c114c414280ec6a4d7eb71420">welcome</SPAN></A><DIV id="dd8ecf91c114c414280ec6a4d7eb71420">
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD WIDTH="30" nowrap>&nbsp;</TD>
+		<TD nowrap><A onclick="parent.mainFrame.location='index_1.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="p21b2f543083b4903b2fd5a12226f134e">index</SPAN></A><DIV id="td21b2f543083b4903b2fd5a12226f134e">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD WIDTH="30" nowrap>&nbsp;</TD>
+		<TD nowrap><A onclick="parent.mainFrame.location='quickreg.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="pa400401c8d58464893bd9b720a918131">quickreg</SPAN></A><DIV id="tda400401c8d58464893bd9b720a918131">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD WIDTH="30" nowrap>&nbsp;</TD>
+		<TD nowrap><A onclick="parent.mainFrame.location='quickreg2.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="p9a3f18e16626417c84beded866877b79">quickreg2</SPAN></A><DIV id="td9a3f18e16626417c84beded866877b79">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD WIDTH="30" nowrap>&nbsp;</TD>
+		<TD nowrap><A onclick="parent.mainFrame.location='users_maier.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="p9753cfd22c334082b2ec4fd83879c980">users_maier</SPAN></A><DIV id="td9753cfd22c334082b2ec4fd83879c980">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+			</DIV>
+		</TD>
+	</TR>
+</TABLE></BODY></HTML>

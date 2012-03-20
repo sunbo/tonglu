@@ -1,0 +1,45 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+          <%=tabnav :myline%>
+                 <table class="infobox">
+                 <thead>
+                    <tr>
+                      <th>状态</th>
+                      <th>标签</th>
+                      <th>目的地</th>
+                      <th>时间</th>
+                      <th>出发地</th>
+                      <th>航班号</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+
+                  <% for line in @lines %>
+                    <tr>
+                      <td>
+                        <%if line.is_private%>(private)<%end%>
+                            <%if line.startdate > Time.now%>
+                           未开始
+                           <%elsif line.startdate <= Time.now && line.enddate >= Time.now%>
+                           正在进行
+                           <%elsif line.enddate < Time.now%>
+                           已结束
+                          <%end%>
+                        </td>
+                      <td><%= link_to line.title,line_path(:user => current_user,:id => line) %></td>
+                      <td><%=h line.endcity %></td>
+                      <td><%=h nice_date(line.startdate) %>－<%=h nice_date(line.enddate) %></td>
+                      <td><%=h line.startcity %></td>
+                      <td><%=h line.n %></td>
+                      <td><%= link_to '查看',line_path(:user => current_user,:id => line) %>
+                      <%= link_to '编辑', edit_line_path(:user => current_user,:id => line)%>
+                      <%= link_to '删除', line_path(:user => current_user,:id => line), :confirm => '确定要删除吗?', :method => :delete %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </table>
+            <%= will_paginate @lines %>
+	</div>
+	<div class="clear"></div>
+</div>

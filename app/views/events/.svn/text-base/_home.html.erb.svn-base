@@ -1,0 +1,67 @@
+<div class="c_border">
+<%=
+calendar({:year => @date.year, :month => @date.month}) do |d|
+  cell_text = "#{d.mday}"
+  cell_attrs = { :class => 'day ' }
+  todays_events = @events.reject { |e| e.date.to_date != d }
+  todays_posts = @e_posts.reject { |e| e.created_at.to_date != d }
+  todays_lines = @lines.reject { |e| e.startdate.to_date != d }
+  next if todays_events.empty? && todays_posts.empty? && todays_lines.empty?
+  events_text = todays_events.map { |e| "#{link_to h(truncate(e.title,20)), e ,:title => e.title}<br/>" }
+  posts_text = todays_posts.map { |a| "#{link_to h(truncate(a.title,20)), user_entry_path(:user_id => current_user.id,:id => a),:title => a.title}<br/>" }
+  lines_text = todays_lines.map { |b| "#{link_to h(truncate(b.title,20)), line_path(:user => current_user,:id => b),:title => b.title}<br/>" }
+  dd = "#{d.mday}"
+  dl = d.mday.to_s.size
+   if dl == 1
+     dd = "0"+"#{d.mday}"
+   end
+  cell_text = "#{ link_to_remote(d.mday,:update => 'show_data',
+                              :url => {:controller => "welcome",:action => "show_data",:events=> events_text ,:posts => posts_text,:lines => lines_text,:date => dd},
+                               :loading => "Element.show('indicator')",
+                              :complete => "Element.hide('indicator');new Effect.Highlight('show_data');") }"
+  cell_attrs[:class] += 'specialDay '
+  [cell_text, cell_attrs]
+end
+%>
+</div>
+<div id ="indicator" style="display:none"><%= image_tag("/images/loading.gif") %></div>
+<div style="float:left;width:240px;margin-top:5px;">
+	<div class="c_body" id="show_data">
+      <h4 class="line">今日的安排</h4>
+      <%if @today_events.empty?  && @today_posts.empty? && @today_lines.empty?%>
+		你今天没有任何安排，你现在可以<br />
+		<span class="btn_link"><%= link_to "提交行程", new_line_path(:user => current_user) %></span>
+		<span class="btn_link"><%= link_to "提交日程", new_event_path(:user => current_user) %></span>
+		<span class="btn_link"><%= link_to "写日记", new_user_entry_path(:user_id => current_user.id) %></span>
+       <%else%>
+        <%if !@today_lines.empty?%>
+			<div class="event_title"><img src="/images/icons/d_t.png" /> 行程安排</div>
+         <%for today_lines in @today_lines%>
+            <%=link_to h(truncate(today_lines.title,20)), line_path(:user => current_user,:id => today_lines),:title => today_lines.title%><br/>
+          <%end%>
+        <%end%>
+
+        <%if !@today_events.empty?%>
+         	<div class="event_title"><img src="/images/icons/d_c.png" /> 日程安排</div>
+         <%for today_events in @today_events%>
+            <%=link_to h(truncate(today_events.title,20)), today_events ,:title => today_events.title%><br/>
+          <%end%>
+        <%end%>
+
+        <%if !@today_posts.empty?%>
+			<div class="event_title"><img src="/images/icons/d_d.png" /> 我的日记</div>
+         <%for today_posts in @today_posts%>
+            <%=link_to h(truncate(today_posts.title,16)), user_entry_path(:user_id => current_user.id,:id => today_posts),:title => today_posts.title%>
+            <%= link_to "评论(#{today_posts.entry_comments_count})" , user_entry_path(:user_id => today_posts.user,:id => today_posts)%><br/>
+          <%end%>
+        <%end%>
+        
+       <%end%>
+       <script>
+        jq('div.c_border').corners("5px");
+        jq('div.c_body').corners("5px");
+       	jq('div.event_title').corners("3px");
+       </script>
+	</div>
+</div>
+<div class="clear"></div>

@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/project/!svn/ver/2467/sameroads/test/fixtures
+END
+line_notes.yml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/project/!svn/ver/2467/sameroads/test/fixtures/line_notes.yml
+END
+line_places.yml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/project/!svn/ver/2467/sameroads/test/fixtures/line_places.yml
+END
+events.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/project/!svn/ver/1860/sameroads/test/fixtures/events.yml
+END
+friendships.yml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/project/!svn/ver/1915/sameroads/test/fixtures/friendships.yml
+END
+city_airports.yml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/project/!svn/ver/2199/sameroads/test/fixtures/city_airports.yml
+END
+line_users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/project/!svn/ver/2467/sameroads/test/fixtures/line_users.yml
+END
+lines.yml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/project/!svn/ver/2036/sameroads/test/fixtures/lines.yml
+END
+schools.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/project/!svn/ver/2142/sameroads/test/fixtures/schools.yml
+END
+entry_comments.yml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/project/!svn/ver/2367/sameroads/test/fixtures/entry_comments.yml
+END
+photos.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/project/!svn/ver/1801/sameroads/test/fixtures/photos.yml
+END
+details.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/project/!svn/ver/1801/sameroads/test/fixtures/details.yml
+END
+states.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/project/!svn/ver/1980/sameroads/test/fixtures/states.yml
+END
+works.yml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/project/!svn/ver/2142/sameroads/test/fixtures/works.yml
+END
+line_maps.yml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/project/!svn/ver/2467/sameroads/test/fixtures/line_maps.yml
+END
+topics.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/project/!svn/ver/2369/sameroads/test/fixtures/topics.yml
+END
+line_contents.yml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/project/!svn/ver/2467/sameroads/test/fixtures/line_contents.yml
+END
+comment_replies.yml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/project/!svn/ver/2117/sameroads/test/fixtures/comment_replies.yml
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/project/!svn/ver/1733/sameroads/test/fixtures/users.yml
+END
+line_articles.yml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/project/!svn/ver/2467/sameroads/test/fixtures/line_articles.yml
+END
+cities.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/project/!svn/ver/1801/sameroads/test/fixtures/cities.yml
+END
+educations.yml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/project/!svn/ver/2141/sameroads/test/fixtures/educations.yml
+END
+messages.yml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/project/!svn/ver/1945/sameroads/test/fixtures/messages.yml
+END
+mailcodes.yml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/project/!svn/ver/1951/sameroads/test/fixtures/mailcodes.yml
+END
+entries.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/project/!svn/ver/2367/sameroads/test/fixtures/entries.yml
+END
+forums.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/project/!svn/ver/2369/sameroads/test/fixtures/forums.yml
+END
+posts.yml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/project/!svn/ver/2369/sameroads/test/fixtures/posts.yml
+END
+comments.yml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/project/!svn/ver/2117/sameroads/test/fixtures/comments.yml
+END

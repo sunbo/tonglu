@@ -1,0 +1,8 @@
+   <fieldset>
+		<% remote_form_for(:experience, :url => {:controller => 'experiences',:action => 'updateschool'}, :html => {} ) do  %>
+			<input type="hidden" name="school_id" value="<%= @school.id %>" />
+            <div><label>高中：</label><%= text_field_tag "school_name_#{@school.id}",@school.name, {:onfocus => "($(this).className = 'text_normal')",:onblur => "($(this).className = 'text_login')",:class => "text_login"}%></div>
+			<div><label>毕业时间：</label><%= select_tag "school_year_#{@school.id}" ,year_option_tag(@school.year)%>年</div>
+			<div><label></label><%= submit_tag '确定',{:class=>"btn_blue"}%></div>
+		<% end %>
+	</fieldset>

@@ -1,0 +1,16 @@
+<span id="state">
+  <%if @state%>
+    状态：<%=h @state.body%><span id="state_date">[<%= time_ago_in_words @state.created_at %>前更新]</span>
+  <%else%>
+    我正在......
+  <% end %>
+</span>
+<span id="state_date"></span>
+<div></div>
+<% remote_form_for(:state, :url => {:controller => 'states',:action => 'create'}, :html => {} ) do  %>
+	<input type="hidden" name="user_id" value="<%= current_user.id %>" />
+    <input type="text"  name="body" id="body" size="40" class="smallinput" value="我正在......让好友们知道我在做什么"
+       onclick="if (this.value=='我正在......让好友们知道我在做什么') this.value='';this.className='normalinput';"
+       onblur="if (this.value=='') this.value='我正在......让好友们知道我在做什么';this.className='smallinput';"/>
+    <input type="submit" value="提交" name="submit" class="btn_blue" /> <%= link_to "更多",:controller => 'states',:action => "more_state" %>
+<% end %>

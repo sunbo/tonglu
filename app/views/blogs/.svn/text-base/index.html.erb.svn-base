@@ -1,0 +1,16 @@
+<div id="content">
+<%= render :partial => 'profile/slidbar' %>
+	<div id="colright">
+<h2>我的日记</h2>
+    
+<% for entry in @entries %>
+    <h3 class="fonttitle">
+    <span class="floatright fontnormal post_date">写于 <%= time_ago_in_words(entry.created_at) %>前</span>
+    <%= link_to entry.title , user_entry_path(:user_id => entry.user_id,:id => entry) %>
+    <%= link_to "评论(#{entry.entry_comments_count})" , user_entry_path(:user_id => entry.user_id,:id => entry)%>
+   </h2>
+<%end%>
+
+<%= will_paginate @entries %>
+	</div>
+</div>

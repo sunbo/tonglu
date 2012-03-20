@@ -1,0 +1,18 @@
+<a name="message_<%= @message.id%>" href=""></a>
+<div id="message_<%=  @message.id%>" class="masg_body">
+	<div class="sentuser">
+  		<%= link_to "#{image_tag get_photo(@message.user_id)}" ,  :controller => 'profile',:action => 'showuser',:id =>@message.user_id%>
+	</div>
+	<div class="masgcont">
+		<div class="myname" style="background:#fff;padding:0 0 0 10px;">
+			<span><%= link_to "我",:controller => 'profile',:action =>'showuser',:id => @message.user_id %></span>
+			<span class="state_date"><%= nice_time(@message.created_at) %>提交</span>
+		</div>
+		<div style="margin:5px 0;padding:5px;"><%= textilize(auto_link(@message.content))%></div>
+	</div>
+	<div class="clear"></div>
+			<script type="text/javascript">
+				jq('div.myname').corners("5px");
+				jq('div.masgcont').corners("5px");
+			</script>
+</div>
